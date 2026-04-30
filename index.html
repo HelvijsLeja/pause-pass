@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
+<meta name="cf-2fa-verify" content="disable"/>
+<!-- Cloudflare email obfuscation disabled -->
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Pause & Pass — Safety API for Mobility Operators</title>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -1128,7 +1131,7 @@ footer {
         <button class="btn-contact" onclick="submitContact()" data-i18n="cta_btn">Book Demo →</button>
       </div>
       <div class="contact-success" id="contactSuccess" data-i18n="cta_success">✅ Request received. We'll reach out within 1 business day.</div>
-      <p class="contact-note" data-i18n="cta_note">Or email us directly at <span style="color:rgba(255,255,255,0.6)"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e1918093958f84939289889192a19180949284808f8591809292cf888e">[email&#160;protected]</a></span></p>
+      <p class="contact-note" data-i18n="cta_note">Or email us directly at <span style="color:rgba(255,255,255,0.6)">hello@pauseandpass.com</span></p>
     </div>
   </div>
 </section>
@@ -1176,7 +1179,7 @@ footer {
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // ── Scooter dashboard animation ──────────────────────────────────────────
   const scStates = window._scStates = [
     {
@@ -1422,7 +1425,7 @@ const translations = {
     cta_sub: "Book a 30-minute technical demo and we'll walk through exactly how the plugin drops into your existing Skok or RIDE app codebase — no rebuild, no new UX, no rider communication needed. Live in 48 hours.",
     cta_btn: 'Book Demo →',
     cta_success: "✅ Request received. We'll reach out within 1 business day.",
-    cta_note: 'Or email us directly at <span style="color:rgba(255,255,255,0.6)">partnerships@pauseandpass.io</span>',
+    cta_note: 'Or email us directly at <span style="color:rgba(255,255,255,0.6)">hello@pauseandpass.com</span>',
     contact_title: 'Get in touch',
     contact_sub: "We're happy to answer any questions about Pause & Pass.",
   },
@@ -1493,7 +1496,7 @@ const translations = {
     cta_sub: 'Pieteikties 30 minūšu tehniskajam demo un mēs detalizēti parādīsim, kā spraudnis iekļaujas jūsu esošajā Skok vai RIDE lietotnes kodā — bez pārstrukturēšanas, bez jaunas UX, bez saziņas ar braucēju. Dzīvs 48 stundās.',
     cta_btn: 'Pieteikt demo →',
     cta_success: '✅ Pieprasījums saņemts. Sazināsimies vienas darba dienas laikā.',
-    cta_note: 'Vai rakstiet mums tieši uz <span style="color:rgba(255,255,255,0.6)">partnerships@pauseandpass.io</span>',
+    cta_note: 'Vai rakstiet mums tieši uz <span style="color:rgba(255,255,255,0.6)">hello@pauseandpass.com</span>',
     contact_title: 'Sazinies ar mums',
     contact_sub: 'Labprāt atbildēsim uz jebkuriem jautājumiem par Pause & Pass.',
   }
