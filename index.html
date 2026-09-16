@@ -615,6 +615,13 @@ footer {
 }
 .lang-btn.active { background: var(--black); color: var(--white); }
 
+/* ── Ideal-customer cards: equal columns in every language via subgrid ── */
+.icp-grid { align-items: stretch; }
+@media (min-width: 721px) {
+  .icp-grid { grid-template-rows: auto 1fr; row-gap: 0; }
+  .icp-card { display: grid; grid-template-rows: subgrid; grid-row: span 2; }
+}
+
 /* ── Responsive ── */
 @media (max-width: 720px) {
   div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
@@ -738,10 +745,10 @@ footer {
       <p style="max-width:620px;margin:16px auto 0;font-size:15px;color:#666;line-height:1.7;" data-i18n="icp_intro">If your riders open an app to start a trip, they're who we protect. Whatever you run — scooters, bikes or mopeds, one city or twenty — the risk at every crossing is the same, and so is the fix.</p>
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;" class="reveal">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;" class="reveal icp-grid">
 
       <!-- Profile: shared micromobility fleets -->
-      <div style="border:1px solid var(--border);border-radius:20px;overflow:hidden;">
+      <div class="icp-card" style="border:1px solid var(--border);border-radius:20px;overflow:hidden;">
         <div style="background:#0A0A0A;padding:28px 28px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
           <div>
             <div style="font-size:28px;margin-bottom:8px;">🛴</div>
@@ -776,7 +783,7 @@ footer {
       </div>
 
       <!-- Profile: multi-city & cross-border operators -->
-      <div style="border:1px solid var(--border);border-radius:20px;overflow:hidden;">
+      <div class="icp-card" style="border:1px solid var(--border);border-radius:20px;overflow:hidden;">
         <div style="background:#0A0A0A;padding:28px 28px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
           <div>
             <div style="font-size:28px;margin-bottom:8px;">🌍</div>
@@ -811,7 +818,7 @@ footer {
       </div>
 
       <!-- Profile: safety-forward & enterprise platforms -->
-      <div style="border:1px solid var(--border);border-radius:20px;overflow:hidden;">
+      <div class="icp-card" style="border:1px solid var(--border);border-radius:20px;overflow:hidden;">
         <div style="background:#0A0A0A;padding:28px 28px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
           <div>
             <div style="font-size:28px;margin-bottom:8px;">🛡️</div>
