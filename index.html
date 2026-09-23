@@ -697,6 +697,14 @@ footer {
   .stats-grid, .api-steps, .benefits-grid, .pricing-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; }
 }
+
+@media (max-width: 600px) {
+  nav { padding: 0 16px; }
+  .container { padding: 0 16px; }
+  .nav-logo { white-space: nowrap; font-size: 16px; }
+  .nav-right .btn-primary { display: none; }
+  .hero { padding: 100px 0 56px; }
+}
 </style>
 </head>
 <body>
@@ -1040,21 +1048,18 @@ footer {
     <div class="api-steps reveal">
       <div class="api-step">
         <div class="api-step-num" data-i18n="int_s1_num">Step 01</div>
-        <h3 data-i18n="int_s1_title">Add the plugin</h3>
+        <h3 data-i18n="int_s1_title">Add the SDK</h3>
         <p data-i18n="int_s1_body">Your engineer adds the Pause &amp; Pass SDK to your existing Android or iOS project. One import, one initialisation call with your operator key. Nothing else changes in your app.</p>
-        <div class="code-pill">npm install @pausepass/sdk</div>
       </div>
       <div class="api-step">
         <div class="api-step-num" data-i18n="int_s2_num">Step 02</div>
         <h3 data-i18n="int_s2_title">Hook into trip events</h3>
         <p data-i18n="int_s2_body">Attach to your existing trip start and end callbacks. The SDK evaluates mapped zones on-device during active trips — you keep full control of your app UI and rider experience.</p>
-        <div class="code-pill">PausePass.startSession(trip)</div>
       </div>
       <div class="api-step">
         <div class="api-step-num" data-i18n="int_s3_num">Step 03</div>
         <h3 data-i18n="int_s3_title">Go live & measure</h3>
         <p data-i18n="int_s3_body">Eligible active trips on supported app versions are now covered. Safety events flow into your operator dashboard, and you own the record for reporting.</p>
-        <div class="code-pill">✓ Coverage across eligible trips</div>
       </div>
     </div>
 
