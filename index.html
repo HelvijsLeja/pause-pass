@@ -7,19 +7,70 @@
 <!-- Cloudflare email obfuscation disabled -->
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Pause & Pass — Safety API for Mobility Operators</title>
-<meta name="description" content="Pause &amp; Pass is an invisible, white-label safety plugin for mobility apps — it automatically pauses riders' audio near dangerous crossings. No new UI, no rider notification."/>
+<title>Pause & Pass — Safety Plugin for Mobility Operators</title>
+<meta name="description" content="Pause &amp; Pass is a white-label rider-attention safety plugin for shared e-scooter, e-bike and e-moped apps. When an active trip nears a mapped high-risk crossing it triggers a configurable audio-safety intervention and logs an auditable event. No vehicle hardware, no separate app; one integration for iOS and Android."/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="Pause &amp; Pass (DAGAR Ltd)"/>
 <link rel="canonical" href="https://pauseandpass.com/"/>
 <!-- Open Graph / social sharing -->
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Pause &amp; Pass"/>
 <meta property="og:title" content="Pause &amp; Pass — Safety plugin for mobility operators"/>
-<meta property="og:description" content="An invisible, white-label plugin that automatically pauses riders' audio near dangerous crossings. Your app, your brand, riders stay safe."/>
+<meta property="og:description" content="A white-label safety plugin that reduces audio distraction at mapped high-risk crossings — configurable interventions, auditable events, no vehicle hardware. One integration for iOS and Android."/>
 <meta property="og:url" content="https://pauseandpass.com/"/>
 <meta property="og:locale" content="en_US"/>
+<meta property="og:locale:alternate" content="lv_LV"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Pause &amp; Pass — Safety plugin for mobility operators"/>
-<meta name="twitter:description" content="An invisible, white-label plugin that automatically pauses riders' audio near dangerous crossings. Your app, your brand, riders stay safe."/>
+<meta name="twitter:description" content="A white-label safety plugin that reduces audio distraction at mapped high-risk crossings — configurable interventions, auditable events, no vehicle hardware."/>
+<!-- Structured data for search engines and AI answer engines (SEO / GEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://pauseandpass.com/#organization",
+      "name": "Pause & Pass",
+      "url": "https://pauseandpass.com/",
+      "email": "hello@pauseandpass.com",
+      "description": "White-label rider-attention safety plugin for shared micromobility operators (e-scooters, e-bikes, e-mopeds).",
+      "areaServed": ["Latvia", "Estonia", "Lithuania"],
+      "parentOrganization": { "@type": "Organization", "name": "DAGAR Ltd" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://pauseandpass.com/#website",
+      "url": "https://pauseandpass.com/",
+      "name": "Pause & Pass",
+      "inLanguage": ["en", "lv"],
+      "publisher": { "@id": "https://pauseandpass.com/#organization" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://pauseandpass.com/#product",
+      "name": "Pause & Pass",
+      "applicationCategory": "SafetyApplication",
+      "operatingSystem": "iOS, Android",
+      "description": "A white-label safety plugin (SDK) for shared e-scooter, e-bike and e-moped apps. When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention (pause, duck, chime or in-app prompt) and logs an auditable event. No vehicle hardware, no separate rider app; one integration for iOS and Android.",
+      "publisher": { "@id": "https://pauseandpass.com/#organization" },
+      "offers": { "@type": "Offer", "priceCurrency": "EUR", "price": "0.005", "description": "Per active ride" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://pauseandpass.com/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Does audio always pause and resume exactly?", "acceptedAnswer": { "@type": "Answer", "text": "No. Audio behaviour depends on the OS, device and player. We request a configured intervention (pause, duck, chime or prompt) within platform capabilities and validate behaviour across your supported matrix." } },
+        { "@type": "Question", "name": "What is the battery impact?", "acceptedAnswer": { "@type": "Answer", "text": "The plugin runs during active trips using on-device zone logic and standard location APIs, tuned to minimise battery use. We share measurements during the pilot." } },
+        { "@type": "Question", "name": "How accurate is zone detection?", "acceptedAnswer": { "@type": "Answer", "text": "Zone entry uses configurable buffers and location-confidence rules to reduce false triggers near boundaries. Accuracy depends on device GPS and conditions." } },
+        { "@type": "Question", "name": "Do riders need to be told?", "acceptedAnswer": { "@type": "Answer", "text": "You control disclosure. Location processing and automated interventions should be described in your privacy notice and rider terms; we supply recommended language." } },
+        { "@type": "Question", "name": "What data is retained, and for how long?", "acceptedAnswer": { "@type": "Answer", "text": "Only minimised events: zone ID, timestamp, app/SDK version and outcome. Retention and controller/processor roles are agreed per operator." } },
+        { "@type": "Question", "name": "Who owns and maintains the zones?", "acceptedAnswer": { "@type": "Answer", "text": "We maintain a mapped zone database for your markets and support custom zones; you decide which zones are active." } }
+      ]
+    }
+  ]
+}
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

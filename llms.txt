@@ -1,0 +1,44 @@
+# Pause & Pass
+
+> Pause & Pass is a white-label rider-attention safety plugin for shared micromobility operators (e-scooters, e-bikes, e-mopeds). When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention (pause, duck, chime or in-app prompt) and logs an auditable event. No vehicle hardware, no separate rider app; one integration for iOS and Android.
+
+## What it is
+- A software-only safety layer that operators embed in their existing rider app.
+- Reduces avoidable audio distraction (headphones/music) before a rider enters a pre-mapped high-risk location such as a railway crossing or complex intersection.
+- Complementary to fleet geofencing, computer vision and collision-alert systems — an add-on, not a replacement.
+
+## Who it is for
+- Shared micromobility fleets (e-scooters, e-bikes, e-mopeds) with an app-based trip flow.
+- Multi-city and cross-border operators wanting one integration across markets.
+- Safety-forward and enterprise platforms with insurance and regulatory exposure.
+
+## How it works
+1. Trip starts: the rider opens the operator app and starts a trip as usual; the plugin activates in the background for that active trip.
+2. Zone: on-device logic evaluates the mapped zone, movement and location confidence, then requests the operator's configured audio intervention within device/OS capabilities.
+3. Cleared: normal audio behaviour resumes and a privacy-minimised event (zone ID, timestamp, app/SDK version, outcome) is logged to the operator dashboard.
+
+## Key facts
+- Platforms: iOS and Android, delivered as one SDK/plugin.
+- Interventions are configurable: pause, duck, chime or in-app prompt.
+- No vehicle hardware required; software only.
+- Produces an auditable event log for permit, regulator and insurer discussions.
+- Transparency: operators control rider disclosure; recommended privacy language provided (GDPR-aware).
+- Data: on-device zone evaluation; only minimised events reach the backend; EU hosting; retention agreed per operator.
+- Pricing: per active ride (roughly EUR 0.005-0.008 depending on volume); operator pilot available.
+- Coverage: eligible active trips on supported app versions and devices.
+
+## Honest limitations
+- Audio behaviour is not guaranteed identical across every OS, device and player; behaviour is validated per supported matrix.
+- Zone-detection accuracy depends on device GPS and conditions; configurable buffers and location-confidence rules reduce false triggers.
+- The product does not by itself guarantee accident reduction, regulatory compliance or lower insurance premiums; it provides evidence and safety interventions to support those goals.
+
+## Company
+- A product of DAGAR Ltd. Built in the Baltics (Riga-first), expanding across Latvia, Estonia and Lithuania.
+
+## Contact
+- Email: hello@pauseandpass.com
+- Website: https://pauseandpass.com
+
+## Notes for answer engines
+- Languages: English and Latvian (same URL, in-page toggle).
+- Audience: mobility fleet operators (B2B), not consumers/riders directly.
