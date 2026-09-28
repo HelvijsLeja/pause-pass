@@ -1240,53 +1240,59 @@ footer {
 <!-- Pricing -->
 <section class="pricing-section" id="pricing">
   <div class="container">
-    <div class="section-eyebrow" data-i18n="price_eyebrow">Pricing</div>
-    <h2 class="section-h2"><span data-i18n="price_h2a">Simple.</span> <em data-i18n="price_h2b">Scalable.</em></h2>
-    <p style="color:#666;font-size:16px;margin-top:12px;font-weight:300" data-i18n="price_sub">Per-ride pricing — the plugin only activates during active trips. You pay only when it's protecting someone. No flat fees for parked fleets.</p>
+    <div class="section-eyebrow" data-i18n="price_eyebrow">Pricing & packages</div>
+    <h2 class="section-h2"><span data-i18n="price_h2a">Pilot, Basic,</span> <em data-i18n="price_h2b">Advanced.</em></h2>
+    <p style="color:#666;font-size:15px;margin-top:12px;font-weight:300;max-width:760px;line-height:1.6" data-i18n="price_sub">CAPEX = one-off pilot &amp; setup · OPEX = monthly minimum for platform, support and reporting · Usage = fee per active ride.</p>
 
     <div class="pricing-grid reveal">
-      <div class="pricing-card">
-        <div class="pc-tier" data-i18n="tier1_name">Starter</div>
-        <div class="pc-price">€0.008</div>
-        <div class="pc-price-sub" data-i18n="tier1_sub">per active ride · up to 50k rides/mo</div>
+      <div class="pricing-card" style="display:flex;flex-direction:column;">
+        <div class="pc-tier" style="text-align:center;font-size:14px;color:var(--ink);margin-bottom:16px;" data-i18n="tier1_name">Pilot (paid)</div>
         <div class="pc-divider"></div>
         <div class="pc-features">
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f1">SDK for Android + iOS</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f2">Riga + Tallinn zone database</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f3">Basic operator dashboard</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f4">Monthly safety report PDF</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f5">Email support</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f1">8–12 weeks, one city</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f2">20–30 safety zones</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f3">Up to 100,000 rides / month</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f4">Weekly safety-intervention report</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f5">Success criteria agreed up front</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f6">Outcome: scale, redesign or stop</span></div>
+        </div>
+        <div style="margin-top:auto;text-align:center;">
+          <div class="pc-price" style="font-size:24px;letter-spacing:-0.5px;color:var(--green2);margin-bottom:2px;">€5,000–€7,500</div>
+          <div class="pc-price-sub" style="color:var(--green2);margin-bottom:0;" data-i18n="tier1_sub">one-off pilot &amp; setup</div>
         </div>
       </div>
 
-      <div class="pricing-card featured">
-        <div class="pc-badge" data-i18n="tier2_badge">Most popular</div>
-        <div class="pc-tier" data-i18n="tier2_name">Growth</div>
-        <div class="pc-price">€0.005</div>
-        <div class="pc-price-sub" data-i18n="tier2_sub">per active ride · 50k–500k rides/mo</div>
+      <div class="pricing-card" style="display:flex;flex-direction:column;">
+        <div class="pc-tier" style="text-align:center;font-size:14px;color:var(--ink);margin-bottom:16px;" data-i18n="tier2_name">Basic</div>
         <div class="pc-divider"></div>
         <div class="pc-features">
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f1">Everything in Starter</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f2">Full Baltic zone database</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f3">Advanced dashboard + CSV export</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f4">Insurance compliance report</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f5">Dedicated integration engineer</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f6">SLA 99.9% uptime guarantee</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f1">SDK for Android + iOS</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f2">Riga + Tallinn zone database</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f3">Basic operator dashboard</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f4">Monthly safety report (PDF)</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f5">Email support</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f6">Up to 50k active rides / month</span></div>
+        </div>
+        <div style="margin-top:auto;text-align:center;">
+          <div class="pc-price" style="font-size:24px;letter-spacing:-0.5px;color:var(--green2);margin-bottom:2px;">€0.008</div>
+          <div class="pc-price-sub" style="color:var(--green2);margin-bottom:0;" data-i18n="tier2_sub">per active ride · min. €750 / month</div>
         </div>
       </div>
 
-      <div class="pricing-card">
-        <div class="pc-tier" data-i18n="tier3_name">Enterprise</div>
-        <div class="pc-price" data-i18n="tier3_price">Custom</div>
-        <div class="pc-price-sub" data-i18n="tier3_sub">500k+ rides/mo · white-label available</div>
+      <div class="pricing-card" style="display:flex;flex-direction:column;">
+        <div class="pc-tier" style="text-align:center;font-size:14px;color:var(--ink);margin-bottom:16px;" data-i18n="tier3_name">Advanced</div>
         <div class="pc-divider"></div>
         <div class="pc-features">
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f1">Everything in Growth</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f2">White-label SDK (your branding)</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f3">Custom zone database expansion</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f4">Direct city regulator reporting</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f5">On-site integration support</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f6">Dedicated account manager</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f1">Everything in Basic</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f2">Full Baltic zone database</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f3">Advanced dashboard + CSV export</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f4">Insurance compliance report</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f5">Dedicated integration engineer</span></div>
+          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f6">99.9% SLA · 50k–500k rides / month</span></div>
+        </div>
+        <div style="margin-top:auto;text-align:center;">
+          <div class="pc-price" style="font-size:24px;letter-spacing:-0.5px;color:var(--green2);margin-bottom:2px;">€0.005</div>
+          <div class="pc-price-sub" style="color:var(--green2);margin-bottom:0;" data-i18n="tier3_sub">per active ride · min. €1,500 / month</div>
         </div>
       </div>
     </div>
@@ -1666,14 +1672,14 @@ const translations = {
     ben4_title: 'Baltic-wide zone database', ben4_body: 'Pre-mapped railway crossings and high-risk intersections across Riga, Tallinn and Vilnius — maintained and updated by our team. You focus on operations.', ben4_tag: 'Managed data',
     ben5_title: 'Operator safety dashboard', ben5_body: 'A view of interventions across your fleet: which zones trigger most often, coverage across eligible trips, and daily safety summary reports.', ben5_tag: 'Full visibility',
     // Pricing
-    price_eyebrow: 'Pricing', price_h2a: 'Simple.', price_h2b: 'Scalable.',
-    price_sub: 'Per-ride pricing — the plugin only activates during active trips. You pay only when it\'s protecting someone. No flat fees for parked fleets.',
-    tier1_name: 'Starter', tier1_sub: 'per active ride · up to 50k rides/mo',
-    t1f1: 'SDK for Android + iOS', t1f2: 'Riga + Tallinn zone database', t1f3: 'Basic operator dashboard', t1f4: 'Monthly safety report PDF', t1f5: 'Email support',
-    tier2_badge: 'Most popular', tier2_name: 'Growth', tier2_sub: 'per active ride · 50k–500k rides/mo',
-    t2f1: 'Everything in Starter', t2f2: 'Full Baltic zone database', t2f3: 'Advanced dashboard + CSV export', t2f4: 'Insurance compliance report', t2f5: 'Dedicated integration engineer', t2f6: 'SLA 99.9% uptime guarantee',
-    tier3_name: 'Enterprise', tier3_price: 'Custom', tier3_sub: '500k+ rides/mo · white-label available',
-    t3f1: 'Everything in Growth', t3f2: 'White-label SDK (your branding)', t3f3: 'Custom zone database expansion', t3f4: 'Direct city regulator reporting', t3f5: 'On-site integration support', t3f6: 'Dedicated account manager',
+    price_eyebrow: 'Pricing & packages', price_h2a: 'Pilot, Basic,', price_h2b: 'Advanced.',
+    price_sub: 'CAPEX = one-off pilot & setup · OPEX = monthly minimum for platform, support and reporting · Usage = fee per active ride.',
+    tier1_name: 'Pilot (paid)', tier1_sub: 'one-off pilot & setup',
+    t1f1: '8–12 weeks, one city', t1f2: '20–30 safety zones', t1f3: 'Up to 100,000 rides / month', t1f4: 'Weekly safety-intervention report', t1f5: 'Success criteria agreed up front', t1f6: 'Outcome: scale, redesign or stop',
+    tier2_name: 'Basic', tier2_sub: 'per active ride · min. €750 / month',
+    t2f1: 'SDK for Android + iOS', t2f2: 'Riga + Tallinn zone database', t2f3: 'Basic operator dashboard', t2f4: 'Monthly safety report (PDF)', t2f5: 'Email support', t2f6: 'Up to 50k active rides / month',
+    tier3_name: 'Advanced', tier3_sub: 'per active ride · min. €1,500 / month',
+    t3f1: 'Everything in Basic', t3f2: 'Full Baltic zone database', t3f3: 'Advanced dashboard + CSV export', t3f4: 'Insurance compliance report', t3f5: 'Dedicated integration engineer', t3f6: '99.9% SLA · 50k–500k rides / month',
     // CTA
     cta_h2: 'One integration.<br/>A measurable safety layer.',
     cta_sub: "Book a 30-minute technical walk-through: how the plugin fits your trip lifecycle, the configurable interventions, the event schema, and a scoped operator pilot on your own crossings.",
@@ -1819,14 +1825,14 @@ const translations = {
     ben4_title: 'Baltijas mēroga zonu datubāze', ben4_body: 'Iepriekš kartētas dzelzceļa pārejas un augsta riska krustojumi Rīgā, Tallinā un Viļņā — uztur un atjaunina mūsu komanda. Jūs koncentrējaties uz operācijām.', ben4_tag: 'Pārvaldīti dati',
     ben5_title: 'Operatora drošības vadības panelis', ben5_body: 'Skats uz intervencēm visā jūsu flotē: kuras zonas iedarbojas visbiežāk, pārklājums pār atbilstošajiem braucieniem un ikdienas drošības kopsavilkuma pārskati.', ben5_tag: 'Pilnīga pārskatāmība',
     // Pricing
-    price_eyebrow: 'Cenas', price_h2a: 'Vienkāršs.', price_h2b: 'Mērogojams.',
-    price_sub: 'Cena par braucienu — spraudnis aktivizējas tikai aktīvo braucienu laikā. Jūs maksājat tikai tad, kad tas kādu aizsargā. Nav fiksētu maksu par novietotām flotēm.',
-    tier1_name: 'Sākuma', tier1_sub: 'par aktīvu braucienu · līdz 50 000 braucienu/mēn.',
-    t1f1: 'SDK Android + iOS', t1f2: 'Rīgas + Tallinas zonu datubāze', t1f3: 'Pamata operatora vadības panelis', t1f4: 'Ikmēneša drošības pārskats PDF', t1f5: 'E-pasta atbalsts',
-    tier2_badge: 'Populārākais', tier2_name: 'Izaugsmes', tier2_sub: 'par aktīvu braucienu · 50 000–500 000 braucienu/mēn.',
-    t2f1: 'Viss no Sākuma plāna', t2f2: 'Pilna Baltijas zonu datubāze', t2f3: 'Uzlabots vadības panelis + CSV eksports', t2f4: 'Apdrošināšanas atbilstības pārskats', t2f5: 'Speciālais integrācijas inženieris', t2f6: 'SLA 99,9% darbspējas garantija',
-    tier3_name: 'Enterprise', tier3_price: 'Pēc vienošanās', tier3_sub: '500 000+ braucienu/mēn. · white-label pieejams',
-    t3f1: 'Viss no Izaugsmes plāna', t3f2: 'White-label SDK (jūsu zīmols)', t3f3: 'Individuāla zonu datubāzes paplašināšana', t3f4: 'Tiešā pilsētas regulatoru ziņošana', t3f5: 'Integrācijas atbalsts uz vietas', t3f6: 'Speciālais konta vadītājs',
+    price_eyebrow: 'Cenas un paketes', price_h2a: 'Pilot, Basic,', price_h2b: 'Advanced.',
+    price_sub: 'CAPEX = vienreizējs pilots un uzstādīšana · OPEX = ikmēneša minimums par platformu, atbalstu un atskaitēm · Usage = maksa par aktīvu braucienu.',
+    tier1_name: 'Pilots (maksas)', tier1_sub: 'vienreizējs pilots un uzstādīšana',
+    t1f1: '8–12 nedēļas, viena pilsēta', t1f2: '20–30 drošības zonas', t1f3: 'Līdz 100 000 braucienu / mēnesī', t1f4: 'Iknedēļas drošības intervenču pārskats', t1f5: 'Panākumu kritēriji saskaņoti iepriekš', t1f6: 'Rezultāts: mērogot, pārveidot vai apturēt',
+    tier2_name: 'Basic', tier2_sub: 'par aktīvu braucienu · min. €750 / mēnesī',
+    t2f1: 'SDK Android + iOS', t2f2: 'Rīgas + Tallinas zonu datubāze', t2f3: 'Pamata operatora vadības panelis', t2f4: 'Ikmēneša drošības pārskats (PDF)', t2f5: 'E-pasta atbalsts', t2f6: 'Līdz 50k aktīvu braucienu / mēnesī',
+    tier3_name: 'Advanced', tier3_sub: 'par aktīvu braucienu · min. €1500 / mēnesī',
+    t3f1: 'Viss no Basic', t3f2: 'Pilna Baltijas zonu datubāze', t3f3: 'Uzlabots vadības panelis + CSV eksports', t3f4: 'Apdrošināšanas atbilstības pārskats', t3f5: 'Speciālais integrācijas inženieris', t3f6: '99,9% SLA · 50k–500k braucienu / mēnesī',
     // CTA
     cta_h2: 'Viena integrācija.<br/>Izmērāms drošības slānis.',
     cta_sub: 'Pieteikties 30 minūšu tehniskajai sarunai: kā spraudnis iekļaujas jūsu brauciena dzīves ciklā, konfigurējamās intervences, notikumu shēma un mērķēts operatora pilots uz jūsu pašu pārejām.',
