@@ -1,6 +1,6 @@
 # Pause & Pass
 
-> Pause & Pass is a white-label rider-attention safety plugin for shared micromobility operators (e-scooters, self-propelled bicycles, e-bikes, e-mopeds). When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention (pause, duck, chime or in-app prompt) and logs an auditable event. No vehicle hardware, no separate rider app; one integration for iOS and Android.
+> Pause & Pass is a white-label rider-attention safety plugin for shared micromobility operators (e-scooters, self-propelled bicycles, e-bikes, e-mopeds). When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention (pause, duck, chime or in-app prompt) and logs an auditable event. No vehicle hardware, no separate rider app; runs inside the operator's existing rider app.
 
 ## What it is
 - A software-only safety layer that operators embed in their existing rider app.
@@ -9,7 +9,7 @@
 
 ## Who it is for
 - Shared micromobility fleets (e-scooters, self-propelled bicycles, e-bikes, e-mopeds) with an app-based trip flow.
-- Multi-city and cross-border operators wanting one integration across markets.
+- Multi-city and cross-border operators wanting one safety layer across markets.
 - Safety-forward and enterprise platforms with insurance and regulatory exposure.
 
 ## How it works
@@ -18,13 +18,13 @@
 3. Cleared: normal audio behaviour resumes and a privacy-minimised event (zone ID, timestamp, app/SDK version, outcome) is logged to the operator dashboard.
 
 ## Key facts
-- Platforms: iOS and Android, delivered as one SDK/plugin.
+- Platforms: Android first, built with the operator during the pilot; iOS scope agreed per pilot.
 - Interventions are configurable: pause, duck, chime or in-app prompt.
 - No vehicle hardware required; software only.
 - Produces an auditable event log for permit, regulator and insurer discussions.
 - Transparency: operators control rider disclosure; recommended privacy language provided (GDPR-aware).
-- Data: on-device zone evaluation; only minimised events reach the backend; EU hosting; retention agreed per operator.
-- Pricing: per active ride (roughly EUR 0.005-0.008 depending on volume); operator pilot available.
+- Data: on-device zone evaluation; only minimised events reach the backend; hosting region stated in the DPA; retention agreed per operator.
+- Pricing: paid pilot (EUR 5,000-7,500, one city, 8-12 weeks), then per active ride (roughly EUR 0.005-0.008 depending on volume, with a monthly minimum).
 - Coverage: eligible active trips on supported app versions and devices.
 
 ## Market context (Latvia)
