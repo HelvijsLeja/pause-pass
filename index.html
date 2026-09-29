@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Pause & Pass — Safety Plugin for Mobility Operators</title>
-<meta name="description" content="Pause &amp; Pass is a white-label rider-attention safety plugin for shared e-scooter, e-bike and e-moped apps. When an active trip nears a mapped high-risk crossing it triggers a configurable audio-safety intervention and logs an auditable event. No vehicle hardware, no separate app; one integration for iOS and Android."/>
+<meta name="description" content="Pause &amp; Pass helps micromobility operators reduce audio distraction in mapped high-risk zones, measure safety interventions and create an auditable risk-management record. White-label plugin for iOS and Android apps."/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Pause &amp; Pass (DAGAR Ltd)"/>
 <link rel="canonical" href="https://pauseandpass.com/"/>
@@ -16,13 +16,13 @@
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Pause &amp; Pass"/>
 <meta property="og:title" content="Pause &amp; Pass — Safety plugin for mobility operators"/>
-<meta property="og:description" content="A white-label safety plugin that reduces audio distraction at mapped high-risk crossings — configurable interventions, auditable events, no vehicle hardware. One integration for iOS and Android."/>
+<meta property="og:description" content="Pause &amp; Pass helps micromobility operators reduce audio distraction in mapped high-risk zones, measure safety interventions and create an auditable risk-management record. White-label plugin for iOS and Android apps."/>
 <meta property="og:url" content="https://pauseandpass.com/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:locale:alternate" content="lv_LV"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Pause &amp; Pass — Safety plugin for mobility operators"/>
-<meta name="twitter:description" content="A white-label safety plugin that reduces audio distraction at mapped high-risk crossings — configurable interventions, auditable events, no vehicle hardware."/>
+<meta name="twitter:description" content="Pause &amp; Pass helps micromobility operators reduce audio distraction in mapped high-risk zones, measure safety interventions and create an auditable risk-management record. White-label plugin for iOS and Android apps."/>
 <!-- Structured data for search engines and AI answer engines (SEO / GEO) -->
 <script type="application/ld+json">
 {
@@ -35,16 +35,28 @@
       "url": "https://pauseandpass.com/",
       "email": "hello@pauseandpass.com",
       "description": "White-label rider-attention safety plugin for shared micromobility operators (e-scooters, e-bikes, e-mopeds).",
-      "areaServed": ["Latvia", "Estonia", "Lithuania"],
-      "parentOrganization": { "@type": "Organization", "name": "DAGAR Ltd" }
+      "areaServed": [
+        "Latvia",
+        "Estonia",
+        "Lithuania"
+      ],
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "DAGAR Ltd"
+      }
     },
     {
       "@type": "WebSite",
       "@id": "https://pauseandpass.com/#website",
       "url": "https://pauseandpass.com/",
       "name": "Pause & Pass",
-      "inLanguage": ["en", "lv"],
-      "publisher": { "@id": "https://pauseandpass.com/#organization" }
+      "inLanguage": [
+        "en",
+        "lv"
+      ],
+      "publisher": {
+        "@id": "https://pauseandpass.com/#organization"
+      }
     },
     {
       "@type": "SoftwareApplication",
@@ -52,20 +64,77 @@
       "name": "Pause & Pass",
       "applicationCategory": "SafetyApplication",
       "operatingSystem": "iOS, Android",
-      "description": "A white-label safety plugin (SDK) for shared e-scooter, e-bike and e-moped apps. When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention (pause, duck, chime or in-app prompt) and logs an auditable event. No vehicle hardware, no separate rider app; one integration for iOS and Android.",
-      "publisher": { "@id": "https://pauseandpass.com/#organization" },
-      "offers": { "@type": "Offer", "priceCurrency": "EUR", "price": "0.005", "description": "Per active ride" }
+      "description": "A white-label safety plugin for micromobility apps (e-scooters, self-propelled bicycles, e-mopeds). It reduces audio distraction in mapped high-risk zones, measures safety interventions and creates an auditable risk-management record. Not an insurance product.",
+      "publisher": {
+        "@id": "https://pauseandpass.com/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "0.005",
+        "description": "Per active ride"
+      }
     },
     {
       "@type": "FAQPage",
       "@id": "https://pauseandpass.com/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Does audio always pause and resume exactly?", "acceptedAnswer": { "@type": "Answer", "text": "No. Audio behaviour depends on the OS, device and player. We request a configured intervention (pause, duck, chime or prompt) within platform capabilities and validate behaviour across your supported matrix." } },
-        { "@type": "Question", "name": "What is the battery impact?", "acceptedAnswer": { "@type": "Answer", "text": "The plugin runs during active trips using on-device zone logic and standard location APIs, tuned to minimise battery use. We share measurements during the pilot." } },
-        { "@type": "Question", "name": "How accurate is zone detection?", "acceptedAnswer": { "@type": "Answer", "text": "Zone entry uses configurable buffers and location-confidence rules to reduce false triggers near boundaries. Accuracy depends on device GPS and conditions." } },
-        { "@type": "Question", "name": "Do riders need to be told?", "acceptedAnswer": { "@type": "Answer", "text": "You control disclosure. Location processing and automated interventions should be described in your privacy notice and rider terms; we supply recommended language." } },
-        { "@type": "Question", "name": "What data is retained, and for how long?", "acceptedAnswer": { "@type": "Answer", "text": "Only minimised events: zone ID, timestamp, app/SDK version and outcome. Retention and controller/processor roles are agreed per operator." } },
-        { "@type": "Question", "name": "Who owns and maintains the zones?", "acceptedAnswer": { "@type": "Answer", "text": "We maintain a mapped zone database for your markets and support custom zones; you decide which zones are active." } }
+        {
+          "@type": "Question",
+          "name": "Does audio always pause and resume exactly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Audio behaviour depends on the OS, device and player. We request a configured intervention (pause, duck, chime or prompt) within platform capabilities and validate behaviour across your supported matrix."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the battery impact?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The plugin runs during active trips using on-device zone logic and standard location APIs, tuned to minimise battery use. We share measurements during the pilot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is zone detection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zone entry uses configurable buffers and location-confidence rules to reduce false triggers near boundaries. Accuracy depends on device GPS and conditions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do riders need to be told?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You control disclosure. Location processing and automated interventions should be described in your privacy notice and rider terms; we supply recommended language."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What data is retained, and for how long?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only minimised events: zone ID, timestamp, app/SDK version and outcome. Retention and controller/processor roles are agreed per operator."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who owns and maintains the zones?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We maintain a mapped zone database for your markets and support custom zones; you decide which zones are active."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will it lower our insurance premiums?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pause & Pass is not an insurance product and does not guarantee lower premiums. It creates preventive controls and measurable safety evidence that may support future claims and insurance-risk discussions."
+          }
+        }
       ]
     }
   ]
@@ -691,6 +760,8 @@ footer {
   div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
 }
 
+@media (min-width: 901px) { .benefits-grid.four { grid-template-columns: repeat(4, 1fr); } }
+
 @media (max-width: 900px) {
   .hero-inner, .problem-grid, .integration-grid { grid-template-columns: 1fr; }
   .hero::before { display: none; }
@@ -737,8 +808,8 @@ footer {
         <div class="hero-eyebrow" data-i18n="hero_eyebrow">
           🔌 White-label rider-attention safety plugin
         </div>
-        <h1><span data-i18n="hero_h1a">Reduce audio</span><br/><span data-i18n="hero_h1b">distraction</span><br/><span class="accent" data-i18n="hero_h1c">where it matters most.</span></h1>
-        <p class="hero-sub" data-i18n="hero_sub">Pause &amp; Pass is a <strong>white-label safety plugin</strong> for shared e-scooter, e-bike and e-moped apps. When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention and creates an auditable event record.<br/><strong>No vehicle hardware. No separate app. One integration for iOS and Android.</strong></p>
+        <h1><span data-i18n="hero_h1a">Reduce distraction.</span><br/><span data-i18n="hero_h1b">Measure risk.</span><br/><span class="accent" data-i18n="hero_h1c">Strengthen safety operations.</span></h1>
+        <p class="hero-sub" data-i18n="hero_sub">Pause &amp; Pass helps micromobility operators <strong>reduce audio distraction in mapped high-risk zones</strong>, measure safety interventions and create an auditable risk-management record.<br/><strong>No vehicle hardware. No separate app. One integration for iOS and Android.</strong></strong> for shared e-scooter, e-bike and e-moped apps. When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention and creates an auditable event record.<br/><strong>No vehicle hardware. No separate app. One integration for iOS and Android.</strong></p>
         <div class="hero-actions">
           <a href="#contact" class="btn-hero" data-i18n="hero_cta1">Book an operator pilot <span>→</span></a>
           <a href="#plugin" class="btn-outline" style="font-size:14px;padding:12px 20px;border-radius:10px;text-decoration:none;color:var(--ink)" data-i18n="hero_cta2">View the integration</a>
@@ -842,7 +913,7 @@ footer {
         <div class="problem-big-label" style="font-size:19px;color:var(--ink);font-weight:600;line-height:1.5;" data-i18n="prob_stat_label">Riders wearing headphones lose a key cue — sound — right where they most need to notice a train, tram or turning car. Pause &amp; Pass reduces that audio distraction at the crossings you map.</div>
         <div style="margin-top:32px;padding:24px;background:var(--grey1);border-radius:14px;border-left:3px solid var(--green)">
           <div style="font-size:13px;color:#555;line-height:1.7">
-            <strong style="color:var(--black)" data-i18n="prob_reg_title">Cities and insurers are asking.</strong> <span data-i18n="prob_reg_body">Micro-mobility operators are increasingly expected to show active, documented safety measures when negotiating city permits and fleet insurance. A record of concrete interventions helps you answer that.</span>
+            <strong style="color:var(--black)" data-i18n="prob_reg_title">OCTA is now mandatory.</strong> <span data-i18n="prob_reg_body">In Latvia, OCTA insurance has been mandatory for e-scooters since 1 July 2025 and for self-propelled bicycles since 1 May 2026 (LTAB). Operators need a clear way to show how they manage rider risk.</span>
           </div>
         </div>
       </div>
@@ -1208,27 +1279,33 @@ footer {
 <!-- Benefits -->
 <section class="benefits-section" id="benefits">
   <div class="container">
-    <div class="section-eyebrow" data-i18n="ben_eyebrow">Why operators choose the plugin</div>
-    <h2 class="section-h2"><span data-i18n="ben_h2a">Not just safety.</span><br/><em data-i18n="ben_h2b">Business value.</em></h2>
+    <div class="section-eyebrow" data-i18n="ben_eyebrow">What operators get</div>
+    <h2 class="section-h2"><span data-i18n="ben_h2a">Prevent. Measure.</span><br/><em data-i18n="ben_h2b">Document. Manage risk.</em></h2>
 
-    <div class="benefits-grid reveal">
+    <div class="benefits-grid four reveal">
       <div class="benefit-card">
-        <div class="bc-icon">🛡️</div>
-        <h3 data-i18n="ben1_title">Auditable safety record</h3>
-        <p data-i18n="ben1_body">A full log of every intervention — timestamped, zone-tagged and exportable. Use it to support permit, regulator and insurer discussions.</p>
-        <span class="benefit-tag" data-i18n="ben1_tag">Documentation</span>
-      </div>
-      <div class="benefit-card">
-        <div class="bc-icon">🗺️</div>
-        <h3 data-i18n="ben4_title">Baltic-wide zone database</h3>
-        <p data-i18n="ben4_body">Pre-mapped railway crossings and high-risk intersections across Riga, Tallinn and Vilnius — maintained and updated by our team. You focus on operations.</p>
-        <span class="benefit-tag" data-i18n="ben4_tag">Managed data</span>
+        <div class="bc-icon">🛑</div>
+        <h3 data-i18n="pv1_t">Prevent</h3>
+        <p data-i18n="pv1_b">Reduces audio distraction in mapped high-risk zones — railway crossings, complex junctions and city-defined hazard areas.</p>
+        <span class="benefit-tag" data-i18n="pv1_tag">Audio distraction</span>
       </div>
       <div class="benefit-card">
         <div class="bc-icon">📊</div>
-        <h3 data-i18n="ben5_title">Operator safety dashboard</h3>
-        <p data-i18n="ben5_body">A view of interventions across your fleet: which zones trigger most often, coverage across eligible trips, and daily safety summary reports.</p>
-        <span class="benefit-tag" data-i18n="ben5_tag">Full visibility</span>
+        <h3 data-i18n="pv2_t">Measure</h3>
+        <p data-i18n="pv2_b">Tracks eligible trips, zone entries, interventions and coverage, so you see what actually happened on the road.</p>
+        <span class="benefit-tag" data-i18n="pv2_tag">Coverage &amp; KPIs</span>
+      </div>
+      <div class="benefit-card">
+        <div class="bc-icon">🗂️</div>
+        <h3 data-i18n="pv3_t">Document</h3>
+        <p data-i18n="pv3_b">Builds an auditable history of safety events — timestamped, zone-tagged and exportable.</p>
+        <span class="benefit-tag" data-i18n="pv3_tag">Audit trail</span>
+      </div>
+      <div class="benefit-card">
+        <div class="bc-icon">🛡️</div>
+        <h3 data-i18n="pv4_t">Manage risk</h3>
+        <p data-i18n="pv4_b">Helps you manage fleet safety and prepare data for conversations with cities, regulators and insurers.</p>
+        <span class="benefit-tag" data-i18n="pv4_tag">City · regulator · insurer</span>
       </div>
     </div>
   </div>
@@ -1366,6 +1443,10 @@ footer {
         <summary style="font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;" data-i18n="faq_q6">Who owns and maintains the zones?</summary>
         <p style="margin-top:12px;font-size:14px;color:#666;line-height:1.7;" data-i18n="faq_a6">We maintain a mapped zone database for your markets and support custom zones; you decide which zones are active.</p>
       </details>
+      <details style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px 22px;">
+        <summary style="font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;" data-i18n="faq_q7">Will it lower our insurance premiums?</summary>
+        <p style="margin-top:12px;font-size:14px;color:#666;line-height:1.7;" data-i18n="faq_a7">Pause &amp; Pass is not an insurance product and does not guarantee lower premiums. It creates preventive controls and measurable safety evidence that may support future claims and insurance-risk discussions.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -1376,7 +1457,7 @@ footer {
   <div class="container">
     <div class="cta-box">
       <h2 data-i18n="cta_h2">One integration.<br/>A measurable safety layer.</h2>
-      <p data-i18n="cta_sub">Book a 30-minute technical walk-through: how the plugin fits your trip lifecycle, the configurable interventions, the event schema, and a scoped operator pilot on your own crossings.</p>
+      <p data-i18n="cta_sub">We help operators control risk, measure preventive safety actions and build data that can support future insurance-risk decisions. Book a 30-minute technical walk-through.</p>
 
       <form action="https://formspree.io/f/xaqvbzpa" method="POST" class="contact-form" onsubmit="handleContactSubmit(event)">
         <input class="contact-input" type="email" name="email" id="contactEmail" placeholder="jusu@uznemums.lv" required/>
@@ -1606,8 +1687,8 @@ const translations = {
     nav_cta: 'Get in touch',
     // Hero
     hero_eyebrow: '🔌 White-label rider-attention safety plugin',
-    hero_h1a: 'Reduce audio', hero_h1b: 'distraction', hero_h1c: 'where it matters most.',
-    hero_sub: 'Pause & Pass is a <strong>white-label safety plugin</strong> for shared e-scooter, e-bike and e-moped apps. When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention and creates an auditable event record.<br/><strong>No vehicle hardware. No separate app. One integration for iOS and Android.</strong>',
+    hero_h1a: 'Reduce distraction.', hero_h1b: 'Measure risk.', hero_h1c: 'Strengthen safety operations.',
+    hero_sub: 'Pause & Pass helps micromobility operators <strong>reduce audio distraction in mapped high-risk zones</strong>, measure safety interventions and create an auditable risk-management record.<br/><strong>No vehicle hardware. No separate app. One integration for iOS and Android.</strong>',
     hero_cta1: 'Book an operator pilot →', hero_cta2: 'View the integration',
     hero_note: 'Built for the Baltics · Riga-first · Expanding across Latvia, Estonia & Lithuania',
     trust1: 'White-label plugin', trust2: 'No separate rider app',
@@ -1621,8 +1702,8 @@ const translations = {
     prob_eyebrow: 'The operator problem',
     prob_h2a: 'You own the scooter.', prob_h2b: 'You share the', prob_h2c: 'risk.',
     prob_stat_label: 'Riders wearing headphones lose a key cue — sound — right where they most need to notice a train, tram or turning car. Pause & Pass reduces that audio distraction at the crossings you map.',
-    prob_reg_title: 'Cities and insurers are asking.',
-    prob_reg_body: 'Micro-mobility operators are increasingly expected to show active, documented safety measures when negotiating city permits and fleet insurance. A record of concrete interventions helps you answer that.',
+    prob_reg_title: 'OCTA is now mandatory.',
+    prob_reg_body: 'In Latvia, OCTA insurance has been mandatory for e-scooters since 1 July 2025 and for self-propelled bicycles since 1 May 2026 (LTAB). Operators need a clear way to show how they manage rider risk.',
     lc1_title: 'Regulatory & liability exposure', lc1_body: 'When incidents happen, operators are increasingly asked what active safety measures they had in place. A documented intervention record helps you answer that question.', lc1_tag: 'Ongoing',
     lc2_title: 'Insurance & risk pricing', lc2_body: 'Insurers increasingly weigh active safety technology when pricing micro-mobility fleet policies. A documented safety record supports those conversations.', lc2_tag: 'Financial',
     lc3_title: 'Brand & media exposure', lc3_body: 'High-profile crossing incidents attract press coverage that can affect operator perception and city relationships. Demonstrable safety measures help.', lc3_tag: 'Reputational',
@@ -1643,11 +1724,12 @@ const translations = {
     gdpr_title: 'Transparent by design — we help with the disclosures',
     gdpr_body: 'Location processing and automated safety interventions should be described in your privacy notice and rider terms. Pause & Pass supplies recommended privacy language, a minimised event schema and configurable intervention rules, so your legal team can set the right disclosure and consent flow for each market. GDPR requires clear information on processing — legal basis, recipients, retention and any automated processing — and we give you the building blocks to provide it.',
     // Benefits
-    ben_eyebrow: 'Why operators choose the plugin',
-    ben_h2a: 'Not just safety.', ben_h2b: 'Business value.',
-    ben1_title: 'Auditable safety record', ben1_body: 'A full log of every intervention — timestamped, zone-tagged and exportable. Use it to support permit, regulator and insurer discussions.', ben1_tag: 'Documentation',
-    ben4_title: 'Baltic-wide zone database', ben4_body: 'Pre-mapped railway crossings and high-risk intersections across Riga, Tallinn and Vilnius — maintained and updated by our team. You focus on operations.', ben4_tag: 'Managed data',
-    ben5_title: 'Operator safety dashboard', ben5_body: 'A view of interventions across your fleet: which zones trigger most often, coverage across eligible trips, and daily safety summary reports.', ben5_tag: 'Full visibility',
+    ben_eyebrow: 'What operators get',
+    ben_h2a: 'Prevent. Measure.', ben_h2b: 'Document. Manage risk.',
+    pv1_t: 'Prevent', pv1_b: 'Reduces audio distraction in mapped high-risk zones — railway crossings, complex junctions and city-defined hazard areas.', pv1_tag: 'Audio distraction',
+    pv2_t: 'Measure', pv2_b: 'Tracks eligible trips, zone entries, interventions and coverage, so you see what actually happened on the road.', pv2_tag: 'Coverage & KPIs',
+    pv3_t: 'Document', pv3_b: 'Builds an auditable history of safety events — timestamped, zone-tagged and exportable.', pv3_tag: 'Audit trail',
+    pv4_t: 'Manage risk', pv4_b: 'Helps you manage fleet safety and prepare data for conversations with cities, regulators and insurers.', pv4_tag: 'City · regulator · insurer',
     // Pricing
     price_eyebrow: 'Pricing & packages', price_h2a: 'Pilot, Basic,', price_h2b: 'Advanced.',
     price_sub: 'CAPEX = one-off pilot & setup · OPEX = monthly minimum for platform, support and reporting · Usage = fee per active ride.',
@@ -1659,7 +1741,7 @@ const translations = {
     t3f1: 'Everything in Basic', t3f2: 'Full Baltic zone database', t3f3: 'Advanced dashboard + CSV export', t3f4: 'Insurance compliance report', t3f5: 'Dedicated integration engineer', t3f6: '99.9% SLA · 50k–500k rides / month',
     // CTA
     cta_h2: 'One integration.<br/>A measurable safety layer.',
-    cta_sub: "Book a 30-minute technical walk-through: how the plugin fits your trip lifecycle, the configurable interventions, the event schema, and a scoped operator pilot on your own crossings.",
+    cta_sub: 'We help operators control risk, measure preventive safety actions and build data that can support future insurance-risk decisions. Book a 30-minute technical walk-through.',
     cta_btn: 'Request a pilot →',
     cta_success: "✅ Request received. We'll reach out within 1 business day.",
     cta_note: 'Or email us directly at <span style="color:rgba(255,255,255,0.6)">hello@pauseandpass.com</span>',
@@ -1743,6 +1825,7 @@ const translations = {
     faq_q4: 'Do riders need to be told?', faq_a4: 'You control disclosure. Location processing and automated interventions should be described in your privacy notice and rider terms; we supply recommended language.',
     faq_q5: 'What data is retained, and for how long?', faq_a5: 'Only minimised events — zone ID, timestamp, app/SDK version and outcome. Retention and controller / processor roles are agreed per operator.',
     faq_q6: 'Who owns and maintains the zones?', faq_a6: 'We maintain a mapped zone database for your markets and support custom zones; you decide which zones are active.',
+    faq_q7: 'Will it lower our insurance premiums?', faq_a7: 'Pause & Pass is not an insurance product and does not guarantee lower premiums. It creates preventive controls and measurable safety evidence that may support future claims and insurance-risk discussions.',
   },
 
   lv: {
@@ -1752,8 +1835,8 @@ const translations = {
     nav_cta: 'Sazināties',
     // Hero
     hero_eyebrow: '🔌 White-label braucēju uzmanības drošības spraudnis',
-    hero_h1a: 'Samazini audio', hero_h1b: 'traucēkli', hero_h1c: 'tur, kur tas ir svarīgākais.',
-    hero_sub: 'Pause & Pass ir <strong>white-label drošības spraudnis</strong> koplietošanas e-skrejriteņu, e-velosipēdu un e-mopēdu lietotnēm. Kad aktīvs brauciens tuvojas kartētai augsta riska pārejai, tas iedarbina konfigurējamu audio drošības intervenci un izveido auditējamu notikuma ierakstu.<br/><strong>Bez transportlīdzekļa aparatūras. Bez atsevišķas lietotnes. Viena integrācija iOS un Android.</strong>',
+    hero_h1a: 'Samazini distrakciju.', hero_h1b: 'Izmēri risku.', hero_h1c: 'Uzlabo drošības vadību.',
+    hero_sub: 'Pause & Pass palīdz mikromobilitātes operatoriem <strong>samazināt audio distrakciju kartētās augsta riska zonās</strong>, izmērīt drošības intervences un izveidot auditējamu riska vadības ierakstu.<br/><strong>Bez transportlīdzekļa aparatūras. Bez atsevišķas lietotnes. Viena integrācija iOS un Android.</strong>',
     hero_cta1: 'Pieteikt operatora pilotu →', hero_cta2: 'Skatīt integrāciju',
     hero_note: 'Veidots Baltijā · Rīga pirmā · Paplašinās visā Latvijā, Igaunijā un Lietuvā',
     trust1: 'White-label spraudnis', trust2: 'Bez atsevišķas lietotnes braucējam',
@@ -1767,8 +1850,8 @@ const translations = {
     prob_eyebrow: 'Operatora problēma',
     prob_h2a: 'Skūteris pieder jums.', prob_h2b: 'Risku jūs', prob_h2c: 'dalāt.',
     prob_stat_label: 'Braucēji ar austiņām zaudē būtisku norādi — skaņu — tieši tur, kur visvairāk vajag pamanīt vilcienu, tramvaju vai nogriežošu auto. Pause & Pass samazina šo audio traucēkli jūsu kartētajās pārejās.',
-    prob_reg_title: 'Pilsētas un apdrošinātāji jautā.',
-    prob_reg_body: 'No mikromobilitātes operatoriem arvien biežāk sagaida aktīvus, dokumentētus drošības pasākumus, risinot pilsētu atļaujas un flotes apdrošināšanu. Konkrētu intervenču ieraksts palīdz uz to atbildēt.',
+    prob_reg_title: 'OCTA tagad ir obligāta.',
+    prob_reg_body: 'Latvijā OCTA ir obligāta elektriskajiem skrejriteņiem kopš 2025. gada 1. jūlija un pašgājējiem velosipēdiem kopš 2026. gada 1. maija (LTAB). Operatoriem vajag skaidru veidu, kā parādīt, ka viņi vada braucēju risku.',
     lc1_title: 'Regulatīvā un atbildības iedarbība', lc1_body: 'Kad notiek incidenti, operatoriem arvien biežāk jautā, kādi aktīvi drošības pasākumi bija ieviesti. Dokumentēts intervenču ieraksts palīdz uz to atbildēt.', lc1_tag: 'Aktuāli',
     lc2_title: 'Apdrošināšana un riska cena', lc2_body: 'Apdrošinātāji arvien vairāk ņem vērā aktīvo drošības tehnoloģiju, nosakot mikromobilitātes flotu polišu cenas. Dokumentēts drošības ieraksts atbalsta šīs sarunas.', lc2_tag: 'Finansiāli',
     lc3_title: 'Zīmola un mediju iedarbība', lc3_body: 'Augsta profila incidenti pārejās piesaista preses uzmanību, kas var ietekmēt operatora reputāciju un attiecības ar pilsētu. Pierādāmi drošības pasākumi palīdz.', lc3_tag: 'Reputācija',
@@ -1789,11 +1872,12 @@ const translations = {
     gdpr_title: 'Caurspīdīgs pēc būtības — mēs palīdzam ar informēšanu',
     gdpr_body: 'Atrašanās vietas apstrāde un automātiskās drošības intervences jāapraksta jūsu privātuma paziņojumā un braucēju noteikumos. Pause & Pass nodrošina ieteicamo privātuma formulējumu, minimizētu notikumu shēmu un konfigurējamus intervences noteikumus, lai jūsu juridiskā komanda katram tirgum var iestatīt pareizo informēšanas un piekrišanas plūsmu. VDAR pieprasa skaidru informāciju par apstrādi — juridisko pamatu, saņēmējus, glabāšanu un jebkādu automatizētu apstrādi — un mēs sniedzam pamatelementus tās nodrošināšanai.',
     // Benefits
-    ben_eyebrow: 'Kāpēc operatori izvēlas spraudni',
-    ben_h2a: 'Ne tikai drošība.', ben_h2b: 'Biznesa vērtība.',
-    ben1_title: 'Auditējams drošības ieraksts', ben1_body: 'Pilns katras intervences žurnāls — ar laika zīmogu, zonas atzīmi, eksportējams. Izmantojiet to atļauju, regulatoru un apdrošinātāju sarunās.', ben1_tag: 'Dokumentācija',
-    ben4_title: 'Baltijas mēroga zonu datubāze', ben4_body: 'Iepriekš kartētas dzelzceļa pārejas un augsta riska krustojumi Rīgā, Tallinā un Viļņā — uztur un atjaunina mūsu komanda. Jūs koncentrējaties uz operācijām.', ben4_tag: 'Pārvaldīti dati',
-    ben5_title: 'Operatora drošības vadības panelis', ben5_body: 'Skats uz intervencēm visā jūsu flotē: kuras zonas iedarbojas visbiežāk, pārklājums pār atbilstošajiem braucieniem un ikdienas drošības kopsavilkuma pārskati.', ben5_tag: 'Pilnīga pārskatāmība',
+    ben_eyebrow: 'Ko iegūst operators',
+    ben_h2a: 'Novērs. Izmēri.', ben_h2b: 'Dokumentē. Vadi risku.',
+    pv1_t: 'Novērs', pv1_b: 'Samazina audio distrakciju kartētās augsta riska zonās — dzelzceļa pārejās, sarežģītos krustojumos un pilsētas noteiktās bīstamās zonās.', pv1_tag: 'Audio distrakcija',
+    pv2_t: 'Izmēri', pv2_b: 'Uzskaita atbilstošos braucienus, zonu ievadus, intervences un pārklājumu, lai redzat, kas patiešām notika uz ceļa.', pv2_tag: 'Pārklājums un KPI',
+    pv3_t: 'Dokumentē', pv3_b: 'Veido auditējamu drošības notikumu vēsturi — ar laika zīmogu, zonas atzīmi, eksportējamu.', pv3_tag: 'Audita pēda',
+    pv4_t: 'Vadi risku', pv4_b: 'Palīdz vadīt flotes drošību un sagatavot datus sarunām ar pilsētu, regulatoru un apdrošinātāju.', pv4_tag: 'Pilsēta · regulators · apdrošinātājs',
     // Pricing
     price_eyebrow: 'Cenas un paketes', price_h2a: 'Pilot, Basic,', price_h2b: 'Advanced.',
     price_sub: 'CAPEX = vienreizējs pilots un uzstādīšana · OPEX = ikmēneša minimums par platformu, atbalstu un atskaitēm · Usage = maksa par aktīvu braucienu.',
@@ -1805,7 +1889,7 @@ const translations = {
     t3f1: 'Viss no Basic', t3f2: 'Pilna Baltijas zonu datubāze', t3f3: 'Uzlabots vadības panelis + CSV eksports', t3f4: 'Apdrošināšanas atbilstības pārskats', t3f5: 'Speciālais integrācijas inženieris', t3f6: '99,9% SLA · 50k–500k braucienu / mēnesī',
     // CTA
     cta_h2: 'Viena integrācija.<br/>Izmērāms drošības slānis.',
-    cta_sub: 'Pieteikties 30 minūšu tehniskajai sarunai: kā spraudnis iekļaujas jūsu brauciena dzīves ciklā, konfigurējamās intervences, notikumu shēma un mērķēts operatora pilots uz jūsu pašu pārejām.',
+    cta_sub: 'Mēs palīdzam operatoriem kontrolēt risku, izmērīt preventīvās drošības darbības un izveidot datus, kas var atbalstīt nākotnes apdrošināšanas riska lēmumus. Piesakiet 30 minūšu tehnisko sarunu.',
     cta_btn: 'Pieteikt pilotu →',
     cta_success: '✅ Pieprasījums saņemts. Sazināsimies vienas darba dienas laikā.',
     cta_note: 'Vai rakstiet mums tieši uz <span style="color:rgba(255,255,255,0.6)">hello@pauseandpass.com</span>',
@@ -1889,6 +1973,7 @@ const translations = {
     faq_q4: 'Vai braucēji ir jāinformē?', faq_a4: 'Jūs kontrolējat informēšanu. Atrašanās vietas apstrāde un automātiskās intervences jāapraksta jūsu privātuma paziņojumā un braucēju noteikumos; mēs nodrošinām ieteicamo formulējumu.',
     faq_q5: 'Kādi dati tiek glabāti un cik ilgi?', faq_a5: 'Tikai minimizēti notikumi — zonas ID, laika zīmogs, lietotnes/SDK versija un iznākums. Glabāšana un pārziņa / apstrādātāja lomas tiek saskaņotas katram operatoram.',
     faq_q6: 'Kam pieder un kas uztur zonas?', faq_a6: 'Mēs uzturam kartētu zonu datubāzi jūsu tirgiem un atbalstām pielāgotas zonas; jūs izlemjat, kuras zonas ir aktīvas.',
+    faq_q7: 'Vai tas samazinās mūsu apdrošināšanas prēmijas?', faq_a7: 'Pause & Pass nav apdrošināšanas produkts un negarantē zemākas prēmijas. Tas rada preventīvus kontroles mehānismus un izmērāmus drošības pierādījumus, kas var palīdzēt turpmākās atlīdzību un apdrošināšanas riska sarunās.',
   }
 };
 
