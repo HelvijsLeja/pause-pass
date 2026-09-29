@@ -800,6 +800,88 @@ footer {
 .pilot-form .btn-contact { grid-column: 1 / -1; }
 @media (max-width: 600px) { .pilot-form { grid-template-columns: 1fr; } }
 
+/* ── Dark hero ── */
+.hero { background: #0A0A0A; }
+.hero::before { clip-path: none; right: 0; width: 100%; background: radial-gradient(ellipse at 72% 45%, rgba(29,185,84,0.16), transparent 55%); }
+.hero h1 { color: #fff; }
+.hero h1 .accent { color: var(--green); }
+.hero-sub { color: rgba(255,255,255,0.65); }
+.hero-sub strong { color: #fff; font-weight: 500; }
+.hero-eyebrow { background: rgba(29,185,84,0.1); border-color: rgba(29,185,84,0.3); color: var(--green); }
+.hero .btn-hero { background: var(--green); color: #0A0A0A; }
+.hero .btn-hero:hover { background: #1ed760; box-shadow: 0 8px 24px rgba(29,185,84,0.25); }
+.hero .btn-outline { color: #fff !important; border-color: rgba(255,255,255,0.25); }
+.hero .btn-outline:hover { border-color: #fff; }
+.hero-note { color: rgba(255,255,255,0.45); }
+.hero [style*="color:#555"] { color: rgba(255,255,255,0.65) !important; }
+.stats-strip { border-top: 1px solid rgba(255,255,255,0.08); }
+
+/* ── Hero risk-zone map ── */
+.map-card { background: #111; border: 1px solid rgba(255,255,255,0.08); border-radius: 22px; padding: 18px; width: 100%; max-width: 460px; box-shadow: 0 32px 64px rgba(0,0,0,0.45); }
+.map-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.map-title { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+.map-status { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; transition: all 0.3s; }
+.map-status.safe    { background: rgba(29,185,84,0.15); color: #1DB954; border: 1px solid rgba(29,185,84,0.3); }
+.map-status.warning { background: rgba(217,119,6,0.15); color: #D97706; border: 1px solid rgba(217,119,6,0.3); }
+.map-status.danger  { background: rgba(229,62,62,0.15); color: #E53E3E; border: 1px solid rgba(229,62,62,0.3); }
+.map-svg { width: 100%; height: auto; display: block; border-radius: 14px; }
+.map-svg .blocks rect { fill: #161616; }
+.map-svg .rd { stroke: #232323; stroke-width: 12; stroke-linecap: round; }
+.map-svg .rail { stroke: #555; stroke-width: 2; }
+.map-svg .rail-ties { stroke: #555; stroke-width: 9; stroke-dasharray: 1.5 7; }
+.map-svg .rz-fill { fill: rgba(217,119,6,0.10); stroke: rgba(217,119,6,0.6); stroke-width: 1.5; stroke-dasharray: 4 4; transition: all 0.3s; }
+#riskZone.hot .rz-fill { fill: rgba(229,62,62,0.16); stroke: rgba(229,62,62,0.85); }
+.map-svg .rz-pulse { fill: none; stroke: rgba(217,119,6,0.45); stroke-width: 1.5; transform-box: fill-box; transform-origin: center; animation: rzpulse 2.4s ease-out infinite; }
+@keyframes rzpulse { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(1.45); opacity: 0; } }
+.map-svg .rz-label { fill: rgba(217,119,6,0.9); font-size: 10px; font-family: 'Geist', sans-serif; font-weight: 600; }
+.map-svg .trip { fill: none; stroke: rgba(29,185,84,0.45); stroke-width: 3; stroke-dasharray: 6 6; }
+.map-svg .trip-dot { fill: #1DB954; stroke: #0A0A0A; stroke-width: 2; }
+.map-svg .trip-halo { fill: rgba(29,185,84,0.2); }
+.map-audio { display: flex; gap: 10px; align-items: center; margin-top: 12px; padding: 10px 12px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); transition: all 0.3s; }
+.map-audio.on { background: rgba(229,62,62,0.10); border-color: rgba(229,62,62,0.35); }
+.map-audio-ico { font-size: 18px; width: 22px; text-align: center; }
+.map-audio-t { font-size: 13px; color: #fff; font-weight: 500; }
+.map-audio-s { font-size: 11px; color: rgba(255,255,255,0.45); }
+.map-controls { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 12px; }
+.map-ctl-label { font-size: 11px; color: rgba(255,255,255,0.45); margin-right: 2px; }
+.map-chip { font-family: 'Geist', sans-serif; font-size: 11px; padding: 5px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.15); background: transparent; color: rgba(255,255,255,0.7); cursor: pointer; }
+.map-chip.active { background: var(--green); border-color: var(--green); color: #0A0A0A; font-weight: 600; }
+.map-replay { margin-left: auto; font-family: 'Geist', sans-serif; font-size: 11px; font-weight: 600; padding: 5px 10px; border-radius: 8px; border: 1px solid rgba(29,185,84,0.4); background: rgba(29,185,84,0.1); color: var(--green); cursor: pointer; }
+.map-log { margin-top: 10px; font-family: ui-monospace, Menlo, monospace; font-size: 10.5px; color: rgba(255,255,255,0.55); min-height: 58px; }
+.map-log-row { display: flex; gap: 10px; padding: 3px 0; border-top: 1px solid rgba(255,255,255,0.05); animation: logIn 0.4s ease; }
+.map-log-row span:last-child { margin-left: auto; color: var(--green); }
+@keyframes logIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+.map-foot { font-size: 10px; color: rgba(255,255,255,0.3); margin-top: 8px; text-align: right; }
+
+/* ── Operator dashboard (illustrative) ── */
+.dash-section { background: #0A0A0A; padding: 90px 0; }
+.dash-section .section-eyebrow { color: var(--green); }
+.dash-section .section-h2 { color: #fff; }
+.dash-section .section-h2 em { color: var(--green); }
+.dash-sub { color: rgba(255,255,255,0.55); font-size: 16px; max-width: 640px; line-height: 1.7; font-weight: 300; }
+.dash-panel { margin-top: 36px; background: #111; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 24px; }
+.dash-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; flex-wrap: wrap; gap: 8px; }
+.dash-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #D97706; background: rgba(217,119,6,0.12); border: 1px solid rgba(217,119,6,0.3); padding: 4px 10px; border-radius: 6px; }
+.dash-period { font-size: 12px; color: rgba(255,255,255,0.45); }
+.dash-kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 12px; }
+.dash-kpi, .dash-box { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 16px; }
+.dash-kpi-v { font-size: 28px; font-weight: 700; color: #fff; letter-spacing: -1px; }
+.dash-kpi-v.flash { animation: kflash 1s ease; }
+@keyframes kflash { 0% { color: var(--green); } 100% { color: #fff; } }
+.dash-kpi-l { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 4px; }
+.dash-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 12px; }
+.dash-box-t { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); margin-bottom: 14px; }
+.dash-bars { display: flex; align-items: flex-end; gap: 10px; height: 130px; }
+.dash-bar { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; height: 100%; }
+.dash-bar i { display: block; width: 100%; background: linear-gradient(180deg, var(--green), rgba(29,185,84,0.3)); border-radius: 6px 6px 2px 2px; }
+.dash-bar span { font-size: 10px; color: rgba(255,255,255,0.4); }
+.dash-zone { display: flex; justify-content: space-between; gap: 10px; font-size: 12.5px; color: rgba(255,255,255,0.75); padding: 9px 0; border-top: 1px solid rgba(255,255,255,0.06); }
+.dash-box-t + .dash-zone { border-top: none; }
+.dash-zone b { color: #fff; font-weight: 600; }
+.dash-zone code { font-size: 11px; color: var(--green); margin-right: 8px; }
+.dash-live { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 14px; }
+@media (max-width: 900px) { .dash-kpis { grid-template-columns: 1fr 1fr; } .dash-grid { grid-template-columns: 1fr; } .map-card { max-width: 520px; } }
+
 /* ── Responsive ── */
 @media (max-width: 720px) {
   div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
@@ -869,51 +951,33 @@ footer {
         </div>
       </div>
 
-      <!-- Animated scooter dashboard -->
+      <!-- Live risk-zone map (illustrative simulation) -->
       <div class="hero-visual">
-        <div class="scooter-card">
-          <div class="sc-header">
-            <div class="sc-brand">Pause &amp; Pass</div>
-            <div class="sc-status safe" id="scStatus">
-              <div class="sc-status-dot"></div>
-              <span id="scStatusText">Safe zone</span>
-            </div>
+        <div class="map-card">
+          <div class="map-head">
+            <div class="map-title" data-i18n="map_title">Live trip · Riga</div>
+            <div class="map-status safe" id="mapStatus"><span class="sc-status-dot"></span><span id="mapStatusText">Safe zone</span></div>
           </div>
-
-          <!-- Speed ring -->
-          <div class="sc-speed-ring">
-            <svg class="sc-ring-svg" viewBox="0 0 120 120">
-              <circle class="sc-ring-bg" cx="60" cy="60" r="56"/>
-              <circle class="sc-ring-val" id="scRing" cx="60" cy="60" r="56"/>
-            </svg>
-            <div class="sc-speed-text">
-              <div class="sc-speed-num" id="scSpeed">18</div>
-              <div class="sc-speed-unit">km/h</div>
-            </div>
+          <svg class="map-svg" viewBox="0 0 400 260" aria-hidden="true">
+            <rect width="400" height="260" fill="#0d0d0d"/>
+            <g class="blocks"><rect x="108" y="72" width="80" height="50" rx="4"/><rect x="108" y="150" width="60" height="42" rx="4"/><rect x="200" y="160" width="115" height="36" rx="4"/><rect x="215" y="66" width="100" height="22" rx="4"/><rect x="10" y="150" width="70" height="42" rx="4"/><rect x="355" y="80" width="40" height="110" rx="4"/></g>
+            <g class="roads"><line x1="0" y1="60" x2="400" y2="50" class="rd"/><line x1="0" y1="205" x2="400" y2="215" class="rd"/><line x1="95" y1="0" x2="70" y2="260" class="rd"/><line x1="330" y1="0" x2="345" y2="260" class="rd"/><line x1="0" y1="130" x2="160" y2="140" class="rd"/></g>
+            <line x1="185" y1="0" x2="315" y2="260" class="rail"/><line x1="185" y1="0" x2="315" y2="260" class="rail-ties"/>
+            <g id="riskZone"><circle class="rz-pulse" cx="250" cy="118" r="46"/><circle class="rz-fill" cx="250" cy="118" r="46"/></g>
+            <text x="262" y="56" class="rz-label" data-i18n="map_zone_lbl">RZ-014 · railway crossing</text>
+            <path id="tripPath" d="M18 214 C 90 208, 160 165, 228 128 S 330 70, 392 44" class="trip"/>
+            <circle id="tripHalo" r="14" class="trip-halo" cx="18" cy="214"/><circle id="tripDot" r="6" class="trip-dot" cx="18" cy="214"/>
+          </svg>
+          <div class="map-audio" id="mapAudio"><span class="map-audio-ico" id="mapAudioIco">🎵</span><div><div class="map-audio-t" id="mapAudioT">Music playing</div><div class="map-audio-s" id="mapAudioS">Audio active</div></div></div>
+          <div class="map-controls">
+            <span class="map-ctl-label" data-i18n="map_mode">Intervention:</span>
+            <button type="button" class="map-chip active" data-mode="pause" data-i18n="map_m_pause">Pause</button>
+            <button type="button" class="map-chip" data-mode="duck" data-i18n="map_m_duck">Lower volume</button>
+            <button type="button" class="map-chip" data-mode="chime" data-i18n="map_m_chime">Chime</button>
+            <button type="button" class="map-replay" id="mapReplay" data-i18n="map_replay">▶ Run a trip</button>
           </div>
-
-          <!-- Audio status -->
-          <div class="sc-audio-bar" id="scAudioBar">
-            <div class="sc-audio-icon">🎵</div>
-            <div class="sc-audio-info">
-              <div class="sc-audio-title" id="scAudioTitle">Spotify playing</div>
-              <div class="sc-audio-sub" id="scAudioSub">Audio active · 78% volume</div>
-            </div>
-            <div class="sc-audio-waveform" id="scWaveform">
-              <div class="sc-wave-bar" style="height:14px"></div>
-              <div class="sc-wave-bar" style="height:20px"></div>
-              <div class="sc-wave-bar" style="height:10px"></div>
-              <div class="sc-wave-bar" style="height:18px"></div>
-              <div class="sc-wave-bar" style="height:12px"></div>
-            </div>
-            <div class="sc-pause-overlay" id="scPauseTag" style="background:rgba(229,62,62,0.15);color:#E53E3E">⏸ PAUSED</div>
-          </div>
-
-          <!-- Zone alert -->
-          <div class="sc-zone-alert" id="scZoneAlert">
-            <div class="sc-zone-icon">✅</div>
-            <div id="scZoneText" style="font-size:12px">No crossings in range · 340m to nearest zone</div>
-          </div>
+          <div class="map-log" id="mapLog"></div>
+          <div class="map-foot" data-i18n="map_sim">Simulation · illustrative data</div>
         </div>
       </div>
     </div>
@@ -1201,6 +1265,25 @@ footer {
       </div>
     </div>
 
+  </div>
+</section>
+
+
+<!-- Operator dashboard (illustrative) -->
+<section class="dash-section" id="dashboard">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="dash_eyebrow">Operator dashboard</div>
+    <h2 class="section-h2"><span data-i18n="dash_h2a">Every intervention,</span> <em data-i18n="dash_h2b">on the record.</em></h2>
+    <p class="dash-sub" data-i18n="dash_sub">Trips in risk zones, interventions, coverage and system performance — per zone, per day, exportable.</p>
+    <div class="dash-panel reveal">
+      <div class="dash-top"><span class="dash-tag" data-i18n="dash_tag">Illustrative data</span><span class="dash-period" data-i18n="dash_period">Last 7 days · Riga</span></div>
+      <div class="dash-kpis"><div class="dash-kpi"><div class="dash-kpi-v" id="dkTrips">1,284</div><div class="dash-kpi-l" data-i18n="dash_k1">Trips in risk zones</div></div><div class="dash-kpi"><div class="dash-kpi-v" id="dkInt">1,197</div><div class="dash-kpi-l" data-i18n="dash_k2">Interventions triggered</div></div><div class="dash-kpi"><div class="dash-kpi-v">93.2%</div><div class="dash-kpi-l" data-i18n="dash_k3">Technical coverage</div></div><div class="dash-kpi"><div class="dash-kpi-v">0.8%</div><div class="dash-kpi-l" data-i18n="dash_k4">False activations</div></div></div>
+      <div class="dash-grid">
+        <div class="dash-box"><div class="dash-box-t" data-i18n="dash_chart">Interventions per day</div><div class="dash-bars"><div class="dash-bar"><i style="height:62%"></i><span>22.09</span></div><div class="dash-bar"><i style="height:70%"></i><span>23.09</span></div><div class="dash-bar"><i style="height:55%"></i><span>24.09</span></div><div class="dash-bar"><i style="height:80%"></i><span>25.09</span></div><div class="dash-bar"><i style="height:74%"></i><span>26.09</span></div><div class="dash-bar"><i style="height:90%"></i><span>27.09</span></div><div class="dash-bar"><i style="height:68%"></i><span>28.09</span></div></div></div>
+        <div class="dash-box"><div class="dash-box-t" data-i18n="dash_zones">Top risk zones</div><div class="dash-zone"><span><code>RZ-014</code><span data-i18n="dash_z1">Railway crossing · Brīvības iela</span></span><b>312</b></div><div class="dash-zone"><span><code>RZ-007</code><span data-i18n="dash_z2">Tram tracks · Maskavas iela</span></span><b>241</b></div><div class="dash-zone"><span><code>RZ-022</code><span data-i18n="dash_z3">Junction · Krasta iela</span></span><b>188</b></div><div class="dash-zone"><span><code>RZ-031</code><span data-i18n="dash_z4">Low visibility · Daugavgrīvas iela</span></span><b>126</b></div></div>
+      </div>
+      <div class="dash-live" data-i18n="dash_live">Counters update live with the trip simulation at the top of the page.</div>
+    </div>
   </div>
 </section>
 
@@ -1652,6 +1735,7 @@ footer {
 
   let sci = 0;
   function animateScooter() {
+    if (!document.getElementById('scStatus')) return;
     sci = (sci + 1) % scStates.length;
     const s = scStates[sci];
 
@@ -1913,6 +1997,43 @@ const translations = {
     faq_q8: 'Is extra hardware needed?', faq_a8: 'No. Pause & Pass is software that integrates into your existing operator app.',
     faq_q9: 'Do riders need to download a separate app?', faq_a9: 'No. It runs inside your existing operator app.',
     faq_q10: 'Does it only work with e-scooters?', faq_a10: 'No. It is built for connected micromobility platforms, including e-scooters, self-propelled bicycles, e-bikes and e-mopeds.',
+    // Map + dashboard
+    map_title: 'Live trip · Riga',
+    map_s_safe: 'Safe zone',
+    map_s_near: 'Risk zone ahead',
+    map_s_zone: 'In risk zone',
+    map_a_play: 'Music playing',
+    map_a_active: 'Audio active',
+    map_a_near: 'Approaching RZ-014',
+    map_a_zone: 'RZ-014 · railway crossing',
+    map_a_pause: 'Audio paused',
+    map_a_duck: 'Volume lowered',
+    map_a_chime: 'Chime played',
+    map_mode: 'Intervention:',
+    map_m_pause: 'Pause',
+    map_m_duck: 'Lower volume',
+    map_m_chime: 'Chime',
+    map_replay: '▶ Run a trip',
+    map_resume: 'resume',
+    map_sim: 'Simulation · illustrative data',
+    map_zone_lbl: 'RZ-014 · railway crossing',
+    dash_eyebrow: 'Operator dashboard',
+    dash_h2a: 'Every intervention,',
+    dash_h2b: 'on the record.',
+    dash_sub: 'Trips in risk zones, interventions, coverage and system performance — per zone, per day, exportable.',
+    dash_tag: 'Illustrative data',
+    dash_period: 'Last 7 days · Riga',
+    dash_k1: 'Trips in risk zones',
+    dash_k2: 'Interventions triggered',
+    dash_k3: 'Technical coverage',
+    dash_k4: 'False activations',
+    dash_chart: 'Interventions per day',
+    dash_zones: 'Top risk zones',
+    dash_z1: 'Railway crossing · Brīvības iela',
+    dash_z2: 'Tram tracks · Maskavas iela',
+    dash_z3: 'Junction · Krasta iela',
+    dash_z4: 'Low visibility · Daugavgrīvas iela',
+    dash_live: 'Counters update live with the trip simulation at the top of the page.',
   },
 
   lv: {
@@ -2072,6 +2193,43 @@ const translations = {
     faq_q8: 'Vai nepieciešama papildu aparatūra?', faq_a8: 'Nē. Pause & Pass ir programmatūras risinājums, kas integrējas operatora lietotnē.',
     faq_q9: 'Vai braucējam jālejupielādē atsevišķa lietotne?', faq_a9: 'Nē. Funkcija darbojas operatora esošajā lietotnē.',
     faq_q10: 'Vai risinājums darbojas tikai ar skrejriteņiem?', faq_a10: 'Nē. Tas paredzēts dažādām savienotām mikromobilitātes platformām, tostarp elektriskajiem skrejriteņiem, pašgājējiem velosipēdiem, e-velosipēdiem un e-mopēdiem.',
+    // Map + dashboard
+    map_title: 'Aktīvs brauciens · Rīga',
+    map_s_safe: 'Droša zona',
+    map_s_near: 'Priekšā riska zona',
+    map_s_zone: 'Riska zonā',
+    map_a_play: 'Skan mūzika',
+    map_a_active: 'Audio aktīvs',
+    map_a_near: 'Tuvojas RZ-014',
+    map_a_zone: 'RZ-014 · dzelzceļa pārbrauktuve',
+    map_a_pause: 'Audio apturēts',
+    map_a_duck: 'Skaļums samazināts',
+    map_a_chime: 'Atskaņots signāls',
+    map_mode: 'Intervence:',
+    map_m_pause: 'Pauze',
+    map_m_duck: 'Klusāk',
+    map_m_chime: 'Signāls',
+    map_replay: '▶ Palaist braucienu',
+    map_resume: 'atsākts',
+    map_sim: 'Simulācija · ilustratīvi dati',
+    map_zone_lbl: 'RZ-014 · pārbrauktuve',
+    dash_eyebrow: 'Operatora dashboard',
+    dash_h2a: 'Katra intervence',
+    dash_h2b: 'ir fiksēta.',
+    dash_sub: 'Braucieni riska zonās, intervences, pārklājums un sistēmas darbība — pa zonām, pa dienām, eksportējami.',
+    dash_tag: 'Ilustratīvi dati',
+    dash_period: 'Pēdējās 7 dienas · Rīga',
+    dash_k1: 'Braucieni riska zonās',
+    dash_k2: 'Aktivizētās intervences',
+    dash_k3: 'Tehniskais pārklājums',
+    dash_k4: 'Kļūdainās aktivizācijas',
+    dash_chart: 'Intervences dienā',
+    dash_zones: 'Riskantākās zonas',
+    dash_z1: 'Dzelzceļa pārbrauktuve · Brīvības iela',
+    dash_z2: 'Tramvaja sliedes · Maskavas iela',
+    dash_z3: 'Krustojums · Krasta iela',
+    dash_z4: 'Ierobežota redzamība · Daugavgrīvas iela',
+    dash_live: 'Skaitītāji atjaunojas līdz ar brauciena simulāciju lapas augšā.',
   }
 };
 
@@ -2109,6 +2267,71 @@ function setLang(lang) {
     scStates[2].zoneText   = lang === 'lv' ? 'BĪSTAMĀ ZONA — Mūzika apturēta · Atsāksies pēc ~15m' : 'DANGER ZONE — Music paused · Resume in ~15m';
   }
 }
+
+// ── Hero risk-zone map simulation (illustrative) ─────────────────────────
+(function () {
+  const path = document.getElementById('tripPath');
+  if (!path) return;
+  const dot = document.getElementById('tripDot'), halo = document.getElementById('tripHalo');
+  const zone = { x: 250, y: 118, r: 46 }, len = path.getTotalLength(), DUR = 9000;
+  let t0 = null, mode = 'pause', inZone = false, near = false, lastLang = null;
+  const tr = k => (translations[document.documentElement.lang === 'lv' ? 'lv' : 'en'] || {})[k] || k;
+  const $ = id => document.getElementById(id);
+  function render() {
+    const cls = inZone ? 'danger' : near ? 'warning' : 'safe';
+    $('mapStatus').className = 'map-status ' + cls;
+    $('mapStatusText').textContent = tr(inZone ? 'map_s_zone' : near ? 'map_s_near' : 'map_s_safe');
+    if (inZone) {
+      $('mapAudioIco').textContent = mode === 'chime' ? '🔔' : mode === 'duck' ? '🔉' : '⏸';
+      $('mapAudioT').textContent = tr('map_a_' + mode);
+      $('mapAudioS').textContent = tr('map_a_zone');
+    } else {
+      $('mapAudioIco').textContent = '🎵';
+      $('mapAudioT').textContent = tr('map_a_play');
+      $('mapAudioS').textContent = tr(near ? 'map_a_near' : 'map_a_active');
+    }
+    $('mapAudio').classList.toggle('on', inZone);
+    $('riskZone').classList.toggle('hot', inZone);
+  }
+  function bump(id) {
+    const el = $(id); if (!el) return;
+    el.textContent = (parseInt(el.textContent.replace(/\D/g, ''), 10) + 1).toLocaleString('en-US');
+    el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash');
+  }
+  function log(enter) {
+    const row = document.createElement('div');
+    row.className = 'map-log-row';
+    const ts = new Date().toTimeString().slice(0, 8);
+    row.innerHTML = '<span>' + ts + '</span><span>' + (enter ? 'zone_enter' : 'zone_exit') + ' · RZ-014</span><span>' +
+      (enter ? tr('map_m_' + mode) : tr('map_resume')) + '</span>';
+    $('mapLog').prepend(row);
+    while ($('mapLog').children.length > 3) $('mapLog').lastChild.remove();
+    if (enter) bump('dkInt');
+  }
+  let prog = 0;
+  function frame(ts) {
+    if (t0 === null) { t0 = ts; prog = 0; }
+    const dt = ts - t0; t0 = ts;
+    prog += (dt / DUR) * (inZone ? 0.35 : near ? 0.6 : 1);   // rider slows near the crossing
+    if (prog >= 1) { bump('dkTrips'); prog = 0; }
+    const pt = path.getPointAtLength(prog * len);
+    dot.setAttribute('cx', pt.x); dot.setAttribute('cy', pt.y);
+    halo.setAttribute('cx', pt.x); halo.setAttribute('cy', pt.y);
+    const d = Math.hypot(pt.x - zone.x, pt.y - zone.y);
+    const nz = d < zone.r, nr = !nz && d < zone.r + 45, lang = document.documentElement.lang;
+    if (nz !== inZone) { inZone = nz; near = nr; log(nz); render(); }
+    else if (nr !== near || lang !== lastLang) { near = nr; lastLang = lang; render(); }
+    requestAnimationFrame(frame);
+  }
+  document.querySelectorAll('.map-chip').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.map-chip').forEach(x => x.classList.remove('active'));
+    b.classList.add('active'); mode = b.dataset.mode; render();
+  }));
+  $('mapReplay').addEventListener('click', () => { t0 = null; });
+  ['btnEN', 'btnLV'].forEach(id => $(id) && $(id).addEventListener('click', render));
+  render();
+  requestAnimationFrame(frame);
+})();
 
 // Render from the translation dictionary on load (the dictionary is the source of truth)
 setLang(document.documentElement.lang === 'lv' ? 'lv' : 'en');
