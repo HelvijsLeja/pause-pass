@@ -1,6 +1,6 @@
 # Pause & Pass
 
-> Pause & Pass is a white-label rider-attention safety plugin for shared micromobility operators (e-scooters, e-bikes, e-mopeds). When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention (pause, duck, chime or in-app prompt) and logs an auditable event. No vehicle hardware, no separate rider app; one integration for iOS and Android.
+> Pause & Pass is a white-label rider-attention safety plugin for shared micromobility operators (e-scooters, self-propelled bicycles, e-bikes, e-mopeds). When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention (pause, duck, chime or in-app prompt) and logs an auditable event. No vehicle hardware, no separate rider app; one integration for iOS and Android.
 
 ## What it is
 - A software-only safety layer that operators embed in their existing rider app.
@@ -8,7 +8,7 @@
 - Complementary to fleet geofencing, computer vision and collision-alert systems — an add-on, not a replacement.
 
 ## Who it is for
-- Shared micromobility fleets (e-scooters, e-bikes, e-mopeds) with an app-based trip flow.
+- Shared micromobility fleets (e-scooters, self-propelled bicycles, e-bikes, e-mopeds) with an app-based trip flow.
 - Multi-city and cross-border operators wanting one integration across markets.
 - Safety-forward and enterprise platforms with insurance and regulatory exposure.
 
@@ -26,6 +26,14 @@
 - Data: on-device zone evaluation; only minimised events reach the backend; EU hosting; retention agreed per operator.
 - Pricing: per active ride (roughly EUR 0.005-0.008 depending on volume); operator pilot available.
 - Coverage: eligible active trips on supported app versions and devices.
+
+## Market context (Latvia)
+- OCTA insurance is mandatory for e-scooters since 1 July 2025 and for self-propelled bicycles since 1 May 2026 (LTAB).
+- Pause & Pass is not an insurance product and does not guarantee lower premiums; it creates preventive controls and measurable safety evidence that may support future claims and insurance-risk discussions.
+
+## Pilot
+- One city, 20-30 high-risk zones, 8-12 weeks, integrated in the operator's existing app.
+- Measured: trips in risk zones, interventions triggered, technical coverage, false activations, missed interventions, team readiness.
 
 ## Honest limitations
 - Audio behaviour is not guaranteed identical across every OS, device and player; behaviour is validated per supported matrix.
