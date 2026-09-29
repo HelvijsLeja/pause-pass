@@ -1432,7 +1432,7 @@ footer {
         </ol>
       </div>
 
-      <form action="https://formspree.io/f/xaqvbzpa" method="POST" class="contact-form pilot-form" onsubmit="handleContactSubmit(event)">
+      <form class="contact-form pilot-form" onsubmit="handleContactSubmit(event)">
         <input class="contact-input" type="text" name="company" data-i18n-ph="pf_company" placeholder="Company name" required/>
         <input class="contact-input" type="text" name="location" data-i18n-ph="pf_location" placeholder="Country / city"/>
         <select class="contact-input" name="vehicles"><option value="" disabled selected data-i18n="pf_v0">Vehicle type</option><option value="E-scooters" data-i18n="pf_v1">E-scooters</option><option value="Self-propelled bicycles" data-i18n="pf_v2">Self-propelled bicycles</option><option value="E-bikes" data-i18n="pf_v3">E-bikes</option><option value="E-mopeds" data-i18n="pf_v4">E-mopeds</option><option value="Mixed fleet" data-i18n="pf_v5">Mixed fleet</option></select>
@@ -1441,11 +1441,10 @@ footer {
         <input class="contact-input" type="text" name="start" data-i18n-ph="pf_start" placeholder="Preferred pilot start (e.g. Q1 2027)"/>
         <input class="contact-input" type="text" name="contact_person" data-i18n-ph="pf_contact" placeholder="Contact person"/>
         <input class="contact-input" type="email" name="email" id="contactEmail" data-i18n-ph="pf_email" placeholder="Work email" required/>
-        <input type="hidden" name="_subject" value="Pause &amp; Pass — Pilot request"/>
         <button type="submit" class="btn-contact" data-i18n="cta_btn">Request a pilot →</button>
         <p class="contact-note form-privacy" data-i18n="form_privacy">We use these details to reply to your pilot request and discuss a pilot with you. See our <a class="privacy-link" href="privacy.html">Privacy notice</a>.</p>
       </form>
-      <div class="contact-success" id="contactSuccess" data-i18n="cta_success">✅ Pilot request received. We'll reply within 2 business days.</div>
+      <div class="contact-success" id="contactSuccess" data-i18n="cta_success">✅ Your email app should now open with the request filled in. Press send and we will reply within 2 business days. If nothing opened, email us at hello@pauseandpass.com.</div>
       <p class="contact-note" data-i18n="cta_note">Or email us directly at <span style="color:rgba(255,255,255,0.6)">hello@pauseandpass.com</span></p>
     </div>
   </div>
@@ -1642,22 +1641,18 @@ footer {
       document.getElementById('contactEmail').style.borderColor = '#EF4444';
       return;
     }
-    const btn = form.querySelector('.btn-contact');
-    btn.textContent = '⏳ Sending...';
-    btn.disabled = true;
-    fetch(form.action, {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form)
-    }).then(r => {
-      form.style.display = 'none';
-      document.getElementById('contactSuccess').style.display = 'block';
-    }).catch(() => {
-      form.style.display = 'none';
-      document.getElementById('contactSuccess').style.display = 'block';
+    // No form service: open the visitor's own email app with a prefilled request.
+    const lines = [];
+    form.querySelectorAll('input:not([type=hidden]), select').forEach(el => {
+      if (!el.value) return;
+      const label = el.tagName === 'SELECT' ? el.options[0].textContent : el.placeholder;
+      lines.push(label + ': ' + el.value);
     });
-  }
-</script>
+    const subject = document.documentElement.lang === 'lv' ? 'Pause & Pass — pilota pieteikums' : 'Pause & Pass — Pilot request';
+    window.location.href = 'mailto:hello@pauseandpass.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    form.style.display = 'none';
+    document.getElementById('contactSuccess').style.display = 'block';
+  }</script>
 <script>
 // ── i18n Translation System ──────────────────────────────────────────────
 const translations = {
@@ -1729,7 +1724,7 @@ const translations = {
     kpi6: 'Incident / complaint trend*',
     kpi7: 'Team readiness',
     pf_company: 'Company name', pf_location: 'Country / city', pf_fleet: 'Approx. fleet size', pf_contact: 'Contact person', pf_email: 'Work email', pf_start: 'Preferred pilot start (e.g. Q1 2027)', pf_v0: 'Vehicle type', pf_v1: 'E-scooters', pf_v2: 'Self-propelled bicycles', pf_v3: 'E-bikes', pf_v4: 'E-mopeds', pf_v5: 'Mixed fleet', pf_p0: 'App platform', pf_p1: 'iOS + Android', pf_p2: 'iOS only', pf_p3: 'Android only', pf_p4: 'Other',
-    cta_success: '✅ Pilot request received. We\'ll reply within 2 business days.',
+    cta_success: '✅ Your email app should now open with the request filled in. Press send and we will reply within 2 business days. If nothing opened, email us at hello@pauseandpass.com.',
     cta_note: 'Or email us directly at <span style="color:rgba(255,255,255,0.6)">hello@pauseandpass.com</span>',
     contact_title: 'Get in touch',
     contact_sub: "We're happy to answer any questions about Pause & Pass.",
@@ -1879,7 +1874,7 @@ const translations = {
     kpi6: 'Incidentu / sūdzību dinamika*',
     kpi7: 'Komandas gatavība',
     pf_company: 'Uzņēmuma nosaukums', pf_location: 'Valsts / pilsēta', pf_fleet: 'Aptuvenais flotes izmērs', pf_contact: 'Kontaktpersona', pf_email: 'Darba e-pasts', pf_start: 'Vēlamais pilota sākums (piem., 2027. g. 1. cet.)', pf_v0: 'Transportlīdzekļu veids', pf_v1: 'Elektroskrejriteņi', pf_v2: 'Pašgājēji velosipēdi', pf_v3: 'E-velosipēdi', pf_v4: 'E-mopēdi', pf_v5: 'Jaukta flote', pf_p0: 'Lietotnes platforma', pf_p1: 'iOS + Android', pf_p2: 'Tikai iOS', pf_p3: 'Tikai Android', pf_p4: 'Cits',
-    cta_success: '✅ Pieteikums saņemts. Atbildēsim 2 darba dienu laikā.',
+    cta_success: '✅ Tagad jāatveras jūsu e-pasta lietotnei ar aizpildītu pieteikumu. Nospiediet “Sūtīt”, un mēs atbildēsim 2 darba dienu laikā. Ja nekas neatvērās, rakstiet uz hello@pauseandpass.com.',
     cta_note: 'Vai rakstiet mums tieši uz <span style="color:rgba(255,255,255,0.6)">hello@pauseandpass.com</span>',
     contact_title: 'Sazinies ar mums',
     contact_sub: 'Labprāt atbildēsim uz jebkuriem jautājumiem par Pause & Pass.',
