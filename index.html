@@ -882,6 +882,8 @@ footer {
 .dash-live { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 14px; }
 @media (max-width: 900px) { .dash-kpis { grid-template-columns: 1fr 1fr; } .dash-grid { grid-template-columns: 1fr; } .map-card { max-width: 520px; } }
 
+.price-note { margin-top: 24px; font-size: 13px; color: #888; text-align: center; }
+
 /* ── Responsive ── */
 @media (max-width: 720px) {
   div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
@@ -915,8 +917,9 @@ footer {
   </a>
   <div class="nav-links">
     <a href="#plugin" data-i18n="nav_how">How it works</a>
-    <a href="#use-cases" data-i18n="nav_uses">Use cases</a>
+    <a href="#dashboard" data-i18n="nav_dash">Dashboard</a>
     <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+    <a href="#faq" data-i18n="nav_faq">FAQ</a>
   </div>
   <div class="nav-right">
     <div class="lang-switcher">
@@ -984,216 +987,41 @@ footer {
   </div>
 </section>
 
-<!-- Logos bar placeholder - add client logos when first operator signs -->
 
-<!-- Stats strip -->
-<div class="stats-strip" id="problem">
+<!-- Benefits -->
+<section class="benefits-section" id="benefits">
   <div class="container">
-    <div class="stats-grid">
-      <div class="stat-box reveal">
-        <div class="stat-num"><span id="stat1">0</span></div>
-        <div class="stat-desc" data-i18n="stat1_desc">mobile platforms — one plugin for iOS and Android</div>
-      </div>
-      <div class="stat-box reveal">
-        <div class="stat-num"><span id="stat2">0</span></div>
-        <div class="stat-desc" data-i18n="stat2_desc">pieces of vehicle hardware to fit or maintain</div>
-      </div>
-      <div class="stat-box reveal">
-        <div class="stat-num"><span id="stat3">0</span></div>
-        <div class="stat-desc" data-i18n="stat3_desc">integration to cover every high-risk crossing you map</div>
-      </div>
-      <div class="stat-box reveal">
-        <div class="stat-num"><span id="stat4">0</span></div>
-        <div class="stat-desc" data-i18n="stat4_desc">configurable responses: pause, duck, chime or in-app prompt</div>
-      </div>
-    </div>
-  </div>
-</div>
+    <div class="section-eyebrow" data-i18n="ben_eyebrow">What operators get</div>
+    <h2 class="section-h2"><span data-i18n="ben_h2a">Prevent. Measure.</span><br/><em data-i18n="ben_h2b">Document. Manage risk.</em></h2>
 
-<!-- Problem -->
-<section class="problem-section">
-  <div class="container">
-    <div class="section-eyebrow" data-i18n="prob_eyebrow">The operator problem</div>
-    <h2 class="section-h2"><span data-i18n="prob_h2a">You own the scooter.</span><br/><span data-i18n="prob_h2b">You share the</span> <em data-i18n="prob_h2c">risk.</em></h2>
-
-    <div class="problem-grid reveal">
-      <div>
-        <div style="font-size:40px;margin-bottom:20px;">🎧</div>
-        <div class="problem-big-label" style="font-size:19px;color:var(--ink);font-weight:600;line-height:1.5;" data-i18n="prob_stat_label">Riders wearing headphones lose a key cue — sound — right where they most need to notice a train, tram or turning car. Pause &amp; Pass reduces that audio distraction at the crossings you map.</div>
-        <div style="margin-top:32px;padding:24px;background:var(--grey1);border-radius:14px;border-left:3px solid var(--green)">
-          <div style="font-size:13px;color:#555;line-height:1.7">
-            <strong style="color:var(--black)" data-i18n="prob_reg_title">Why risk management matters.</strong> <span data-i18n="prob_reg_body">In Latvia, OCTA insurance has been mandatory for e-scooters since 1 July 2025 and for self-propelled bicycles since 1 May 2026. LTAB has published data on OCTA claims linked to accidents caused by e-scooter riders.</span>
-          </div>
-        </div>
+    <div class="benefits-grid four reveal">
+      <div class="benefit-card">
+        <div class="bc-icon">🛑</div>
+        <h3 data-i18n="pv1_t">Prevent</h3>
+        <p data-i18n="pv1_b">Reduces audio distraction in mapped high-risk zones — railway crossings, complex junctions and city-defined hazard areas.</p>
+        <span class="benefit-tag" data-i18n="pv1_tag">Audio distraction</span>
       </div>
-
-      <div class="liability-cards">
-        <div class="liability-card">
-          <div class="lc-icon">⚖️</div>
-          <div>
-            <div class="lc-title" data-i18n="lc1_title">Regulatory &amp; liability exposure</div>
-            <div class="lc-body" data-i18n="lc1_body">When incidents happen, operators are increasingly asked what active safety measures they had in place. A documented intervention record helps you answer that question.</div>
-            <span class="lc-tag tag-red" data-i18n="lc1_tag">Ongoing</span>
-          </div>
-        </div>
-        <div class="liability-card">
-          <div class="lc-icon">💸</div>
-          <div>
-            <div class="lc-title" data-i18n="lc2_title">Insurance &amp; risk pricing</div>
-            <div class="lc-body" data-i18n="lc2_body">Insurers increasingly weigh active safety technology when pricing micro-mobility fleet policies. A documented safety record supports those conversations.</div>
-            <span class="lc-tag tag-amber" data-i18n="lc2_tag">Financial</span>
-          </div>
-        </div>
-        <div class="liability-card">
-          <div class="lc-icon">📰</div>
-          <div>
-            <div class="lc-title" data-i18n="lc3_title">Brand &amp; media exposure</div>
-            <div class="lc-body" data-i18n="lc3_body">High-profile crossing incidents attract press coverage that can affect operator perception and city relationships. Demonstrable safety measures help.</div>
-            <span class="lc-tag tag-amber" data-i18n="lc3_tag">Reputational</span>
-          </div>
-        </div>
-        <div class="liability-card">
-          <div class="lc-icon">✅</div>
-          <div>
-            <div class="lc-title" data-i18n="lc4_title">Pause &amp; Pass changes the equation</div>
-            <div class="lc-body" data-i18n="lc4_body">A configured audio intervention at the crossings you map creates an auditable safety record — evidence of active duty of care for regulator, city and insurer discussions.</div>
-            <span class="lc-tag tag-green" data-i18n="lc4_tag">Risk mitigation</span>
-          </div>
-        </div>
+      <div class="benefit-card">
+        <div class="bc-icon">📊</div>
+        <h3 data-i18n="pv2_t">Measure</h3>
+        <p data-i18n="pv2_b">Tracks eligible trips, zone entries, interventions and coverage, so you see what actually happened on the road.</p>
+        <span class="benefit-tag" data-i18n="pv2_tag">Coverage &amp; KPIs</span>
+      </div>
+      <div class="benefit-card">
+        <div class="bc-icon">🗂️</div>
+        <h3 data-i18n="pv3_t">Document</h3>
+        <p data-i18n="pv3_b">Builds an auditable history of safety events — timestamped, zone-tagged and exportable.</p>
+        <span class="benefit-tag" data-i18n="pv3_tag">Audit trail</span>
+      </div>
+      <div class="benefit-card">
+        <div class="bc-icon">🛡️</div>
+        <h3 data-i18n="pv4_t">Manage risk</h3>
+        <p data-i18n="pv4_b">Helps you manage fleet safety and prepare data for conversations with cities, regulators and insurers.</p>
+        <span class="benefit-tag" data-i18n="pv4_tag">City · regulator · insurer</span>
       </div>
     </div>
   </div>
 </section>
-
-
-<!-- Ideal customer profiles -->
-<div style="background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:60px 0;">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:44px;">
-      <div class="section-eyebrow" data-i18n="icp_eyebrow">Who Pause &amp; Pass is built for</div>
-      <h2 class="section-h2" style="font-size:clamp(26px,3vw,38px)" data-i18n="icp_h2">Different fleets.<br/><em>One shared problem.</em></h2>
-      <p style="max-width:620px;margin:16px auto 0;font-size:15px;color:#666;line-height:1.7;" data-i18n="icp_intro">If your riders open an app to start a trip, they're who we protect. Whatever you run — scooters, bikes or mopeds, one city or twenty — the risk at every crossing is the same, and so is the fix.</p>
-    </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;" class="reveal icp-grid">
-
-      <!-- Profile: shared micromobility fleets -->
-      <div class="icp-card" style="border:1px solid var(--border);border-radius:20px;overflow:hidden;">
-        <div style="background:#0A0A0A;padding:28px 28px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
-          <div>
-            <div style="font-size:28px;margin-bottom:8px;">🛴</div>
-            <div style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.5px;" data-i18n="icp_c1_title">Shared micromobility fleets</div>
-            <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-top:4px;" data-i18n="icp_c1_sub">E-scooters · self-propelled bicycles · e-bikes · e-mopeds</div>
-          </div>
-          <div style="background:rgba(29,185,84,0.12);border:1px solid rgba(29,185,84,0.25);color:#1DB954;font-size:11px;font-weight:700;padding:5px 12px;border-radius:8px;white-space:nowrap;" data-i18n="icp_c1_badge">Core fit</div>
-        </div>
-        <div style="padding:24px 28px;">
-          <div style="font-size:14px;color:#444;line-height:1.7;margin-bottom:20px;" data-i18n="icp_c1_desc">
-            Any operator running a <strong>free-floating or docked fleet</strong> through a rider app. If your users start and end trips in-app — often with music or a podcast playing — Pause &amp; Pass slots into that existing flow and protects them at every high-risk crossing, without changing how they ride.
-          </div>
-          <div style="display:flex;flex-direction:column;gap:10px;">
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#555;">
-              <span style="color:var(--green2);font-weight:700;">✓</span>
-              <span data-i18n="icp_c1_b1">App-based start/end ride flow — plugin drops into your existing logic</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#555;">
-              <span style="color:var(--green2);font-weight:700;">✓</span>
-              <span data-i18n="icp_c1_b2">Works the same for scooters, bikes and mopeds</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#555;">
-              <span style="color:var(--green2);font-weight:700;">✓</span>
-              <span data-i18n="icp_c1_b3">Software-only — no new hardware to fit or maintain</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#555;">
-              <span style="color:var(--green2);font-weight:700;">✓</span>
-              <span data-i18n="icp_c1_b4">Runs during the active trip — no change to your rider flow</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Profile: multi-city & cross-border operators -->
-      <div class="icp-card" style="border:1px solid var(--border);border-radius:20px;overflow:hidden;">
-        <div style="background:#0A0A0A;padding:28px 28px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
-          <div>
-            <div style="font-size:28px;margin-bottom:8px;">🌍</div>
-            <div style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.5px;" data-i18n="icp_c2_title">Multi-city &amp; cross-border operators</div>
-            <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-top:4px;" data-i18n="icp_c2_sub">Regional · national · pan-European</div>
-          </div>
-          <div style="background:rgba(29,185,84,0.12);border:1px solid rgba(29,185,84,0.25);color:#1DB954;font-size:11px;font-weight:700;padding:5px 12px;border-radius:8px;white-space:nowrap;" data-i18n="icp_c2_badge">One integration</div>
-        </div>
-        <div style="padding:24px 28px;">
-          <div style="font-size:14px;color:#444;line-height:1.7;margin-bottom:20px;" data-i18n="icp_c2_desc">
-            Operators scaling across <strong>several cities or countries</strong> face a different zone map in every market. One Pause &amp; Pass integration covers all of them — every crossing, every city — from a single plugin you ship once and never have to re-map yourself.
-          </div>
-          <div style="display:flex;flex-direction:column;gap:10px;">
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#555;">
-              <span style="color:var(--green2);font-weight:700;">✓</span>
-              <span data-i18n="icp_c2_b1">One integration covers every market you operate in</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#555;">
-              <span style="color:var(--green2);font-weight:700;">✓</span>
-              <span data-i18n="icp_c2_b2">Zone databases mapped, maintained and expanded for you</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#555;">
-              <span style="color:var(--green2);font-weight:700;">✓</span>
-              <span data-i18n="icp_c2_b3">iOS + Android supported out of the box</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#555;">
-              <span style="color:var(--green2);font-weight:700;">✓</span>
-              <span data-i18n="icp_c2_b4">New city launch = flip a switch, not a new build</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Profile: safety-forward & enterprise platforms -->
-      <div class="icp-card" style="border:1px solid var(--border);border-radius:20px;overflow:hidden;">
-        <div style="background:#0A0A0A;padding:28px 28px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;">
-          <div>
-            <div style="font-size:28px;margin-bottom:8px;">🛡️</div>
-            <div style="font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.5px;" data-i18n="icp_c3_title">Safety-forward &amp; enterprise platforms</div>
-            <div style="font-size:13px;color:rgba(255,255,255,0.4);margin-top:4px;" data-i18n="icp_c3_sub">Market leaders · high-volume fleets</div>
-          </div>
-          <div style="background:rgba(52,199,89,0.12);border:1px solid rgba(52,199,89,0.25);color:#34C759;font-size:11px;font-weight:700;padding:5px 12px;border-radius:8px;white-space:nowrap;" data-i18n="icp_c3_badge">Highest impact</div>
-        </div>
-        <div style="padding:24px 28px;">
-          <div style="font-size:14px;color:#444;line-height:1.7;margin-bottom:20px;" data-i18n="icp_c3_desc">
-            Large operators carry the <strong>most riders — and the most insurance and regulatory exposure</strong>. A documented safety layer turns that risk into a measurable safety and compliance asset, with an auditable record across your busiest trips.
-          </div>
-          <div style="display:flex;flex-direction:column;gap:10px;">
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#555;">
-              <span style="color:var(--green2);font-weight:700;">✓</span>
-              <span data-i18n="icp_c3_b1">Maximum safety impact per integration at scale</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#555;">
-              <span style="color:var(--green2);font-weight:700;">✓</span>
-              <span data-i18n="icp_c3_b2">Complements existing safety features (beginner mode, sobriety checks)</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#555;">
-              <span style="color:var(--green2);font-weight:700;">✓</span>
-              <span data-i18n="icp_c3_b3">Documented safety record for insurers and regulators</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:#555;">
-              <span style="color:var(--green2);font-weight:700;">✓</span>
-              <span data-i18n="icp_c3_b4">Configurable, white-label — you control the rider experience</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Shared pitch line -->
-    <div class="reveal" style="margin-top:32px;background:#0A0A0A;border-radius:16px;padding:28px 36px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
-      <div style="flex:1;min-width:280px;">
-        <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:6px;" data-i18n="icp_pitch_label">The pitch in one sentence</div>
-        <div style="font-size:14px;color:rgba(255,255,255,0.5);line-height:1.6;" data-i18n="icp_pitch_body">Pause &amp; Pass helps micromobility operators control distraction risk where it matters most, measure preventive interventions and build an auditable safety record for better operational and insurance-risk decisions.</div>
-      </div>
-      <a href="#contact" class="btn-hero" style="white-space:nowrap;flex-shrink:0;" data-i18n="icp_pitch_cta">Request a pilot →</a>
-    </div>
-  </div>
-</div>
 
 
 <!-- Plugin / How it works -->
@@ -1237,34 +1065,46 @@ footer {
       </div>
     </div>
 
-    <!-- Three integration steps -->
-    <div class="api-steps reveal">
-      <div class="api-step">
-        <div class="api-step-num" data-i18n="int_s1_num">Step 01</div>
-        <h3 data-i18n="int_s1_title">Add the SDK</h3>
-        <p data-i18n="int_s1_body">Your engineer adds the Pause &amp; Pass SDK to your existing Android or iOS project. One import, one initialisation call with your operator key. Nothing else changes in your app.</p>
-      </div>
-      <div class="api-step">
-        <div class="api-step-num" data-i18n="int_s2_num">Step 02</div>
-        <h3 data-i18n="int_s2_title">Hook into trip events</h3>
-        <p data-i18n="int_s2_body">Attach to your existing trip start and end callbacks. The SDK evaluates mapped zones on-device during active trips — you keep full control of your app UI and rider experience.</p>
-      </div>
-      <div class="api-step">
-        <div class="api-step-num" data-i18n="int_s3_num">Step 03</div>
-        <h3 data-i18n="int_s3_title">Go live & measure</h3>
-        <p data-i18n="int_s3_body">Eligible active trips on supported app versions are now covered. Safety events flow into your operator dashboard, and you own the record for reporting.</p>
-      </div>
-    </div>
+  </div>
+</section>
 
-    <!-- GDPR compliance note -->
-    <div class="reveal" style="margin-top:40px;border:1px solid #FDE68A;background:#FFFBEB;border-radius:14px;padding:28px 32px;display:flex;gap:20px;align-items:flex-start;">
-      <div style="font-size:28px;flex-shrink:0;">⚖️</div>
+
+<!-- Problem -->
+<section class="problem-section">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="prob_eyebrow">The operator problem</div>
+    <h2 class="section-h2"><span data-i18n="prob_h2a">You own the scooter.</span><br/><span data-i18n="prob_h2b">You share the</span> <em data-i18n="prob_h2c">risk.</em></h2>
+
+    <div class="problem-grid reveal">
       <div>
-        <div style="font-size:14px;font-weight:700;color:#92400E;margin-bottom:8px;" data-i18n="gdpr_title">Fits your existing GDPR setup</div>
-        <div style="font-size:13px;color:#78350F;line-height:1.7;" data-i18n="gdpr_body">You already have the rider relationship, terms and GDPR framework. Pause &amp; Pass slots into it: you remain the data controller, we act as your processor under a data processing agreement, and we supply ready wording if your privacy notice needs a line about safety interventions.</div>
+        <div style="font-size:40px;margin-bottom:20px;">🎧</div>
+        <div class="problem-big-label" style="font-size:19px;color:var(--ink);font-weight:600;line-height:1.5;" data-i18n="prob_stat_label">Riders wearing headphones lose a key cue — sound — right where they most need to notice a train, tram or turning car. Pause &amp; Pass reduces that audio distraction at the crossings you map.</div>
+        <div style="margin-top:32px;padding:24px;background:var(--grey1);border-radius:14px;border-left:3px solid var(--green)">
+          <div style="font-size:13px;color:#555;line-height:1.7">
+            <strong style="color:var(--black)" data-i18n="prob_reg_title">Why risk management matters.</strong> <span data-i18n="prob_reg_body">In Latvia, OCTA insurance has been mandatory for e-scooters since 1 July 2025 and for self-propelled bicycles since 1 May 2026. LTAB has published data on OCTA claims linked to accidents caused by e-scooter riders.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="liability-cards">
+        <div class="liability-card">
+          <div class="lc-icon">⚖️</div>
+          <div>
+            <div class="lc-title" data-i18n="lc1_title">Regulatory &amp; liability exposure</div>
+            <div class="lc-body" data-i18n="lc1_body">When incidents happen, operators are increasingly asked what active safety measures they had in place. A documented intervention record helps you answer that question.</div>
+            <span class="lc-tag tag-red" data-i18n="lc1_tag">Ongoing</span>
+          </div>
+        </div>
+        <div class="liability-card">
+          <div class="lc-icon">✅</div>
+          <div>
+            <div class="lc-title" data-i18n="lc4_title">Pause &amp; Pass changes the equation</div>
+            <div class="lc-body" data-i18n="lc4_body">A configured audio intervention at the crossings you map creates an auditable safety record — evidence of active duty of care for regulator, city and insurer discussions.</div>
+            <span class="lc-tag tag-green" data-i18n="lc4_tag">Risk mitigation</span>
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -1286,169 +1126,6 @@ footer {
     </div>
   </div>
 </section>
-
-
-<!-- Where it fits / competitive positioning -->
-<section style="padding:80px 0;background:var(--grey1);border-top:1px solid var(--border);" id="fit">
-  <div class="container">
-    <div class="section-eyebrow" data-i18n="comp_eyebrow">Where it fits</div>
-    <h2 class="section-h2"><span data-i18n="comp_h2a">Complementary to</span> <em data-i18n="comp_h2b">your safety stack.</em></h2>
-    <p style="color:#666;font-size:16px;max-width:640px;margin-top:12px;line-height:1.7;font-weight:300" data-i18n="comp_sub">Fleet geofences can slow or restrict a vehicle. Computer vision can identify where it is ridden. Collision-alert systems warn about dynamically detected road users. Pause &amp; Pass addresses a separate layer: reducing avoidable audio distraction before a rider enters a pre-mapped high-risk location.</p>
-
-    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:40px;">
-      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:26px;">
-        <div style="font-size:24px;margin-bottom:12px;">🛰️</div>
-        <div style="font-size:15px;font-weight:700;margin-bottom:8px;" data-i18n="comp_c1_title">Fleet geofencing</div>
-        <div style="font-size:13px;color:#666;line-height:1.65;" data-i18n="comp_c1_body">Slows or restricts a vehicle inside defined areas.</div>
-      </div>
-      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:26px;">
-        <div style="font-size:24px;margin-bottom:12px;">📷</div>
-        <div style="font-size:15px;font-weight:700;margin-bottom:8px;" data-i18n="comp_c2_title">Vehicle computer vision</div>
-        <div style="font-size:13px;color:#666;line-height:1.65;" data-i18n="comp_c2_body">Hardware that detects sidewalk riding, parking and surroundings.</div>
-      </div>
-      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:26px;">
-        <div style="font-size:24px;margin-bottom:12px;">📡</div>
-        <div style="font-size:15px;font-weight:700;margin-bottom:8px;" data-i18n="comp_c3_title">Collision-alert systems</div>
-        <div style="font-size:13px;color:#666;line-height:1.65;" data-i18n="comp_c3_body">Network or location alerts about dynamically detected road users.</div>
-      </div>
-    </div>
-
-    <div class="reveal" style="margin-top:20px;background:#0A0A0A;border-radius:16px;padding:26px 30px;display:flex;align-items:flex-start;gap:18px;">
-      <div style="font-size:26px;flex-shrink:0;">🎧</div>
-      <div>
-        <div style="font-size:16px;font-weight:700;color:#fff;margin-bottom:6px;" data-i18n="comp_pp_title">Pause &amp; Pass</div>
-        <div style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.65;" data-i18n="comp_pp_body">Pre-mapped, location-triggered rider-attention management and safety-event documentation inside your existing app — an add-on, not a replacement for your fleet or safety stack.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Use cases -->
-<section style="padding:80px 0;background:var(--white);border-top:1px solid var(--border);" id="use-cases">
-  <div class="container">
-    <div class="section-eyebrow" data-i18n="uc_eyebrow">Use cases</div>
-    <h2 class="section-h2"><span data-i18n="uc_h2a">Mapped for the</span> <em data-i18n="uc_h2b">riskiest places.</em></h2>
-    <p style="color:#666;font-size:16px;max-width:640px;margin-top:12px;line-height:1.7;font-weight:300" data-i18n="uc_sub">You (or we) map the locations that matter in your city. Pause &amp; Pass acts only there — not everywhere the rider goes.</p>
-
-    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:20px;margin-top:40px;">
-      <div style="border:1px solid var(--border);border-radius:16px;padding:26px;">
-        <div style="font-size:26px;margin-bottom:12px;">🚉</div>
-        <div style="font-size:15px;font-weight:700;margin-bottom:8px;" data-i18n="uc1_t">Railway &amp; tram crossings</div>
-        <div style="font-size:13px;color:#666;line-height:1.65;" data-i18n="uc1_b">Where a missed train or tram is the difference between a close call and a tragedy.</div>
-      </div>
-      <div style="border:1px solid var(--border);border-radius:16px;padding:26px;">
-        <div style="font-size:26px;margin-bottom:12px;">🚦</div>
-        <div style="font-size:15px;font-weight:700;margin-bottom:8px;" data-i18n="uc2_t">Complex intersections</div>
-        <div style="font-size:13px;color:#666;line-height:1.65;" data-i18n="uc2_b">Multi-lane junctions and turning traffic that demand a rider's full attention.</div>
-      </div>
-      <div style="border:1px solid var(--border);border-radius:16px;padding:26px;">
-        <div style="font-size:26px;margin-bottom:12px;">🏫</div>
-        <div style="font-size:15px;font-weight:700;margin-bottom:8px;" data-i18n="uc3_t">School zones</div>
-        <div style="font-size:13px;color:#666;line-height:1.65;" data-i18n="uc3_b">Areas with children and unpredictable movement, often with reduced speed limits.</div>
-      </div>
-      <div style="border:1px solid var(--border);border-radius:16px;padding:26px;">
-        <div style="font-size:26px;margin-bottom:12px;">🏙️</div>
-        <div style="font-size:15px;font-weight:700;margin-bottom:8px;" data-i18n="uc4_t">City-defined hazard areas</div>
-        <div style="font-size:13px;color:#666;line-height:1.65;" data-i18n="uc4_b">Any location a city, operator or insurer flags as high-risk in your permit conditions.</div>
-      </div>
-    </div>
-    <p style="margin-top:18px;font-size:13px;color:#888;line-height:1.6;" data-i18n="uc_note">Standard zones come pre-mapped for your markets; custom zones are added per operator.</p>
-  </div>
-</section>
-
-
-<!-- Implementation / platform capability matrix -->
-<section style="padding:80px 0;background:var(--white);border-top:1px solid var(--border);" id="implementation">
-  <div class="container">
-    <div class="section-eyebrow" data-i18n="cap_eyebrow">Implementation</div>
-    <h2 class="section-h2"><span data-i18n="cap_h2a">Platform capabilities,</span> <em data-i18n="cap_h2b">in plain terms.</em></h2>
-    <p style="color:#666;font-size:16px;max-width:640px;margin-top:12px;line-height:1.7;font-weight:300" data-i18n="cap_sub">Audio behaviour varies by OS, device and player. Here is what Pause &amp; Pass supports on each platform — and the decisions that stay with you.</p>
-
-    <div class="reveal" style="margin-top:36px;overflow-x:auto;border:1px solid var(--border);border-radius:16px;">
-      <table style="width:100%;border-collapse:collapse;min-width:640px;font-size:13px;">
-        <thead>
-          <tr style="background:var(--grey1);text-align:left;">
-            <th style="padding:14px 18px;font-weight:700;color:var(--ink);" data-i18n="cap_th_cap">Capability</th>
-            <th style="padding:14px 18px;font-weight:700;color:var(--ink);" data-i18n="cap_th_android">Android</th>
-            <th style="padding:14px 18px;font-weight:700;color:var(--ink);" data-i18n="cap_th_ios">iOS</th>
-            <th style="padding:14px 18px;font-weight:700;color:var(--ink);" data-i18n="cap_th_op">Operator decision</th>
-          </tr>
-        </thead>
-        <tbody style="color:#555;">
-          <tr style="border-top:1px solid var(--border);">
-            <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r1_cap">Background trip monitoring</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r1_android">Supported, subject to permissions and OS conditions</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r1_ios">Supported, subject to permissions and OS conditions</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r1_op">Define the required permission flow</td>
-          </tr>
-          <tr style="border-top:1px solid var(--border);">
-            <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r2_cap">Audio intervention</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r2_android">Audio-focus behaviour varies by OS, device and player</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r2_ios">Validated per OS / audio-session behaviour</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r2_op">Choose pause, duck, chime or in-app prompt</td>
-          </tr>
-          <tr style="border-top:1px solid var(--border);">
-            <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r3_cap">Event logging</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r3_android">Supported</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r3_ios">Supported</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r3_op">Define the minimised event schema and retention</td>
-          </tr>
-          <tr style="border-top:1px solid var(--border);">
-            <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r4_cap">Zone configuration</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r4_android">Supported</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r4_ios">Supported</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r4_op">Select standard and custom zones</td>
-          </tr>
-          <tr style="border-top:1px solid var(--border);">
-            <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r5_cap">Rider messaging</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r5_android">Optional</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r5_ios">Optional</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r5_op">You choose the copy and UX</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p style="margin-top:18px;font-size:13px;color:#888;line-height:1.6;" data-i18n="cap_note">Zone entry is evaluated using configurable buffers and location-confidence rules to reduce false triggers near crossing boundaries.</p>
-  </div>
-</section>
-
-
-<!-- Benefits -->
-<section class="benefits-section" id="benefits">
-  <div class="container">
-    <div class="section-eyebrow" data-i18n="ben_eyebrow">What operators get</div>
-    <h2 class="section-h2"><span data-i18n="ben_h2a">Prevent. Measure.</span><br/><em data-i18n="ben_h2b">Document. Manage risk.</em></h2>
-
-    <div class="benefits-grid four reveal">
-      <div class="benefit-card">
-        <div class="bc-icon">🛑</div>
-        <h3 data-i18n="pv1_t">Prevent</h3>
-        <p data-i18n="pv1_b">Reduces audio distraction in mapped high-risk zones — railway crossings, complex junctions and city-defined hazard areas.</p>
-        <span class="benefit-tag" data-i18n="pv1_tag">Audio distraction</span>
-      </div>
-      <div class="benefit-card">
-        <div class="bc-icon">📊</div>
-        <h3 data-i18n="pv2_t">Measure</h3>
-        <p data-i18n="pv2_b">Tracks eligible trips, zone entries, interventions and coverage, so you see what actually happened on the road.</p>
-        <span class="benefit-tag" data-i18n="pv2_tag">Coverage &amp; KPIs</span>
-      </div>
-      <div class="benefit-card">
-        <div class="bc-icon">🗂️</div>
-        <h3 data-i18n="pv3_t">Document</h3>
-        <p data-i18n="pv3_b">Builds an auditable history of safety events — timestamped, zone-tagged and exportable.</p>
-        <span class="benefit-tag" data-i18n="pv3_tag">Audit trail</span>
-      </div>
-      <div class="benefit-card">
-        <div class="bc-icon">🛡️</div>
-        <h3 data-i18n="pv4_t">Manage risk</h3>
-        <p data-i18n="pv4_b">Helps you manage fleet safety and prepare data for conversations with cities, regulators and insurers.</p>
-        <span class="benefit-tag" data-i18n="pv4_tag">City · regulator · insurer</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 
 <!-- Pricing -->
@@ -1510,8 +1187,95 @@ footer {
         </div>
       </div>
     </div>
+    <p class="price-note" data-i18n="price_note">Indicative pricing — final scope depends on fleet size, cities, integration requirements and reporting needs.</p>
   </div>
 </section>
+
+
+<!-- Implementation / platform capability matrix -->
+<section style="padding:80px 0;background:var(--white);border-top:1px solid var(--border);" id="implementation">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="cap_eyebrow">Implementation</div>
+    <h2 class="section-h2"><span data-i18n="cap_h2a">Platform capabilities,</span> <em data-i18n="cap_h2b">in plain terms.</em></h2>
+    <p style="color:#666;font-size:16px;max-width:640px;margin-top:12px;line-height:1.7;font-weight:300" data-i18n="cap_sub">Audio behaviour varies by OS, device and player. Here is what Pause &amp; Pass supports on each platform — and the decisions that stay with you.</p>
+
+    <div class="reveal" style="margin-top:36px;overflow-x:auto;border:1px solid var(--border);border-radius:16px;">
+      <table style="width:100%;border-collapse:collapse;min-width:640px;font-size:13px;">
+        <thead>
+          <tr style="background:var(--grey1);text-align:left;">
+            <th style="padding:14px 18px;font-weight:700;color:var(--ink);" data-i18n="cap_th_cap">Capability</th>
+            <th style="padding:14px 18px;font-weight:700;color:var(--ink);" data-i18n="cap_th_android">Android</th>
+            <th style="padding:14px 18px;font-weight:700;color:var(--ink);" data-i18n="cap_th_ios">iOS</th>
+            <th style="padding:14px 18px;font-weight:700;color:var(--ink);" data-i18n="cap_th_op">Operator decision</th>
+          </tr>
+        </thead>
+        <tbody style="color:#555;">
+          <tr style="border-top:1px solid var(--border);">
+            <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r1_cap">Background trip monitoring</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r1_android">Supported, subject to permissions and OS conditions</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r1_ios">Supported, subject to permissions and OS conditions</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r1_op">Define the required permission flow</td>
+          </tr>
+          <tr style="border-top:1px solid var(--border);">
+            <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r2_cap">Audio intervention</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r2_android">Audio-focus behaviour varies by OS, device and player</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r2_ios">Validated per OS / audio-session behaviour</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r2_op">Choose pause, duck, chime or in-app prompt</td>
+          </tr>
+          <tr style="border-top:1px solid var(--border);">
+            <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r3_cap">Event logging</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r3_android">Supported</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r3_ios">Supported</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r3_op">Define the minimised event schema and retention</td>
+          </tr>
+          <tr style="border-top:1px solid var(--border);">
+            <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r4_cap">Zone configuration</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r4_android">Supported</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r4_ios">Supported</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r4_op">Select standard and custom zones</td>
+          </tr>
+          <tr style="border-top:1px solid var(--border);">
+            <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r5_cap">Rider messaging</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r5_android">Optional</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r5_ios">Optional</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r5_op">You choose the copy and UX</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:18px;font-size:13px;color:#888;line-height:1.6;" data-i18n="cap_note">Zone entry is evaluated using configurable buffers and location-confidence rules to reduce false triggers near crossing boundaries.</p>
+
+    <!-- Three integration steps -->
+    <div class="api-steps reveal">
+      <div class="api-step">
+        <div class="api-step-num" data-i18n="int_s1_num">Step 01</div>
+        <h3 data-i18n="int_s1_title">Add the SDK</h3>
+        <p data-i18n="int_s1_body">Your engineer adds the Pause &amp; Pass SDK to your existing Android or iOS project. One import, one initialisation call with your operator key. Nothing else changes in your app.</p>
+      </div>
+      <div class="api-step">
+        <div class="api-step-num" data-i18n="int_s2_num">Step 02</div>
+        <h3 data-i18n="int_s2_title">Hook into trip events</h3>
+        <p data-i18n="int_s2_body">Attach to your existing trip start and end callbacks. The SDK evaluates mapped zones on-device during active trips — you keep full control of your app UI and rider experience.</p>
+      </div>
+      <div class="api-step">
+        <div class="api-step-num" data-i18n="int_s3_num">Step 03</div>
+        <h3 data-i18n="int_s3_title">Go live & measure</h3>
+        <p data-i18n="int_s3_body">Eligible active trips on supported app versions are now covered. Safety events flow into your operator dashboard, and you own the record for reporting.</p>
+      </div>
+    </div>
+
+    <!-- GDPR compliance note -->
+    <div class="reveal" style="margin-top:40px;border:1px solid #FDE68A;background:#FFFBEB;border-radius:14px;padding:28px 32px;display:flex;gap:20px;align-items:flex-start;">
+      <div style="font-size:28px;flex-shrink:0;">⚖️</div>
+      <div>
+        <div style="font-size:14px;font-weight:700;color:#92400E;margin-bottom:8px;" data-i18n="gdpr_title">Fits your existing GDPR setup</div>
+        <div style="font-size:13px;color:#78350F;line-height:1.7;" data-i18n="gdpr_body">You already have the rider relationship, terms and GDPR framework. Pause &amp; Pass slots into it: you remain the data controller, we act as your processor under a data processing agreement, and we supply ready wording if your privacy notice needs a line about safety interventions.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <!-- Trust & governance -->
 <section style="padding:80px 0;background:var(--white);border-top:1px solid var(--border);" id="trust">
@@ -1602,6 +1366,21 @@ footer {
 </section>
 
 
+<!-- One-line pitch -->
+<section style="padding:70px 0 0;background:var(--white);">
+  <div class="container">
+    <!-- Shared pitch line -->
+    <div class="reveal" style="background:#0A0A0A;border-radius:16px;padding:28px 36px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:280px;">
+        <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:6px;" data-i18n="icp_pitch_label">The pitch in one sentence</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);line-height:1.6;" data-i18n="icp_pitch_body">Pause &amp; Pass helps micromobility operators control distraction risk where it matters most, measure preventive interventions and build an auditable safety record for better operational and insurance-risk decisions.</div>
+      </div>
+      <a href="#contact" class="btn-hero" style="white-space:nowrap;flex-shrink:0;" data-i18n="icp_pitch_cta">Request a pilot →</a>
+    </div>
+  </div>
+</section>
+
+
 <!-- CTA / Contact -->
 <section class="cta-section" id="contact">
   <div class="container">
@@ -1629,6 +1408,7 @@ footer {
     </div>
   </div>
 </section>
+
 
 <!-- Footer -->
 <footer>
@@ -1842,8 +1622,8 @@ footer {
 const translations = {
   en: {
     // Nav
-    nav_how: 'How it works', nav_uses: 'Use cases',
-    nav_pricing: 'Pricing',
+    nav_how: 'How it works',
+    nav_pricing: 'Pricing', nav_dash: 'Dashboard', nav_faq: 'FAQ',
     nav_cta: 'Get in touch',
     // Hero
     hero_eyebrow: '🔌 White-label rider-attention safety plugin',
@@ -1854,10 +1634,6 @@ const translations = {
     trust1: 'White-label plugin', trust2: 'No separate rider app',
     trust3: 'Configurable intervention', trust4: 'GDPR-ready',
     // Stats — defensible product facts (no unverified external statistics)
-    stat1_desc: 'mobile platforms — one plugin for iOS and Android',
-    stat2_desc: 'pieces of vehicle hardware to fit or maintain',
-    stat3_desc: 'integration to cover every high-risk crossing you map',
-    stat4_desc: 'configurable responses: pause, duck, chime or in-app prompt',
     // Problem
     prob_eyebrow: 'The operator problem',
     prob_h2a: 'You own the scooter.', prob_h2b: 'You share the', prob_h2c: 'risk.',
@@ -1865,8 +1641,6 @@ const translations = {
     prob_reg_title: 'Why risk management matters.',
     prob_reg_body: 'In Latvia, OCTA insurance has been mandatory for e-scooters since 1 July 2025 and for self-propelled bicycles since 1 May 2026. LTAB has published data on OCTA claims linked to accidents caused by e-scooter riders.',
     lc1_title: 'Regulatory & liability exposure', lc1_body: 'When incidents happen, operators are increasingly asked what active safety measures they had in place. A documented intervention record helps you answer that question.', lc1_tag: 'Ongoing',
-    lc2_title: 'Insurance & risk pricing', lc2_body: 'Insurers increasingly weigh active safety technology when pricing micro-mobility fleet policies. A documented safety record supports those conversations.', lc2_tag: 'Financial',
-    lc3_title: 'Brand & media exposure', lc3_body: 'High-profile crossing incidents attract press coverage that can affect operator perception and city relationships. Demonstrable safety measures help.', lc3_tag: 'Reputational',
     lc4_title: 'Pause & Pass changes the equation', lc4_body: 'A configured audio intervention at the crossings you map creates an auditable safety record — evidence of active duty of care for regulator, city and insurer discussions.', lc4_tag: 'Risk mitigation',
     // Plugin section
     plug_eyebrow: 'How it works',
@@ -1891,6 +1665,7 @@ const translations = {
     pv4_t: 'Manage risk', pv4_b: 'Helps you manage fleet safety and prepare data for conversations with cities, regulators and insurers.', pv4_tag: 'City · regulator · insurer',
     // Pricing
     price_eyebrow: 'Pricing & packages', price_h2a: 'Pilot, Basic,', price_h2b: 'Advanced.',
+    price_note: 'Indicative pricing — final scope depends on fleet size, cities, integration requirements and reporting needs.',
     price_sub: 'CAPEX = one-off pilot & setup · OPEX = monthly minimum for platform, support and reporting · Usage = fee per active ride.',
     tier1_name: 'Pilot (paid)', tier1_sub: 'one-off pilot & setup',
     t1f1: '8–12 weeks, one city', t1f2: '20–30 safety zones', t1f3: 'Up to 100,000 rides / month', t1f4: 'Weekly safety-intervention report', t1f5: 'Success criteria agreed up front', t1f6: 'Outcome: scale, redesign or stop',
@@ -1916,44 +1691,10 @@ const translations = {
     contact_title: 'Get in touch',
     contact_sub: "We're happy to answer any questions about Pause & Pass.",
     // Ideal customer profiles
-    icp_eyebrow: 'Who Pause & Pass is built for',
-    icp_h2: 'Different fleets.<br/><em>One shared problem.</em>',
-    icp_intro: "If your riders open an app to start a trip, they're who we protect. Whatever you run — scooters, bikes or mopeds, one city or twenty — the risk at every crossing is the same, and so is the fix.",
-    icp_c1_title: 'Shared micromobility fleets',
-    icp_c1_sub: 'E-scooters · self-propelled bicycles · e-bikes · e-mopeds',
-    icp_c1_badge: 'Core fit',
-    icp_c1_desc: 'Any operator running a <strong>free-floating or docked fleet</strong> through a rider app. If your users start and end trips in-app — often with music or a podcast playing — Pause &amp; Pass slots into that existing flow and protects them at every high-risk crossing, without changing how they ride.',
-    icp_c1_b1: 'App-based start/end ride flow — plugin drops into your existing logic',
-    icp_c1_b2: 'Works the same for scooters, bikes and mopeds',
-    icp_c1_b3: 'Software-only — no new hardware to fit or maintain',
-    icp_c1_b4: 'Runs during the active trip — no change to your rider flow',
-    icp_c2_title: 'Multi-city & cross-border operators',
-    icp_c2_sub: 'Regional · national · pan-European',
-    icp_c2_badge: 'One integration',
-    icp_c2_desc: 'Operators scaling across <strong>several cities or countries</strong> face a different zone map in every market. One Pause &amp; Pass integration covers all of them — every crossing, every city — from a single plugin you ship once and never have to re-map yourself.',
-    icp_c2_b1: 'One integration covers every market you operate in',
-    icp_c2_b2: 'Zone databases mapped, maintained and expanded for you',
-    icp_c2_b3: 'iOS + Android supported out of the box',
-    icp_c2_b4: 'New city launch = flip a switch, not a new build',
-    icp_c3_title: 'Safety-forward & enterprise platforms',
-    icp_c3_sub: 'Market leaders · high-volume fleets',
-    icp_c3_badge: 'Highest impact',
-    icp_c3_desc: 'Large operators carry the <strong>most riders — and the most insurance and regulatory exposure</strong>. A documented safety layer turns that risk into a measurable safety and compliance asset, with an auditable record across your busiest trips.',
-    icp_c3_b1: 'Maximum safety impact per integration at scale',
-    icp_c3_b2: 'Complements existing safety features (beginner mode, sobriety checks)',
-    icp_c3_b3: 'Documented safety record for insurers and regulators',
-    icp_c3_b4: 'Configurable, white-label — you control the rider experience',
     icp_pitch_label: 'The pitch in one sentence',
     icp_pitch_body: 'Pause & Pass helps micromobility operators control distraction risk where it matters most, measure preventive interventions and build an auditable safety record for better operational and insurance-risk decisions.',
     icp_pitch_cta: 'Request a pilot →',
     // Where it fits (competitive)
-    comp_eyebrow: 'Where it fits',
-    comp_h2a: 'Complementary to', comp_h2b: 'your safety stack.',
-    comp_sub: 'Fleet geofences can slow or restrict a vehicle. Computer vision can identify where it is ridden. Collision-alert systems warn about dynamically detected road users. Pause & Pass addresses a separate layer: reducing avoidable audio distraction before a rider enters a pre-mapped high-risk location.',
-    comp_c1_title: 'Fleet geofencing', comp_c1_body: 'Slows or restricts a vehicle inside defined areas.',
-    comp_c2_title: 'Vehicle computer vision', comp_c2_body: 'Hardware that detects sidewalk riding, parking and surroundings.',
-    comp_c3_title: 'Collision-alert systems', comp_c3_body: 'Network or location alerts about dynamically detected road users.',
-    comp_pp_title: 'Pause & Pass', comp_pp_body: 'Pre-mapped, location-triggered rider-attention management and safety-event documentation inside your existing app — an add-on, not a replacement for your fleet or safety stack.',
     // Implementation (capability matrix)
     cap_eyebrow: 'Implementation',
     cap_h2a: 'Platform capabilities,', cap_h2b: 'in plain terms.',
@@ -1966,14 +1707,6 @@ const translations = {
     cap_r5_cap: 'Rider messaging', cap_r5_android: 'Optional', cap_r5_ios: 'Optional', cap_r5_op: 'You choose the copy and UX',
     cap_note: 'Zone entry is evaluated using configurable buffers and location-confidence rules to reduce false triggers near crossing boundaries.',
     // Use cases
-    uc_eyebrow: 'Use cases',
-    uc_h2a: 'Mapped for the', uc_h2b: 'riskiest places.',
-    uc_sub: 'You (or we) map the locations that matter in your city. Pause & Pass acts only there — not everywhere the rider goes.',
-    uc1_t: 'Railway & tram crossings', uc1_b: 'Where a missed train or tram is the difference between a close call and a tragedy.',
-    uc2_t: 'Complex intersections', uc2_b: "Multi-lane junctions and turning traffic that demand a rider's full attention.",
-    uc3_t: 'School zones', uc3_b: 'Areas with children and unpredictable movement, often with reduced speed limits.',
-    uc4_t: 'City-defined hazard areas', uc4_b: 'Any location a city, operator or insurer flags as high-risk in your permit conditions.',
-    uc_note: 'Standard zones come pre-mapped for your markets; custom zones are added per operator.',
     // Trust & governance
     trust_eyebrow: 'Privacy & data',
     trust_h2a: 'Built to pass', trust_h2b: 'a security review.',
@@ -2035,11 +1768,10 @@ const translations = {
     dash_z4: 'Low visibility · Daugavgrīvas iela',
     dash_live: 'Counters update live with the trip simulation at the top of the page.',
   },
-
   lv: {
     // Nav
-    nav_how: 'Kā tas darbojas', nav_uses: 'Pielietojums',
-    nav_pricing: 'Cenas',
+    nav_how: 'Kā tas darbojas',
+    nav_pricing: 'Cenas', nav_dash: 'Dashboard', nav_faq: 'BUJ',
     nav_cta: 'Sazināties',
     // Hero
     hero_eyebrow: '🔌 White-label braucēju uzmanības drošības spraudnis',
@@ -2050,10 +1782,6 @@ const translations = {
     trust1: 'White-label spraudnis', trust2: 'Bez atsevišķas lietotnes braucējam',
     trust3: 'Konfigurējama intervence', trust4: 'VDAR gatavs',
     // Stats — patiesi produkta fakti (bez nepamatotas statistikas)
-    stat1_desc: 'mobilās platformas — viens spraudnis iOS un Android',
-    stat2_desc: 'transportlīdzekļa aparatūras vienības, ko uzstādīt vai uzturēt',
-    stat3_desc: 'integrācija, kas aptver katru kartēto augsta riska pāreju',
-    stat4_desc: 'konfigurējamas atbildes: pauze, pieklusināšana, signāls vai paziņojums lietotnē',
     // Problem
     prob_eyebrow: 'Operatora problēma',
     prob_h2a: 'Skūteris pieder jums.', prob_h2b: 'Risku jūs', prob_h2c: 'dalāt.',
@@ -2061,8 +1789,6 @@ const translations = {
     prob_reg_title: 'Kāpēc riska vadība ir svarīga.',
     prob_reg_body: 'Latvijā OCTA elektriskajiem skrejriteņiem ir obligāta kopš 2025. gada 1. jūlija, bet pašgājējiem velosipēdiem — kopš 2026. gada 1. maija. LTAB ir publicējis datus par OCTA atlīdzību pieteikumiem saistībā ar elektrisko skrejriteņu vadītāju izraisītiem negadījumiem.',
     lc1_title: 'Regulatīvā un atbildības iedarbība', lc1_body: 'Kad notiek incidenti, operatoriem arvien biežāk jautā, kādi aktīvi drošības pasākumi bija ieviesti. Dokumentēts intervenču ieraksts palīdz uz to atbildēt.', lc1_tag: 'Aktuāli',
-    lc2_title: 'Apdrošināšana un riska cena', lc2_body: 'Apdrošinātāji arvien vairāk ņem vērā aktīvo drošības tehnoloģiju, nosakot mikromobilitātes flotu polišu cenas. Dokumentēts drošības ieraksts atbalsta šīs sarunas.', lc2_tag: 'Finansiāli',
-    lc3_title: 'Zīmola un mediju iedarbība', lc3_body: 'Augsta profila incidenti pārejās piesaista preses uzmanību, kas var ietekmēt operatora reputāciju un attiecības ar pilsētu. Pierādāmi drošības pasākumi palīdz.', lc3_tag: 'Reputācija',
     lc4_title: 'Pause & Pass maina vienādojumu', lc4_body: 'Konfigurēta audio intervence jūsu kartētajās pārejās rada auditējamu drošības ierakstu — pierādījums aktīvai rūpībai sarunās ar regulatoriem, pilsētu un apdrošinātājiem.', lc4_tag: 'Riska mazināšana',
     // Plugin section
     plug_eyebrow: 'Kā tas darbojas',
@@ -2087,6 +1813,7 @@ const translations = {
     pv4_t: 'Vadi risku', pv4_b: 'Palīdz vadīt flotes drošību un sagatavot datus sarunām ar pilsētu, regulatoru un apdrošinātāju.', pv4_tag: 'Pilsēta · regulators · apdrošinātājs',
     // Pricing
     price_eyebrow: 'Cenas un paketes', price_h2a: 'Pilot, Basic,', price_h2b: 'Advanced.',
+    price_note: 'Orientējošas cenas — galīgais piedāvājums ir atkarīgs no flotes izmēra, pilsētu skaita, integrācijas prasībām un atskaišu apjoma.',
     price_sub: 'CAPEX = vienreizējs pilots un uzstādīšana · OPEX = ikmēneša minimums par platformu, atbalstu un atskaitēm · Usage = maksa par aktīvu braucienu.',
     tier1_name: 'Pilots (maksas)', tier1_sub: 'vienreizējs pilots un uzstādīšana',
     t1f1: '8–12 nedēļas, viena pilsēta', t1f2: '20–30 drošības zonas', t1f3: 'Līdz 100 000 braucienu / mēnesī', t1f4: 'Iknedēļas drošības intervenču pārskats', t1f5: 'Panākumu kritēriji saskaņoti iepriekš', t1f6: 'Rezultāts: mērogot, pārveidot vai apturēt',
@@ -2112,44 +1839,10 @@ const translations = {
     contact_title: 'Sazinies ar mums',
     contact_sub: 'Labprāt atbildēsim uz jebkuriem jautājumiem par Pause & Pass.',
     // Ideālie klientu profili
-    icp_eyebrow: 'Kam Pause & Pass ir paredzēts',
-    icp_h2: 'Dažādi autoparki.<br/><em>Viena kopīga problēma.</em>',
-    icp_intro: 'Ja jūsu braucēji atver lietotni, lai sāktu braucienu, tieši viņus mēs aizsargājam. Neatkarīgi no tā, ko jūs pārvaldāt — skrejriteņus, velosipēdus vai mopēdus, vienā pilsētā vai divdesmit — risks katrā pārejā ir vienāds, un tāds pats ir arī risinājums.',
-    icp_c1_title: 'Koplietošanas mikromobilitātes autoparki',
-    icp_c1_sub: 'Elektroskrejriteņi · pašgājēji velosipēdi · e-velosipēdi · e-mopēdi',
-    icp_c1_badge: 'Galvenā atbilstība',
-    icp_c1_desc: 'Jebkurš operators, kas ar braucēju lietotni pārvalda <strong>brīvi novietojamu vai dokstacijās bāzētu autoparku</strong>. Ja jūsu lietotāji sāk un beidz braucienus lietotnē — bieži ar mūziku vai podkāstu — Pause &amp; Pass iekļaujas šajā esošajā plūsmā un aizsargā viņus katrā augsta riska pārejā, nemainot to, kā viņi brauc.',
-    icp_c1_b1: 'Lietotnē balstīta brauciena sākšana/beigšana — spraudnis iekļaujas jūsu esošajā loģikā',
-    icp_c1_b2: 'Darbojas vienādi skrejriteņiem, velosipēdiem un mopēdiem',
-    icp_c1_b3: 'Tikai programmatūra — nav jāuzstāda vai jāuztur jauna aparatūra',
-    icp_c1_b4: 'Darbojas aktīvā brauciena laikā — bez izmaiņām braucēja plūsmā',
-    icp_c2_title: 'Vairāku pilsētu un pārrobežu operatori',
-    icp_c2_sub: 'Reģionāli · nacionāli · Eiropas mēroga',
-    icp_c2_badge: 'Viena integrācija',
-    icp_c2_desc: 'Operatori, kas paplašinās <strong>vairākās pilsētās vai valstīs</strong>, katrā tirgū saskaras ar atšķirīgu zonu karti. Viena Pause &amp; Pass integrācija aptver tās visas — katru pāreju, katru pilsētu — no viena spraudņa, ko ieviešat vienreiz un nekad nav jākartē pašiem.',
-    icp_c2_b1: 'Viena integrācija aptver katru tirgu, kurā darbojaties',
-    icp_c2_b2: 'Zonu datubāzes tiek kartētas, uzturētas un paplašinātas jūsu vietā',
-    icp_c2_b3: 'iOS + Android atbalstīti uzreiz',
-    icp_c2_b4: 'Jaunas pilsētas atvēršana = viena poga, nevis jauns izstrādes cikls',
-    icp_c3_title: 'Uz drošību orientētas un uzņēmumu platformas',
-    icp_c3_sub: 'Tirgus līderi · liela apjoma autoparki',
-    icp_c3_badge: 'Vislielākā ietekme',
-    icp_c3_desc: 'Lielie operatori pārvadā <strong>visvairāk braucēju — un tiem ir vislielākā apdrošināšanas un regulējuma slodze</strong>. Dokumentēts drošības slānis pārvērš šo risku par izmērāmu drošības un atbilstības priekšrocību, ar auditējamu ierakstu jūsu noslogotākajos braucienos.',
-    icp_c3_b1: 'Maksimāla drošības ietekme uz vienu integrāciju lielā mērogā',
-    icp_c3_b2: 'Papildina esošās drošības funkcijas (iesācēju režīms, prātības pārbaudes)',
-    icp_c3_b3: 'Dokumentēta drošības vēsture apdrošinātājiem un regulatoriem',
-    icp_c3_b4: 'Konfigurējams, white-label — jūs kontrolējat braucēja pieredzi',
     icp_pitch_label: 'Piedāvājums vienā teikumā',
     icp_pitch_body: 'Pause & Pass palīdz mikromobilitātes operatoriem kontrolēt uzmanības novēršanas risku vietās, kur tas ir visbūtiskāk, izmērīt preventīvās intervences un izveidot auditējamu drošības vēsturi labākiem operacionālajiem un apdrošināšanas riska lēmumiem.',
     icp_pitch_cta: 'Pieteikt pilotprojektu →',
     // Kur tas iekļaujas (konkurenti)
-    comp_eyebrow: 'Kur tas iekļaujas',
-    comp_h2a: 'Papildina', comp_h2b: 'jūsu drošības steku.',
-    comp_sub: 'Flotes ģeozonas var palēnināt vai ierobežot transportlīdzekli. Datorredze var noteikt, kur ar to brauc. Sadursmju brīdinājumu sistēmas brīdina par dinamiski atklātiem ceļa lietotājiem. Pause & Pass risina atsevišķu slāni: samazina novēršamu audio traucēkli, pirms braucējs iebrauc iepriekš kartētā augsta riska vietā.',
-    comp_c1_title: 'Flotes ģeozonas', comp_c1_body: 'Palēnina vai ierobežo transportlīdzekli noteiktās zonās.',
-    comp_c2_title: 'Transportlīdzekļa datorredze', comp_c2_body: 'Aparatūra, kas nosaka braukšanu pa ietvi, novietošanu un apkārtni.',
-    comp_c3_title: 'Sadursmju brīdinājumu sistēmas', comp_c3_body: 'Tīkla vai atrašanās vietas brīdinājumi par dinamiski atklātiem ceļa lietotājiem.',
-    comp_pp_title: 'Pause & Pass', comp_pp_body: 'Iepriekš kartēta, atrašanās vietā balstīta braucēju uzmanības pārvaldība un drošības notikumu dokumentēšana jūsu esošajā lietotnē — papildinājums, nevis jūsu flotes vai drošības steka aizvietotājs.',
     // Ieviešana (capability matrix)
     cap_eyebrow: 'Ieviešana',
     cap_h2a: 'Platformas iespējas,', cap_h2b: 'vienkāršā valodā.',
@@ -2162,14 +1855,6 @@ const translations = {
     cap_r5_cap: 'Ziņojumi braucējam', cap_r5_android: 'Neobligāti', cap_r5_ios: 'Neobligāti', cap_r5_op: 'Jūs izvēlaties tekstu un UX',
     cap_note: 'Zonas ievadu izvērtē, izmantojot konfigurējamus buferus un atrašanās vietas ticamības noteikumus, lai samazinātu kļūdainus iedarbinājumus pie pāreju robežām.',
     // Pielietojums (use cases)
-    uc_eyebrow: 'Pielietojums',
-    uc_h2a: 'Kartēts', uc_h2b: 'riskantākajām vietām.',
-    uc_sub: 'Jūs (vai mēs) kartējam vietas, kas jūsu pilsētā ir svarīgas. Pause & Pass darbojas tikai tur — nevis visur, kur braucējs dodas.',
-    uc1_t: 'Dzelzceļa un tramvaja pārejas', uc1_b: 'Kur nepamanīts vilciens vai tramvajs ir robeža starp knapu izbēgšanu un traģēdiju.',
-    uc2_t: 'Sarežģīti krustojumi', uc2_b: 'Daudzjoslu krustojumi un nogriežoša satiksme, kas prasa braucēja pilnu uzmanību.',
-    uc3_t: 'Skolu zonas', uc3_b: 'Vietas ar bērniem un neparedzamu kustību, bieži ar samazinātu ātruma ierobežojumu.',
-    uc4_t: 'Pilsētas noteiktās bīstamās zonas', uc4_b: 'Jebkura vieta, ko pilsēta, operators vai apdrošinātājs atzīmē kā augsta riska jūsu atļaujas nosacījumos.',
-    uc_note: 'Standarta zonas ir iepriekš kartētas jūsu tirgiem; pielāgotas zonas tiek pievienotas katram operatoram.',
     // Uzticamība un pārvaldība
     trust_eyebrow: 'Privātums un dati',
     trust_h2a: 'Veidots, lai izturētu', trust_h2b: 'drošības auditu.',
