@@ -1827,7 +1827,7 @@ const translations = {
     prob_reg_title: 'Kāpēc riska vadība ir svarīga.',
     prob_reg_body: 'Latvijā OCTA elektriskajiem skrejriteņiem ir obligāta kopš 2025. gada 1. jūlija, bet pašgājējiem velosipēdiem — kopš 2026. gada 1. maija. LTAB ir publicējis datus par OCTA atlīdzību pieteikumiem saistībā ar elektrisko skrejriteņu vadītāju izraisītiem negadījumiem.',
     lc1_title: 'Regulatīvie un atbildības riski', lc1_body: 'Kad notiek incidenti, operatoriem arvien biežāk jautā, kādi aktīvi drošības pasākumi bija ieviesti. Dokumentēts intervenču ieraksts palīdz uz to atbildēt.', lc1_tag: 'Aktuāli',
-    lc4_title: 'Pause & Pass maina situāciju', lc4_body: 'Konfigurēta audio intervence jūsu kartētajās pārejās rada auditējamu drošības ierakstu — dokumentētu ierakstu par jūsu ieviestajiem drošības pasākumiem sarunām ar regulatoriem, pilsētu un apdrošinātājiem.', lc4_tag: 'Riska mazināšana',
+    lc4_title: 'Pause & Pass maina situāciju', lc4_body: 'Konfigurēta audio intervence jūsu kartētajās pārbrauktuvēs rada auditējamu drošības ierakstu — dokumentētu ierakstu par jūsu ieviestajiem drošības pasākumiem sarunām ar regulatoriem, pilsētu un apdrošinātājiem.', lc4_tag: 'Riska mazināšana',
     // Plugin section
     plug_eyebrow: 'Kā tas darbojas',
     plug_h2a: 'Veidots, lai', plug_h2b: 'netraucētu.',
@@ -1893,7 +1893,7 @@ const translations = {
     cap_r3_cap: 'Notikumu reģistrēšana', cap_r3_android: 'Atbalstīts', cap_r3_ios: 'Atbalstīts', cap_r3_op: 'Definēt minimizētu notikumu shēmu un glabāšanu',
     cap_r4_cap: 'Zonu konfigurācija', cap_r4_android: 'Atbalstīts', cap_r4_ios: 'Atbalstīts', cap_r4_op: 'Izvēlēties standarta un pielāgotas zonas',
     cap_r5_cap: 'Ziņojumi braucējam', cap_r5_android: 'Neobligāti', cap_r5_ios: 'Neobligāti', cap_r5_op: 'Jūs izvēlaties tekstu un UX',
-    cap_note: 'Zonas ievadu izvērtē, izmantojot konfigurējamus buferus un atrašanās vietas ticamības noteikumus, lai samazinātu kļūdainus iedarbinājumus pie pāreju robežām.',
+    cap_note: 'Iebraukšanu zonā izvērtē, izmantojot konfigurējamus buferus un atrašanās vietas ticamības noteikumus, lai samazinātu kļūdainas nostrādes pie pārbrauktuvju robežām.',
     // Pielietojums (use cases)
     // Uzticamība un pārvaldība
     trust_eyebrow: 'Privātums un dati',
@@ -1938,7 +1938,7 @@ const translations = {
     map_resume: 'atsākts',
     map_sim: 'Simulācija · ilustratīvi dati',
     map_zone_lbl: 'RZ-014 · pārbrauktuve',
-    dash_eyebrow: 'Operatora dashboard',
+    dash_eyebrow: 'Operatora vadības panelis',
     dash_h2a: 'Katra intervence',
     dash_h2b: 'ir fiksēta.',
     dash_sub: 'Braucieni riska zonās, intervences, pārklājums un sistēmas darbība — pa zonām, pa dienām, eksportējami.',
@@ -1986,9 +1986,9 @@ function setLang(lang) {
   const scStates = window._scStates;
   if (scStates) {
     scStates[0].statusText = lang === 'lv' ? 'Droša zona' : 'Safe zone';
-    scStates[0].zoneText   = lang === 'lv' ? 'Nav pāreju tuvumā · 340m līdz Maskavas ielai' : 'No crossings in range · 340m to Maskavas iela';
+    scStates[0].zoneText   = lang === 'lv' ? 'Nav pārbrauktuvju tuvumā · 340m līdz Maskavas ielai' : 'No crossings in range · 340m to Maskavas iela';
     scStates[1].statusText = lang === 'lv' ? 'Tuvojas zonai' : 'Approaching zone';
-    scStates[1].zoneText   = lang === 'lv' ? 'Dzelzceļa pāreja priekšā · 40m · Brīvības iela, Rīga' : 'Railway crossing ahead · 40m · Brīvības iela, Rīga';
+    scStates[1].zoneText   = lang === 'lv' ? 'Dzelzceļa pārbrauktuve priekšā · 40m · Brīvības iela, Rīga' : 'Railway crossing ahead · 40m · Brīvības iela, Rīga';
     scStates[2].statusText = lang === 'lv' ? 'Audio apturēts' : 'Audio paused';
     scStates[2].zoneText   = lang === 'lv' ? 'BĪSTAMĀ ZONA — Mūzika apturēta · Atsāksies pēc ~15m' : 'DANGER ZONE — Music paused · Resume in ~15m';
   }
