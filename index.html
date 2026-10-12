@@ -785,6 +785,16 @@ footer {
 .footer-links a { font-size: 13px; color: var(--grey3); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--ink); }
 
+/* ── Urban Mobility Incubator 2026 (EIT Urban Mobility): balti logotipi uz tumšā fona ── */
+.supported-by { background: var(--black); border-top: 1px solid rgba(255,255,255,0.08); padding: 48px 24px; text-align: center; }
+.supported-label { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 26px; }
+.supported-label a { color: inherit; }
+.supported-logos { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 56px; }
+.supporter { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; opacity: 0.85; transition: opacity 0.2s; }
+.supporter:hover { opacity: 1; }
+.supporter img { height: 34px; width: auto; display: block; }
+@media (max-width: 640px) { .supported-logos { gap: 32px; flex-direction: column; } .supporter img { height: 30px; } }
+
 /* ── Scroll reveal ── */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -1016,6 +1026,19 @@ footer {
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Urban Mobility Incubator 2026 (supported by EIT Urban Mobility) -->
+<section class="supported-by">
+  <p class="supported-label" data-i18n="supported_by">Participant · <a href="https://www.urbanmobility.io" target="_blank" rel="noopener">Urban Mobility Incubator 2026</a>, supported by EIT Urban Mobility</p>
+  <div class="supported-logos">
+    <a href="https://www.eiturbanmobility.eu" target="_blank" rel="noopener" class="supporter" aria-label="EIT Urban Mobility">
+      <img src="eit-urban-mobility-white.svg" alt="EIT Urban Mobility" width="262" height="34" loading="lazy">
+    </a>
+    <a href="https://www.vefresh.com" target="_blank" rel="noopener" class="supporter" aria-label="VEFRESH">
+      <img src="vefresh-white.svg" alt="VEFRESH" width="110" height="34" loading="lazy">
+    </a>
   </div>
 </section>
 
@@ -1661,6 +1684,7 @@ const translations = {
     nav_how: 'How it works',
     nav_pricing: 'Pricing', nav_dash: 'Dashboard', nav_faq: 'FAQ',
     nav_cta: 'Get in touch',
+    supported_by: 'Participant · <a href="https://www.urbanmobility.io" target="_blank" rel="noopener">Urban Mobility Incubator 2026</a>, supported by EIT Urban Mobility',
     // Hero
     hero_eyebrow: '🔌 White-label rider-attention safety plugin',
     hero_h1a: 'Reduce distraction.', hero_h1b: 'Measure risk.', hero_h1c: 'Strengthen safety operations.',
@@ -1811,6 +1835,7 @@ const translations = {
     nav_how: 'Kā tas darbojas',
     nav_pricing: 'Cenas', nav_dash: 'Vadības panelis', nav_faq: 'BUJ',
     nav_cta: 'Sazināties',
+    supported_by: 'Dalībnieks · <a href="https://www.urbanmobility.io" target="_blank" rel="noopener">Urban Mobility Incubator 2026</a>, ko atbalsta EIT Urban Mobility',
     // Hero
     hero_eyebrow: '🔌 White-label braucēju uzmanības drošības spraudnis',
     hero_h1a: 'Mazināt uzmanības novēršanu.', hero_h1b: 'Izmērīt risku.', hero_h1c: 'Uzlabot drošības vadību.',
