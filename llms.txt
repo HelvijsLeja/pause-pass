@@ -1,6 +1,6 @@
 # Pause & Pass
 
-> Pause & Pass is a white-label rider-attention safety plugin for shared micromobility operators (e-scooters, self-propelled bicycles, e-bikes, e-mopeds). When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention (pause, duck, chime or in-app prompt) and logs an auditable event. No vehicle hardware, no separate rider app; runs inside the operator's existing rider app.
+> Pause & Pass is a white-label rider-attention safety plugin for shared micromobility operators (e-scooters, self-propelled bicycles, e-bikes, e-mopeds). When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention (pause, lower volume, sound alert or on-screen message) and logs an auditable event. No vehicle hardware, no separate rider app; runs inside the operator's existing rider app.
 
 ## What it is
 - A software-only safety layer that operators embed in their existing rider app.
@@ -19,7 +19,7 @@
 
 ## Key facts
 - Platforms: Android first, built with the operator during the pilot; iOS scope agreed per pilot.
-- Interventions are configurable: pause, duck, chime or in-app prompt.
+- Interventions are configurable: pause, lower volume, sound alert or on-screen message.
 - No vehicle hardware required; software only.
 - Produces an auditable event log for permit, regulator and insurer discussions.
 - Transparency: operators control rider disclosure; recommended privacy language provided (GDPR-aware).

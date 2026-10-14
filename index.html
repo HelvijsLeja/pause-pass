@@ -12,6 +12,7 @@
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Pause &amp; Pass (SIA DAGAR)"/>
 <link rel="canonical" href="https://pauseandpass.com/"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"/>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
@@ -23,9 +24,15 @@
 <meta property="og:url" content="https://pauseandpass.com/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:locale:alternate" content="lv_LV"/>
-<meta name="twitter:card" content="summary"/>
+<meta property="og:image" content="https://pauseandpass.com/assets/og/pauseandpass-og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Pause &amp; Pass: the audio-safety plug-in for micromobility fleets"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Pause &amp; Pass — Safety plugin for mobility operators"/>
 <meta name="twitter:description" content="Plugin for micromobility operators: reduce rider audio distraction in mapped risk zones and keep an auditable safety record. Paid pilot, one city."/>
+<meta name="twitter:image" content="https://pauseandpass.com/assets/og/pauseandpass-og.png"/>
+<meta name="twitter:image:alt" content="Pause &amp; Pass: the audio-safety plug-in for micromobility fleets"/>
 <!-- Structured data for search engines and AI answer engines (SEO / GEO) -->
 <script type="application/ld+json">
 {
@@ -91,7 +98,7 @@
           "name": "Does audio always pause and resume exactly?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Audio behaviour depends on the OS, device and player. We request a configured intervention (pause, duck, chime or prompt) within platform capabilities and validate behaviour across your supported matrix."
+            "text": "No. Audio behaviour depends on the OS, device and player. We request a configured intervention (pause, lower volume, sound alert or on-screen message) within platform capabilities and validate behaviour across your supported matrix."
           }
         },
         {
@@ -970,7 +977,7 @@ footer {
             <span class="map-ctl-label" data-i18n="map_mode">Intervention:</span>
             <button type="button" class="map-chip active" data-mode="pause" data-i18n="map_m_pause">Pause</button>
             <button type="button" class="map-chip" data-mode="duck" data-i18n="map_m_duck">Lower volume</button>
-            <button type="button" class="map-chip" data-mode="chime" data-i18n="map_m_chime">Chime</button>
+            <button type="button" class="map-chip" data-mode="chime" data-i18n="map_m_chime">Sound alert</button>
             <button type="button" class="map-replay" id="mapReplay" data-i18n="map_replay">▶ Run a trip</button>
           </div>
           <div class="map-log" id="mapLog"></div>
@@ -1056,7 +1063,7 @@ footer {
         <div class="hiw-ico">🔇</div>
         <div class="hiw-num">03</div>
         <h3 data-i18n="hw3_t">Trigger the intervention</h3>
-        <p data-i18n="hw3_b">Near a zone it pauses or lowers audio, plays a chime or shows an in-app prompt — you choose which.</p>
+        <p data-i18n="hw3_b">Near a zone it pauses audio, lowers the volume, plays a sound alert or shows an on-screen message. You choose which.</p>
       </div>
       <div class="hiw-card">
         <div class="hiw-ico">🧾</div>
@@ -1188,7 +1195,7 @@ footer {
             <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r2_cap">Audio intervention</td>
             <td style="padding:14px 18px;" data-i18n="cap_r2_android">Audio-focus behaviour varies by OS, device and player</td>
             <td style="padding:14px 18px;" data-i18n="cap_r2_ios">Scoped per pilot</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r2_op">Choose pause, duck, chime or in-app prompt</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r2_op">Choose pause, lower volume, sound alert or on-screen message</td>
           </tr>
           <tr style="border-top:1px solid var(--border);">
             <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r3_cap">Event logging</td>
@@ -1291,7 +1298,7 @@ footer {
     <div class="reveal" style="margin-top:32px;max-width:780px;display:flex;flex-direction:column;gap:12px;">
       <details style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px 22px;">
         <summary style="font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;" data-i18n="faq_q1">Does audio always pause and resume exactly?</summary>
-        <p style="margin-top:12px;font-size:14px;color:#666;line-height:1.7;" data-i18n="faq_a1">No — audio behaviour depends on the OS, device and player. We request a configured intervention (pause, duck, chime or prompt) within platform capabilities and validate behaviour across your supported matrix.</p>
+        <p style="margin-top:12px;font-size:14px;color:#666;line-height:1.7;" data-i18n="faq_a1">No. Audio behaviour depends on the OS, device and player. We request a configured intervention (pause, lower volume, sound alert or on-screen message) within platform capabilities and validate behaviour across your supported matrix.</p>
       </details>
       <details style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px 22px;">
         <summary style="font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;" data-i18n="faq_q2">What is the battery impact?</summary>
@@ -1622,7 +1629,7 @@ const translations = {
     plug_sub: 'Pause & Pass works in the background during an active rental trip. Operators decide the appropriate rider disclosure and safety experience for their market, while Pause & Pass supplies recommended privacy language, event logging and configurable intervention rules.',
     hw1_t: 'Map risk zones', hw1_b: 'We map rail, tram and pedestrian crossings from OpenStreetMap; you choose which are active and can add your own.',
     hw2_t: 'Detect the active trip', hw2_b: 'The plugin runs only during an active rental trip — never outside it.',
-    hw3_t: 'Trigger the intervention', hw3_b: 'Near a zone it pauses or lowers audio, plays a chime or shows an in-app prompt — you choose which.',
+    hw3_t: 'Trigger the intervention', hw3_b: 'Near a zone it pauses audio, lowers the volume, plays a sound alert or shows an on-screen message. You choose which.',
     hw4_t: 'Log the event', hw4_b: 'An auditable record: time, zone ID, app/SDK version, intervention type and technical outcome.',
     hw5_t: 'Build the report', hw5_b: 'See zone visits, intervention frequency, system performance and the zones with the highest exposure.',
     int_s1_num: 'Step 01', int_s1_title: 'Scope the integration', int_s1_body: 'In week 1 we map your app\'s trip flow and agree the integration path with your mobile team. We build it with you; your app UI stays yours.',
@@ -1677,7 +1684,7 @@ const translations = {
     cap_sub: 'Android first; iOS scope agreed per pilot. Audio behaviour varies by OS, device and player. Here is what Pause & Pass supports on each platform and which decisions stay with you.',
     cap_th_cap: 'Capability', cap_th_android: 'Android', cap_th_ios: 'iOS', cap_th_op: 'Operator decision',
     cap_r1_cap: 'Background trip monitoring', cap_r1_android: 'Built and validated in the pilot, subject to permissions and OS conditions', cap_r1_ios: 'Scoped per pilot', cap_r1_op: 'Define the required permission flow',
-    cap_r2_cap: 'Audio intervention', cap_r2_android: 'Audio-focus behaviour varies by OS, device and player', cap_r2_ios: 'Scoped per pilot', cap_r2_op: 'Choose pause, duck, chime or in-app prompt',
+    cap_r2_cap: 'Audio intervention', cap_r2_android: 'Audio-focus behaviour varies by OS, device and player', cap_r2_ios: 'Scoped per pilot', cap_r2_op: 'Choose pause, lower volume, sound alert or on-screen message',
     cap_r3_cap: 'Event logging', cap_r3_android: 'Built and validated in the pilot', cap_r3_ios: 'Scoped per pilot', cap_r3_op: 'Define the minimised event schema and retention',
     cap_r4_cap: 'Zone configuration', cap_r4_android: 'Built and validated in the pilot', cap_r4_ios: 'Scoped per pilot', cap_r4_op: 'Select standard and custom zones',
     cap_r5_cap: 'Rider messaging', cap_r5_android: 'Optional', cap_r5_ios: 'Optional', cap_r5_op: 'You choose the copy and UX',
@@ -1696,7 +1703,7 @@ const translations = {
     trust_note: 'Data-protection and security questionnaires: <span style="color:var(--ink);font-weight:600;">hello@pauseandpass.com</span>',
     // FAQ
     faq_eyebrow: 'FAQ', faq_h2a: 'Questions', faq_h2b: 'buyers ask.',
-    faq_q1: 'Does audio always pause and resume exactly?', faq_a1: 'No — audio behaviour depends on the OS, device and player. We request a configured intervention (pause, duck, chime or prompt) within platform capabilities and validate behaviour across your supported matrix.',
+    faq_q1: 'Does audio always pause and resume exactly?', faq_a1: 'No. Audio behaviour depends on the OS, device and player. We request a configured intervention (pause, lower volume, sound alert or on-screen message) within platform capabilities and validate behaviour across your supported matrix.',
     faq_q2: 'What is the battery impact?', faq_a2: 'The plugin runs during active trips using on-device zone logic and standard location APIs, tuned to minimise battery use. We share measurements during the pilot.',
     faq_q3: 'How accurate is zone detection?', faq_a3: 'Zone entry uses configurable buffers and location-confidence rules to reduce false triggers. Limits apply: GPS accuracy, device settings, battery management and the quality of the zone database can all affect how an intervention works.',
     faq_q4: 'Do riders need to be told?', faq_a4: 'You control disclosure. Location processing and automated interventions should be described in your privacy notice and rider terms; we supply recommended language.',
@@ -1717,11 +1724,11 @@ const translations = {
     map_a_zone: 'RZ-014 · railway crossing',
     map_a_pause: 'Audio paused',
     map_a_duck: 'Volume lowered',
-    map_a_chime: 'Chime played',
+    map_a_chime: 'Sound alert played',
     map_mode: 'Intervention:',
     map_m_pause: 'Pause',
     map_m_duck: 'Lower volume',
-    map_m_chime: 'Chime',
+    map_m_chime: 'Sound alert',
     map_replay: '▶ Run a trip',
     map_resume: 'resume',
     map_sim: 'Simulation · illustrative data',
@@ -1783,7 +1790,7 @@ const translations = {
     plug_sub: 'Pause & Pass darbojas fonā aktīva īres brauciena laikā. Operators izvēlas atbilstošu braucēja informēšanu un drošības pieredzi savam tirgum, savukārt Pause & Pass nodrošina ieteicamo privātuma formulējumu, notikumu reģistrēšanu un konfigurējamus intervences noteikumus.',
     hw1_t: 'Kartēt riska zonas', hw1_b: 'Mēs kartējam dzelzceļa pārbrauktuves, tramvaja sliežu šķērsojumus un gājēju pārejas pēc OpenStreetMap datiem; jūs izvēlaties, kuras ir aktīvas, un varat pievienot savas.',
     hw2_t: 'Atpazīt aktīvu braucienu', hw2_b: 'Spraudnis darbojas tikai aktīva īres brauciena laikā.',
-    hw3_t: 'Aktivizēt intervenci', hw3_b: 'Tuvojoties zonai, tas aptur vai samazina audio, atskaņo signālu vai parāda paziņojumu lietotnē — to izvēlaties jūs.',
+    hw3_t: 'Aktivizēt intervenci', hw3_b: 'Tuvojoties zonai, tas aptur audio, samazina skaļumu, atskaņo skaņas signālu vai parāda ziņojumu ekrānā. Veidu izvēlaties jūs.',
     hw4_t: 'Reģistrēt notikumu', hw4_b: 'Auditējams ieraksts: laiks, zonas ID, lietotnes/SDK versija, intervences veids un tehniskais rezultāts.',
     hw5_t: 'Izveidot pārskatu', hw5_b: 'Redziet zonu apmeklējumu, intervenču biežumu, sistēmas darbību un zonas ar lielāko risku.',
     int_s1_num: '1. solis', int_s1_title: 'Saskaņojam integrāciju', int_s1_body: 'Pirmajā nedēļā kopā ar jūsu mobilo komandu izejam cauri brauciena plūsmai un saskaņojam integrācijas ceļu. Izstrādājam to kopā, un lietotnes saskarne paliek jūsu.',
@@ -1838,7 +1845,7 @@ const translations = {
     cap_sub: 'Vispirms Android; iOS apjomu saskaņojam katram pilotam. Audio uzvedība atšķiras atkarībā no OS, ierīces un atskaņotāja. Tabulā redzams, ko Pause & Pass atbalsta katrā platformā un kādi lēmumi paliek jūsu ziņā.',
     cap_th_cap: 'Iespēja', cap_th_android: 'Android', cap_th_ios: 'iOS', cap_th_op: 'Operatora lēmums',
     cap_r1_cap: 'Fona brauciena uzraudzība', cap_r1_android: 'Izstrādāts un validēts pilotā, atkarībā no atļaujām un OS nosacījumiem', cap_r1_ios: 'Apjoms tiek saskaņots katram pilotam', cap_r1_op: 'Definēt nepieciešamo atļauju plūsmu',
-    cap_r2_cap: 'Audio intervence', cap_r2_android: 'Audio fokusa uzvedība atšķiras pēc OS, ierīces un atskaņotāja', cap_r2_ios: 'Apjoms tiek saskaņots katram pilotam', cap_r2_op: 'Izvēlēties pauzi, pieklusināšanu, signālu vai paziņojumu',
+    cap_r2_cap: 'Audio intervence', cap_r2_android: 'Audio fokusa uzvedība atšķiras pēc OS, ierīces un atskaņotāja', cap_r2_ios: 'Apjoms tiek saskaņots katram pilotam', cap_r2_op: 'Izvēlēties pauzi, skaļuma samazināšanu, skaņas signālu vai ziņojumu ekrānā',
     cap_r3_cap: 'Notikumu reģistrēšana', cap_r3_android: 'Izstrādāts un validēts pilotā', cap_r3_ios: 'Apjoms tiek saskaņots katram pilotam', cap_r3_op: 'Definēt minimizētu notikumu shēmu un glabāšanu',
     cap_r4_cap: 'Zonu konfigurācija', cap_r4_android: 'Izstrādāts un validēts pilotā', cap_r4_ios: 'Apjoms tiek saskaņots katram pilotam', cap_r4_op: 'Izvēlēties standarta un pielāgotas zonas',
     cap_r5_cap: 'Ziņojumi braucējam', cap_r5_android: 'Neobligāti', cap_r5_ios: 'Neobligāti', cap_r5_op: 'Jūs izvēlaties tekstu un UX',
@@ -1857,7 +1864,7 @@ const translations = {
     trust_note: 'Datu aizsardzības un drošības anketas: <span style="color:var(--ink);font-weight:600;">hello@pauseandpass.com</span>',
     // BUJ (FAQ)
     faq_eyebrow: 'BUJ', faq_h2a: 'Jautājumi,', faq_h2b: 'ko uzdod pircēji.',
-    faq_q1: 'Vai audio vienmēr apstājas un atsākas precīzi?', faq_a1: 'Nē — audio uzvedība ir atkarīga no OS, ierīces un atskaņotāja. Mēs pieprasām konfigurētu intervenci (pauzi, pieklusināšanu, signālu vai paziņojumu) platformas iespēju robežās un pārbaudām uzvedību jūsu atbalstītajās OS, ierīču un atskaņotāju kombinācijās.',
+    faq_q1: 'Vai audio vienmēr apstājas un atsākas precīzi?', faq_a1: 'Nē. Audio uzvedība ir atkarīga no OS, ierīces un atskaņotāja. Mēs pieprasām konfigurētu intervenci (pauzi, skaļuma samazināšanu, skaņas signālu vai ziņojumu ekrānā) platformas iespēju robežās un pārbaudām uzvedību jūsu atbalstītajās OS, ierīču un atskaņotāju kombinācijās.',
     faq_q2: 'Kāda ir ietekme uz akumulatoru?', faq_a2: 'Spraudnis darbojas aktīvo braucienu laikā, izmantojot ierīcē esošo zonu loģiku un standarta atrašanās vietas API, noregulēts, lai minimizētu akumulatora patēriņu. Ar mērījumiem dalāmies pilota laikā.',
     faq_q3: 'Cik precīza ir zonu noteikšana?', faq_a3: 'Iebraukšanu zonā nosaka ar konfigurējamiem buferiem un atrašanās vietas ticamības noteikumiem, lai samazinātu kļūdainas nostrādes. Pastāv ierobežojumi: GPS precizitāte, ierīces iestatījumi, akumulatora pārvaldība un zonu datubāzes kvalitāte var ietekmēt intervences darbību.',
     faq_q4: 'Vai braucēji ir jāinformē?', faq_a4: 'Jūs kontrolējat informēšanu. Atrašanās vietas apstrāde un automātiskās intervences jāapraksta jūsu privātuma paziņojumā un braucēju noteikumos; mēs nodrošinām ieteicamo formulējumu.',
@@ -1878,11 +1885,11 @@ const translations = {
     map_a_zone: 'RZ-014 · dzelzceļa pārbrauktuve',
     map_a_pause: 'Audio apturēts',
     map_a_duck: 'Skaļums samazināts',
-    map_a_chime: 'Atskaņots signāls',
+    map_a_chime: 'Atskaņots skaņas signāls',
     map_mode: 'Intervence:',
     map_m_pause: 'Pauze',
     map_m_duck: 'Klusāk',
-    map_m_chime: 'Signāls',
+    map_m_chime: 'Skaņas signāls',
     map_replay: '▶ Palaist braucienu',
     map_resume: 'atsākts',
     map_sim: 'Simulācija · ilustratīvi dati',
