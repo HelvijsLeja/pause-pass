@@ -80,31 +80,7 @@
       "description": "A white-label safety plugin for micromobility apps (e-scooters, self-propelled bicycles, e-mopeds). It reduces audio distraction in mapped high-risk zones, measures safety interventions and creates an auditable risk-management record. Not an insurance product.",
       "publisher": {
         "@id": "https://pauseandpass.com/#organization"
-      },
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Pilot (paid)",
-          "description": "8-12 weeks, one city, 20-30 safety zones",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "priceCurrency": "EUR",
-            "minPrice": "5000",
-            "maxPrice": "7500"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Basic",
-          "description": "Per active ride, min. EUR 750 / month; follows a successful pilot",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "priceCurrency": "EUR",
-            "price": "0.008",
-            "unitText": "active ride"
-          }
-        }
-      ]
+      }
     },
     {
       "@type": "FAQPage",
@@ -188,6 +164,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "No. It is built for connected micromobility platforms, including e-scooters, self-propelled bicycles, e-bikes and e-mopeds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Price on request. You start with a one-off paid pilot, and after the pilot you pay per ride. The price depends on your fleet size and the cities you operate in. Send a request and we reply with a pilot quote."
           }
         }
       ]
@@ -664,56 +648,19 @@ nav {
 /* ── Pricing ── */
 .pricing-section { padding: 100px 0; background: var(--grey1); }
 
-.pricing-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 24px; margin-top: 60px;
+.price-block {
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center;
+  margin-top: 48px; background: var(--white); border: 1px solid var(--border);
+  border-radius: 20px; padding: 36px 40px;
 }
-
-.pricing-card {
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 20px; padding: 36px 28px;
-  position: relative; transition: all 0.3s;
-}
-.pricing-card:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.08); transform: translateY(-3px); }
-.pricing-card.featured {
-  background: var(--black); color: var(--white);
-  border-color: var(--black);
-}
-
-.pc-badge {
-  position: absolute; top: -12px; left: 28px;
-  background: var(--green); color: var(--black);
-  font-size: 11px; font-weight: 700; padding: 3px 12px;
-  border-radius: 100px; letter-spacing: 0.04em;
-}
-
-.pc-tier { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--grey3); margin-bottom: 12px; }
-.pricing-card.featured .pc-tier { color: rgba(255,255,255,0.4); }
-
-.pc-price { font-size: 42px; font-weight: 700; letter-spacing: -2px; line-height: 1; margin-bottom: 4px; color: var(--black); }
-.pricing-card.featured .pc-price { color: var(--white); }
-
-.pc-price-sub { font-size: 13px; color: var(--grey3); margin-bottom: 24px; }
-.pricing-card.featured .pc-price-sub { color: rgba(255,255,255,0.4); }
-
-.pc-divider { height: 1px; background: var(--border); margin-bottom: 20px; }
-.pricing-card.featured .pc-divider { background: rgba(255,255,255,0.1); }
-
-.pc-features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
-.pc-feature { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: #444; }
-.pricing-card.featured .pc-feature { color: rgba(255,255,255,0.75); }
-.pc-check { color: var(--green); font-size: 14px; flex-shrink: 0; margin-top: 1px; }
-
-.pc-cta {
-  width: 100%; padding: 12px;
-  border-radius: 10px; font-size: 14px; font-weight: 600;
-  cursor: pointer; font-family: 'Geist', sans-serif;
-  transition: all 0.2s; border: none; text-align: center;
-}
-.pc-cta-outline { background: var(--grey1); color: var(--black); border: 1px solid var(--border); }
-.pc-cta-outline:hover { background: var(--grey2); }
-.pc-cta-solid { background: var(--green); color: var(--black); }
-.pc-cta-solid:hover { background: #1ed760; transform: translateY(-1px); }
+.price-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin: 0; padding: 0; }
+.price-list li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; color: #444; line-height: 1.55; }
+.pc-check { color: var(--green2); font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+.price-cta { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.price-micro { font-size: 13px; color: #666; margin: 0; }
+.octa-src { margin-top: 6px; font-size: 12px; color: #666; }
+.octa-src a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 900px) { .price-block { grid-template-columns: 1fr; gap: 28px; padding: 28px 24px; } }
 
 /* ── CTA / Contact ── */
 .cta-section {
@@ -933,7 +880,6 @@ footer {
 .dash-live { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 14px; }
 @media (max-width: 900px) { .dash-kpis { grid-template-columns: 1fr 1fr; } .dash-grid { grid-template-columns: 1fr; } .map-card { max-width: 520px; } }
 
-.price-note { margin-top: 24px; font-size: 13px; color: #888; text-align: center; }
 
 /* ── Responsive ── */
 @media (max-width: 720px) {
@@ -945,7 +891,7 @@ footer {
 @media (max-width: 900px) {
   .hero-inner, .problem-grid, .integration-grid { grid-template-columns: 1fr; }
   .hero::before { display: none; }
-  .stats-grid, .api-steps, .benefits-grid, .pricing-grid { grid-template-columns: 1fr; }
+  .stats-grid, .api-steps, .benefits-grid { grid-template-columns: 1fr; }
   .nav-links { display: none; }
 }
 
@@ -998,7 +944,7 @@ footer {
           <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:#555;"><span style="color:var(--green2);font-weight:700;">✓</span> <span data-i18n="trust1">White-label plugin</span></div>
           <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:#555;"><span style="color:var(--green2);font-weight:700;">✓</span> <span data-i18n="trust2">No separate rider app</span></div>
           <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:#555;"><span style="color:var(--green2);font-weight:700;">✓</span> <span data-i18n="trust3">Configurable intervention</span></div>
-          <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:#555;"><span style="color:var(--green2);font-weight:700;">✓</span> <span data-i18n="trust4">GDPR-ready</span></div>
+          <div style="display:flex;align-items:center;gap:7px;font-size:13px;color:#555;"><span style="color:var(--green2);font-weight:700;">✓</span> <span data-i18n="trust4">GDPR-aware</span></div>
         </div>
       </div>
 
@@ -1059,7 +1005,7 @@ footer {
       <div class="benefit-card">
         <div class="bc-icon">🛑</div>
         <h3 data-i18n="pv1_t">Prevent</h3>
-        <p data-i18n="pv1_b">Reduces audio distraction in mapped high-risk zones — railway crossings, complex junctions and city-defined hazard areas.</p>
+        <p data-i18n="pv1_b">Reduces audio distraction in mapped high-risk zones — railway crossings, tram tracks and pedestrian crossings.</p>
         <span class="benefit-tag" data-i18n="pv1_tag">Audio distraction</span>
       </div>
       <div class="benefit-card">
@@ -1098,7 +1044,7 @@ footer {
         <div class="hiw-ico">🗺️</div>
         <div class="hiw-num">01</div>
         <h3 data-i18n="hw1_t">Map risk zones</h3>
-        <p data-i18n="hw1_b">You define high-risk places: railway crossings, tram tracks, dangerous junctions and low-visibility areas.</p>
+        <p data-i18n="hw1_b">We map rail, tram and pedestrian crossings from OpenStreetMap; you choose which are active and can add your own.</p>
       </div>
       <div class="hiw-card">
         <div class="hiw-ico">🛴</div>
@@ -1125,6 +1071,7 @@ footer {
         <p data-i18n="hw5_b">See zone visits, intervention frequency, system performance and the zones with the highest exposure.</p>
       </div>
     </div>
+    <p style="margin-top:28px;font-size:15px;color:#444;max-width:760px;line-height:1.7;" data-i18n="zones_stat">Our Riga map already holds 5,000+ rail, tram and pedestrian crossings (October 2026), built from OpenStreetMap and regularly refreshed. You choose which zones are active for your fleet.</p>
 
   </div>
 </section>
@@ -1142,7 +1089,9 @@ footer {
         <div class="problem-big-label" style="font-size:19px;color:var(--ink);font-weight:600;line-height:1.5;" data-i18n="prob_stat_label">Riders wearing headphones lose a key cue — sound — right where they most need to notice a train, tram or turning car. Pause &amp; Pass reduces that audio distraction at the crossings you map.</div>
         <div style="margin-top:32px;padding:24px;background:var(--grey1);border-radius:14px;border-left:3px solid var(--green)">
           <div style="font-size:13px;color:#555;line-height:1.7">
-            <strong style="color:var(--black)" data-i18n="prob_reg_title">Why risk management matters.</strong> <span data-i18n="prob_reg_body">In Latvia, OCTA insurance has been mandatory for e-scooters since 1 July 2025 and for self-propelled bicycles since 1 May 2026. LTAB has published data on OCTA claims linked to accidents caused by e-scooter riders.</span>
+            <strong style="color:var(--black)" data-i18n="prob_reg_title">Why risk management matters.</strong> <span data-i18n="prob_reg_body">In Latvia, OCTA insurance has been mandatory for e-scooters since 1 July 2025 and for self-propelled bicycles since 1 May 2026.</span>
+            <p style="margin-top:10px;" data-i18n="octa_stat">LTAB reported in February 2026: 24 OCTA claims for accidents caused by e-scooter riders, with compensation from €160 up to €5,500 per claim.</p>
+            <p class="octa-src" data-i18n="octa_src">Source: <a href="https://lvportals.lv/dienaskartiba/386088-lielaka-atlidziba-par-elektroskrejritenu-izraisitu-celu-satiksmes-negadijumu-5500-eur-2026" target="_blank" rel="noopener">LTAB, 13 February 2026</a>. Calculated OCTA compensation for claims received by 1 February 2026.</p>
           </div>
         </div>
       </div>
@@ -1181,7 +1130,7 @@ footer {
       <div class="dash-kpis"><div class="dash-kpi"><div class="dash-kpi-v" id="dkTrips">1,284</div><div class="dash-kpi-l" data-i18n="dash_k1">Trips in risk zones</div></div><div class="dash-kpi"><div class="dash-kpi-v" id="dkInt">1,197</div><div class="dash-kpi-l" data-i18n="dash_k2">Interventions triggered</div></div><div class="dash-kpi"><div class="dash-kpi-v">93.2%</div><div class="dash-kpi-l" data-i18n="dash_k3">Technical coverage</div></div><div class="dash-kpi"><div class="dash-kpi-v">0.8%</div><div class="dash-kpi-l" data-i18n="dash_k4">False activations</div></div></div>
       <div class="dash-grid">
         <div class="dash-box"><div class="dash-box-t" data-i18n="dash_chart">Interventions per day</div><div class="dash-bars"><div class="dash-bar"><i style="height:62%"></i><span>22.09</span></div><div class="dash-bar"><i style="height:70%"></i><span>23.09</span></div><div class="dash-bar"><i style="height:55%"></i><span>24.09</span></div><div class="dash-bar"><i style="height:80%"></i><span>25.09</span></div><div class="dash-bar"><i style="height:74%"></i><span>26.09</span></div><div class="dash-bar"><i style="height:90%"></i><span>27.09</span></div><div class="dash-bar"><i style="height:68%"></i><span>28.09</span></div></div></div>
-        <div class="dash-box"><div class="dash-box-t" data-i18n="dash_zones">Top risk zones</div><div class="dash-zone"><span><code>RZ-014</code><span data-i18n="dash_z1">Railway crossing · Brīvības iela</span></span><b>312</b></div><div class="dash-zone"><span><code>RZ-007</code><span data-i18n="dash_z2">Tram tracks · Maskavas iela</span></span><b>241</b></div><div class="dash-zone"><span><code>RZ-022</code><span data-i18n="dash_z3">Junction · Krasta iela</span></span><b>188</b></div><div class="dash-zone"><span><code>RZ-031</code><span data-i18n="dash_z4">Low visibility · Daugavgrīvas iela</span></span><b>126</b></div></div>
+        <div class="dash-box"><div class="dash-box-t" data-i18n="dash_zones">Top risk zones</div><div class="dash-zone"><span><code>RZ-014</code><span data-i18n="dash_z1">Railway crossing · Brīvības iela</span></span><b>312</b></div><div class="dash-zone"><span><code>RZ-007</code><span data-i18n="dash_z2">Tram tracks · Maskavas iela</span></span><b>241</b></div><div class="dash-zone"><span><code>RZ-022</code><span data-i18n="dash_z3">Pedestrian crossing · Krasta iela</span></span><b>188</b></div><div class="dash-zone"><span><code>RZ-031</code><span data-i18n="dash_z4">Pedestrian crossing · Daugavgrīvas iela</span></span><b>126</b></div></div>
       </div>
       <div class="dash-live" data-i18n="dash_live">Counters update live with the trip simulation at the top of the page.</div>
     </div>
@@ -1189,66 +1138,24 @@ footer {
 </section>
 
 
-<!-- Pricing -->
+<!-- Pricing (on request) -->
 <section class="pricing-section" id="pricing">
   <div class="container">
-    <div class="section-eyebrow" data-i18n="price_eyebrow">Pricing & packages</div>
-    <h2 class="section-h2"><span data-i18n="price_h2a">Pilot, Basic,</span> <em data-i18n="price_h2b">Advanced.</em></h2>
-    <p style="color:#666;font-size:15px;margin-top:12px;font-weight:300;max-width:760px;line-height:1.6" data-i18n="price_sub">Start with a paid pilot. If it meets the criteria we agree up front, move to Basic or Advanced.</p>
+    <div class="section-eyebrow" data-i18n="price_eyebrow">Pricing</div>
+    <h2 class="section-h2"><span data-i18n="price_h2a">Pilot first,</span> <em data-i18n="price_h2b">then pay per ride.</em></h2>
+    <p style="color:#666;font-size:15px;margin-top:12px;font-weight:300;max-width:760px;line-height:1.6" data-i18n="price_sub">Price on request. Tell us about your fleet and we send you a quote.</p>
 
-    <div class="pricing-grid reveal">
-      <div class="pricing-card" style="display:flex;flex-direction:column;">
-        <div class="pc-tier" style="text-align:center;font-size:14px;color:var(--ink);margin-bottom:16px;" data-i18n="tier1_name">Pilot (paid)</div>
-        <div class="pc-divider"></div>
-        <div class="pc-features">
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f1">8–12 weeks, one city</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f2">20–30 safety zones</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f3">Up to 50,000 rides / month in the pilot city</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f4">Weekly safety-intervention report</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f5">Success criteria agreed up front</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t1f6">Outcome: scale, redesign or stop</span></div>
-        </div>
-        <div style="margin-top:auto;text-align:center;">
-          <div class="pc-price" style="font-size:24px;letter-spacing:-0.5px;color:var(--green2);margin-bottom:2px;">€5,000–€7,500</div>
-          <div class="pc-price-sub" style="color:var(--green2);margin-bottom:0;" data-i18n="tier1_sub">one-off pilot &amp; setup</div>
-        </div>
-      </div>
-
-      <div class="pricing-card" style="display:flex;flex-direction:column;">
-        <div class="pc-tier" style="text-align:center;font-size:14px;color:var(--ink);margin-bottom:16px;" data-i18n="tier2_name">Basic</div>
-        <div class="pc-divider"></div>
-        <div class="pc-features">
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f1">Android integration, built with your team in the pilot</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f2">Zone set for your launch city</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f3">Basic operator dashboard</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f4">Monthly safety report (PDF)</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f5">Email support</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t2f6">Up to 50k active rides / month</span></div>
-        </div>
-        <div style="margin-top:auto;text-align:center;">
-          <div class="pc-price" style="font-size:24px;letter-spacing:-0.5px;color:var(--green2);margin-bottom:2px;">€0.008</div>
-          <div class="pc-price-sub" style="color:var(--green2);margin-bottom:0;" data-i18n="tier2_sub">per active ride · min. €750 / month</div>
-        </div>
-      </div>
-
-      <div class="pricing-card" style="display:flex;flex-direction:column;">
-        <div class="pc-tier" style="text-align:center;font-size:14px;color:var(--ink);margin-bottom:16px;" data-i18n="tier3_name">Advanced</div>
-        <div class="pc-divider"></div>
-        <div class="pc-features">
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f1">Everything in Basic</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f2">Zones for every city you operate in (Baltics)</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f3">Advanced dashboard + CSV export</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f4">Safety evidence pack for city and insurer discussions</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f5">Named technical contact</span></div>
-          <div class="pc-feature"><span class="pc-check">✓</span><span data-i18n="t3f6">Agreed uptime &amp; support terms · 50k–500k rides / month</span></div>
-        </div>
-        <div style="margin-top:auto;text-align:center;">
-          <div class="pc-price" style="font-size:24px;letter-spacing:-0.5px;color:var(--green2);margin-bottom:2px;">€0.005</div>
-          <div class="pc-price-sub" style="color:var(--green2);margin-bottom:0;" data-i18n="tier3_sub">per active ride · min. €1,500 / month</div>
-        </div>
+    <div class="price-block reveal">
+      <ul class="price-list">
+        <li><span class="pc-check" aria-hidden="true">✓</span><span data-i18n="price_p1">A one-off paid pilot in your city, with success criteria agreed up front.</span></li>
+        <li><span class="pc-check" aria-hidden="true">✓</span><span data-i18n="price_p2">After the pilot, you pay per ride.</span></li>
+        <li><span class="pc-check" aria-hidden="true">✓</span><span data-i18n="price_p3">The price depends on your fleet size and the cities you operate in.</span></li>
+      </ul>
+      <div class="price-cta">
+        <a href="#contact" class="btn-hero" data-i18n="price_btn">Request a quote →</a>
+        <p class="price-micro" data-i18n="price_micro">We reply with a pilot quote.</p>
       </div>
     </div>
-    <p class="price-note" data-i18n="price_note">Indicative pricing — final scope depends on fleet size, cities, integration requirements and reporting needs. Basic and Advanced follow a successful pilot; iOS scope is agreed during the pilot.</p>
   </div>
 </section>
 
@@ -1258,7 +1165,7 @@ footer {
   <div class="container">
     <div class="section-eyebrow" data-i18n="cap_eyebrow">Implementation</div>
     <h2 class="section-h2"><span data-i18n="cap_h2a">Platform capabilities,</span> <em data-i18n="cap_h2b">in plain terms.</em></h2>
-    <p style="color:#666;font-size:16px;max-width:640px;margin-top:12px;line-height:1.7;font-weight:300" data-i18n="cap_sub">Audio behaviour varies by OS, device and player. Here is what Pause &amp; Pass supports on each platform — and the decisions that stay with you.</p>
+    <p style="color:#666;font-size:16px;max-width:640px;margin-top:12px;line-height:1.7;font-weight:300" data-i18n="cap_sub">Android first; iOS scope agreed per pilot. Audio behaviour varies by OS, device and player. Here is what Pause &amp; Pass supports on each platform — and the decisions that stay with you.</p>
 
     <div class="reveal" style="margin-top:36px;overflow-x:auto;border:1px solid var(--border);border-radius:16px;">
       <table style="width:100%;border-collapse:collapse;min-width:640px;font-size:13px;">
@@ -1273,8 +1180,8 @@ footer {
         <tbody style="color:#555;">
           <tr style="border-top:1px solid var(--border);">
             <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r1_cap">Background trip monitoring</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r1_android">Supported, subject to permissions and OS conditions</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r1_ios">Supported, subject to permissions and OS conditions</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r1_android">Built and validated in the pilot, subject to permissions and OS conditions</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r1_ios">Scoped per pilot</td>
             <td style="padding:14px 18px;" data-i18n="cap_r1_op">Define the required permission flow</td>
           </tr>
           <tr style="border-top:1px solid var(--border);">
@@ -1285,14 +1192,14 @@ footer {
           </tr>
           <tr style="border-top:1px solid var(--border);">
             <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r3_cap">Event logging</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r3_android">Supported</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r3_ios">Supported</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r3_android">Built and validated in the pilot</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r3_ios">Scoped per pilot</td>
             <td style="padding:14px 18px;" data-i18n="cap_r3_op">Define the minimised event schema and retention</td>
           </tr>
           <tr style="border-top:1px solid var(--border);">
             <td style="padding:14px 18px;font-weight:600;color:var(--ink);" data-i18n="cap_r4_cap">Zone configuration</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r4_android">Supported</td>
-            <td style="padding:14px 18px;" data-i18n="cap_r4_ios">Supported</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r4_android">Built and validated in the pilot</td>
+            <td style="padding:14px 18px;" data-i18n="cap_r4_ios">Scoped per pilot</td>
             <td style="padding:14px 18px;" data-i18n="cap_r4_op">Select standard and custom zones</td>
           </tr>
           <tr style="border-top:1px solid var(--border);">
@@ -1422,6 +1329,10 @@ footer {
         <summary style="font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;" data-i18n="faq_q10">Does it only work with e-scooters?</summary>
         <p style="margin-top:12px;font-size:14px;color:#666;line-height:1.7;" data-i18n="faq_a10">No. It is built for connected micromobility platforms, including e-scooters, self-propelled bicycles, e-bikes and e-mopeds.</p>
       </details>
+      <details style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px 22px;">
+        <summary style="font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;" data-i18n="faq_q11">How much does it cost?</summary>
+        <p style="margin-top:12px;font-size:14px;color:#666;line-height:1.7;" data-i18n="faq_a11">Price on request. You start with a one-off paid pilot, and after the pilot you pay per ride. The price depends on your fleet size and the cities you operate in. Send a request and we reply with a pilot quote.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -1447,7 +1358,7 @@ footer {
   <div class="container">
     <div class="cta-box">
       <h2 data-i18n="cta_h2">Validate safety impact<br/>with a focused pilot.</h2>
-      <p style="max-width:600px;" data-i18n="cta_sub">One city, 20–30 high-risk zones, 8–12 weeks — integrated in your existing app, with a dashboard, regular safety reports and final recommendations.</p>
+      <p style="max-width:600px;" data-i18n="cta_sub">A pilot in your city, inside your existing app, with a dashboard, regular safety reports and final recommendations.</p>
       <div class="kpi-label" data-i18n="kpi_label">What we measure</div>
       <div class="kpi-chips"><span class="kpi-chip" data-i18n="kpi1">Trips in risk zones</span><span class="kpi-chip" data-i18n="kpi2">Interventions triggered</span><span class="kpi-chip" data-i18n="kpi3">Technical coverage</span><span class="kpi-chip" data-i18n="kpi4">False activations</span><span class="kpi-chip" data-i18n="kpi5">Missed interventions</span><span class="kpi-chip" data-i18n="kpi6">Incident / complaint trend*</span><span class="kpi-chip" data-i18n="kpi7">Team readiness</span></div>
       <p class="contact-note" style="margin:-16px auto 28px;position:relative;z-index:1;" data-i18n="kpi_note">*If the operator provides this data.</p>
@@ -1473,7 +1384,7 @@ footer {
         <button type="submit" class="btn-contact" data-i18n="cta_btn">Request a pilot →</button>
         <p class="contact-note form-privacy" data-i18n="form_privacy">We use these details to reply to your pilot request and discuss a pilot with you. See our <a class="privacy-link" href="privacy.html">Privacy notice</a>.</p>
       </form>
-      <div class="contact-success" id="contactSuccess" data-i18n="cta_success">✅ Your email app should now open with the request filled in. Press send and we will reply within 2 business days. If nothing opened, email us at hello@pauseandpass.com.</div>
+      <div class="contact-success" id="contactSuccess" data-i18n="cta_success">✅ Your email app should now open with the request filled in. Press send and we will reply with a pilot quote. If nothing opened, email us at hello@pauseandpass.com.</div>
       <p class="contact-note" data-i18n="cta_note">Or email us directly at <span style="color:rgba(255,255,255,0.6)">hello@pauseandpass.com</span></p>
     </div>
   </div>
@@ -1485,10 +1396,10 @@ footer {
   <div class="container">
     <div class="footer-inner">
       <div class="nav-logo" style="font-size:16px" role="img" aria-label="Pause &amp; Pass"><span class="brand-word">Pause</span><svg class="brand-mark" viewBox="0 0 92 100" aria-hidden="true" focusable="false"><circle cx="46" cy="50" r="40" fill="rgba(29,185,84,.12)" stroke="#1DB954" stroke-width="4" stroke-dasharray="7 7" stroke-linecap="round"/><rect x="32" y="33" width="10" height="34" rx="5" fill="#1DB954"/><rect x="50" y="33" width="10" height="34" rx="5" fill="#1DB954"/></svg><span class="brand-pass"><span class="brand-waves" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="brand-word">Pass</span></span></div>
-      <div class="footer-copy">© 2026 Pause &amp; Pass, a product of SIA “DAGAR” · Reg. No. 40103579673 · VAT LV40103579673 · Silciema iela 15 k-2 – 40, Rīga, LV-1024, Latvia · hello@pauseandpass.com</div>
+      <div class="footer-copy" data-i18n="footer_copy">© 2026 Pause &amp; Pass, a product of SIA “DAGAR” · Reg. No. 40103579673 · VAT LV40103579673 · Silciema iela 15 k-2 – 40, Rīga, LV-1024, Latvia · hello@pauseandpass.com</div>
       <div class="footer-links">
         <a class="privacy-link" href="privacy.html" data-i18n="footer_privacy">Privacy</a>
-        <a href="#" onclick="document.getElementById('contactModal').style.display='flex';return false;">Contact</a>
+        <a href="#" onclick="document.getElementById('contactModal').style.display='flex';return false;" data-i18n="footer_contact">Contact</a>
       </div>
     </div>
   </div>
@@ -1504,7 +1415,7 @@ footer {
     <a href="mailto:hello@pauseandpass.com" style="display:flex;align-items:center;gap:14px;background:#F5F5F3;border:1px solid #E8E8E4;border-radius:12px;padding:16px 20px;text-decoration:none;margin-bottom:12px;transition:background 0.2s;" onmouseover="this.style.background='#EAEAE6'" onmouseout="this.style.background='#F5F5F3'">
       <span style="font-size:22px;">✉️</span>
       <div style="text-align:left;">
-        <div style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;">E-mail</div>
+        <div style="font-size:11px;color:#aaa;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;" data-i18n="modal_email">Email</div>
         <div style="color:#0A0A0A;font-size:15px;font-weight:500;">hello@pauseandpass.com</div>
       </div>
     </a>
@@ -1515,7 +1426,7 @@ footer {
         <div style="color:#0A0A0A;font-size:15px;font-weight:500;">+371 29 185 303</div>
       </div>
     </a>
-    <p style="font-size:11px;color:#ccc;margin-top:20px;">SIA “DAGAR” · Reg. No. 40103579673</p>
+    <p style="font-size:11px;color:#ccc;margin-top:20px;" data-i18n="modal_reg">SIA “DAGAR” · Reg. No. 40103579673</p>
   </div>
 </div>
 
@@ -1695,21 +1606,21 @@ const translations = {
     hero_cta1: 'Request a pilot →', hero_cta2: 'How it works',
     hero_note: 'For shared e-scooter, self-propelled bicycle, e-bike and e-moped operators · Riga-first, expanding across the Baltics',
     trust1: 'White-label plugin', trust2: 'No separate rider app',
-    trust3: 'Configurable intervention', trust4: 'GDPR-ready',
+    trust3: 'Configurable intervention', trust4: 'GDPR-aware',
     // Stats — defensible product facts (no unverified external statistics)
     // Problem
     prob_eyebrow: 'The operator problem',
     prob_h2a: 'You own the scooter.', prob_h2b: 'You share the', prob_h2c: 'risk.',
     prob_stat_label: 'Riders wearing headphones lose a key cue — sound — right where they most need to notice a train, tram or turning car. Pause & Pass reduces that audio distraction at the crossings you map.',
     prob_reg_title: 'Why risk management matters.',
-    prob_reg_body: 'In Latvia, OCTA insurance has been mandatory for e-scooters since 1 July 2025 and for self-propelled bicycles since 1 May 2026. LTAB has published data on OCTA claims linked to accidents caused by e-scooter riders.',
+    prob_reg_body: 'In Latvia, OCTA insurance has been mandatory for e-scooters since 1 July 2025 and for self-propelled bicycles since 1 May 2026.',
     lc1_title: 'Regulatory & liability exposure', lc1_body: 'When incidents happen, operators are increasingly asked what active safety measures they had in place. A documented intervention record helps you answer that question.', lc1_tag: 'Ongoing',
     lc4_title: 'Pause & Pass changes the equation', lc4_body: 'A configured audio intervention at the crossings you map creates an auditable safety record — a documented record of the safety measures you had in place, for regulator, city and insurer discussions.', lc4_tag: 'Risk mitigation',
     // Plugin section
     plug_eyebrow: 'How it works',
     plug_h2a: 'Designed to stay', plug_h2b: 'out of the way.',
     plug_sub: 'Pause & Pass works in the background during an active rental trip. Operators decide the appropriate rider disclosure and safety experience for their market, while Pause & Pass supplies recommended privacy language, event logging and configurable intervention rules.',
-    hw1_t: 'Map risk zones', hw1_b: 'You define high-risk places: railway crossings, tram tracks, dangerous junctions and low-visibility areas.',
+    hw1_t: 'Map risk zones', hw1_b: 'We map rail, tram and pedestrian crossings from OpenStreetMap; you choose which are active and can add your own.',
     hw2_t: 'Detect the active trip', hw2_b: 'The plugin runs only during an active rental trip — never outside it.',
     hw3_t: 'Trigger the intervention', hw3_b: 'Near a zone it pauses or lowers audio, plays a chime or shows an in-app prompt — you choose which.',
     hw4_t: 'Log the event', hw4_b: 'An auditable record: time, zone ID, app/SDK version, intervention type and technical outcome.',
@@ -1722,23 +1633,23 @@ const translations = {
     // Benefits
     ben_eyebrow: 'What operators get',
     ben_h2a: 'Prevent. Measure.', ben_h2b: 'Document. Manage risk.',
-    pv1_t: 'Prevent', pv1_b: 'Reduces audio distraction in mapped high-risk zones — railway crossings, complex junctions and city-defined hazard areas.', pv1_tag: 'Audio distraction',
+    pv1_t: 'Prevent', pv1_b: 'Reduces audio distraction in mapped high-risk zones — railway crossings, tram tracks and pedestrian crossings.', pv1_tag: 'Audio distraction',
     pv2_t: 'Measure', pv2_b: 'Tracks eligible trips, zone entries, interventions and coverage, so you see what actually happened on the road.', pv2_tag: 'Coverage & KPIs',
     pv3_t: 'Document', pv3_b: 'Builds an auditable history of safety events — timestamped, zone-tagged and exportable.', pv3_tag: 'Audit trail',
     pv4_t: 'Manage risk', pv4_b: 'Helps you manage fleet safety and prepare data for conversations with cities, regulators and insurers.', pv4_tag: 'City · regulator · insurer',
     // Pricing
-    price_eyebrow: 'Pricing & packages', price_h2a: 'Pilot, Basic,', price_h2b: 'Advanced.',
-    price_note: 'Indicative pricing — final scope depends on fleet size, cities, integration requirements and reporting needs. Basic and Advanced follow a successful pilot; iOS scope is agreed during the pilot.',
-    price_sub: 'Start with a paid pilot. If it meets the criteria we agree up front, move to Basic or Advanced.',
-    tier1_name: 'Pilot (paid)', tier1_sub: 'one-off pilot & setup',
-    t1f1: '8–12 weeks, one city', t1f2: '20–30 safety zones', t1f3: 'Up to 50,000 rides / month in the pilot city', t1f4: 'Weekly safety-intervention report', t1f5: 'Success criteria agreed up front', t1f6: 'Outcome: scale, redesign or stop',
-    tier2_name: 'Basic', tier2_sub: 'per active ride · min. €750 / month',
-    t2f1: 'Android integration, built with your team in the pilot', t2f2: 'Zone set for your launch city', t2f3: 'Basic operator dashboard', t2f4: 'Monthly safety report (PDF)', t2f5: 'Email support', t2f6: 'Up to 50k active rides / month',
-    tier3_name: 'Advanced', tier3_sub: 'per active ride · min. €1,500 / month',
-    t3f1: 'Everything in Basic', t3f2: 'Zones for every city you operate in (Baltics)', t3f3: 'Advanced dashboard + CSV export', t3f4: 'Safety evidence pack for city and insurer discussions', t3f5: 'Named technical contact', t3f6: 'Agreed uptime & support terms · 50k–500k rides / month',
+    price_eyebrow: 'Pricing',
+    price_h2a: 'Pilot first,',
+    price_h2b: 'then pay per ride.',
+    price_sub: 'Price on request. Tell us about your fleet and we send you a quote.',
+    price_p1: 'A one-off paid pilot in your city, with success criteria agreed up front.',
+    price_p2: 'After the pilot, you pay per ride.',
+    price_p3: 'The price depends on your fleet size and the cities you operate in.',
+    price_btn: 'Request a quote →',
+    price_micro: 'We reply with a pilot quote.',
     // CTA
     cta_h2: 'Validate safety impact<br/>with a focused pilot.',
-    cta_sub: 'One city, 20–30 high-risk zones, 8–12 weeks — integrated in your existing app, with a dashboard, regular safety reports and final recommendations.',
+    cta_sub: 'A pilot in your city, inside your existing app, with a dashboard, regular safety reports and final recommendations.',
     cta_btn: 'Request a pilot →',
     next_label: 'What happens next', next1: '30-min call: your cities, fleet and app setup', next2: 'Written pilot scope and success criteria within a week', next3: 'Pilot agreement and DPA, then kickoff',
     form_privacy: 'We use these details to reply to your pilot request and discuss a pilot with you. See our <a class="privacy-link" href="privacy.html">Privacy notice</a>.', modal_phone: 'Phone', footer_privacy: 'Privacy',
@@ -1751,7 +1662,7 @@ const translations = {
     kpi6: 'Incident / complaint trend*',
     kpi7: 'Team readiness',
     pf_company: 'Company name', pf_location: 'Country / city', pf_fleet: 'Approx. fleet size', pf_contact: 'Contact person', pf_email: 'Work email', pf_start: 'Preferred pilot start (e.g. Q1 2027)', pf_v0: 'Vehicle type', pf_v1: 'E-scooters', pf_v2: 'Self-propelled bicycles', pf_v3: 'E-bikes', pf_v4: 'E-mopeds', pf_v5: 'Mixed fleet', pf_p0: 'App platform', pf_p1: 'iOS + Android', pf_p2: 'iOS only', pf_p3: 'Android only', pf_p4: 'Other',
-    cta_success: '✅ Your email app should now open with the request filled in. Press send and we will reply within 2 business days. If nothing opened, email us at hello@pauseandpass.com.',
+    cta_success: '✅ Your email app should now open with the request filled in. Press send and we will reply with a pilot quote. If nothing opened, email us at hello@pauseandpass.com.',
     cta_note: 'Or email us directly at <span style="color:rgba(255,255,255,0.6)">hello@pauseandpass.com</span>',
     contact_title: 'Get in touch',
     contact_sub: "We're happy to answer any questions about Pause & Pass.",
@@ -1763,12 +1674,12 @@ const translations = {
     // Implementation (capability matrix)
     cap_eyebrow: 'Implementation',
     cap_h2a: 'Platform capabilities,', cap_h2b: 'in plain terms.',
-    cap_sub: 'Audio behaviour varies by OS, device and player. Here is what Pause & Pass supports on each platform — and the decisions that stay with you.',
+    cap_sub: 'Android first; iOS scope agreed per pilot. Audio behaviour varies by OS, device and player. Here is what Pause & Pass supports on each platform — and the decisions that stay with you.',
     cap_th_cap: 'Capability', cap_th_android: 'Android', cap_th_ios: 'iOS', cap_th_op: 'Operator decision',
-    cap_r1_cap: 'Background trip monitoring', cap_r1_android: 'Supported, subject to permissions and OS conditions', cap_r1_ios: 'Supported, subject to permissions and OS conditions', cap_r1_op: 'Define the required permission flow',
+    cap_r1_cap: 'Background trip monitoring', cap_r1_android: 'Built and validated in the pilot, subject to permissions and OS conditions', cap_r1_ios: 'Scoped per pilot', cap_r1_op: 'Define the required permission flow',
     cap_r2_cap: 'Audio intervention', cap_r2_android: 'Audio-focus behaviour varies by OS, device and player', cap_r2_ios: 'Validated per OS / audio-session behaviour', cap_r2_op: 'Choose pause, duck, chime or in-app prompt',
-    cap_r3_cap: 'Event logging', cap_r3_android: 'Supported', cap_r3_ios: 'Supported', cap_r3_op: 'Define the minimised event schema and retention',
-    cap_r4_cap: 'Zone configuration', cap_r4_android: 'Supported', cap_r4_ios: 'Supported', cap_r4_op: 'Select standard and custom zones',
+    cap_r3_cap: 'Event logging', cap_r3_android: 'Built and validated in the pilot', cap_r3_ios: 'Scoped per pilot', cap_r3_op: 'Define the minimised event schema and retention',
+    cap_r4_cap: 'Zone configuration', cap_r4_android: 'Built and validated in the pilot', cap_r4_ios: 'Scoped per pilot', cap_r4_op: 'Select standard and custom zones',
     cap_r5_cap: 'Rider messaging', cap_r5_android: 'Optional', cap_r5_ios: 'Optional', cap_r5_op: 'You choose the copy and UX',
     cap_note: 'Zone entry is evaluated using configurable buffers and location-confidence rules to reduce false triggers near crossing boundaries.',
     // Use cases
@@ -1829,9 +1740,19 @@ const translations = {
     dash_zones: 'Top risk zones',
     dash_z1: 'Railway crossing · Brīvības iela',
     dash_z2: 'Tram tracks · Maskavas iela',
-    dash_z3: 'Junction · Krasta iela',
-    dash_z4: 'Low visibility · Daugavgrīvas iela',
+    dash_z3: 'Pedestrian crossing · Krasta iela',
+    dash_z4: 'Pedestrian crossing · Daugavgrīvas iela',
     dash_live: 'Counters update live with the trip simulation at the top of the page.',
+    // Added 2026-10-14 (price on request, zones, LTAB, footer)
+    faq_q11: 'How much does it cost?',
+    faq_a11: 'Price on request. You start with a one-off paid pilot, and after the pilot you pay per ride. The price depends on your fleet size and the cities you operate in. Send a request and we reply with a pilot quote.',
+    zones_stat: 'Our Riga map already holds 5,000+ rail, tram and pedestrian crossings (October 2026), built from OpenStreetMap and regularly refreshed. You choose which zones are active for your fleet.',
+    octa_stat: 'LTAB reported in February 2026: 24 OCTA claims for accidents caused by e-scooter riders, with compensation from €160 up to €5,500 per claim.',
+    octa_src: 'Source: <a href="https://lvportals.lv/dienaskartiba/386088-lielaka-atlidziba-par-elektroskrejritenu-izraisitu-celu-satiksmes-negadijumu-5500-eur-2026" target="_blank" rel="noopener">LTAB, 13 February 2026</a>. Calculated OCTA compensation for claims received by 1 February 2026.',
+    footer_contact: 'Contact',
+    modal_email: 'Email',
+    footer_copy: '© 2026 Pause & Pass, a product of SIA “DAGAR” · Reg. No. 40103579673 · VAT LV40103579673 · Silciema iela 15 k-2 – 40, Rīga, LV-1024, Latvia · hello@pauseandpass.com',
+    modal_reg: 'SIA “DAGAR” · Reg. No. 40103579673',
   },
   lv: {
     // Nav
@@ -1846,50 +1767,50 @@ const translations = {
     hero_cta1: 'Pieteikt pilotprojektu →', hero_cta2: 'Kā tas darbojas',
     hero_note: 'Elektrisko skrejriteņu, pašgājēju velosipēdu, e-velosipēdu un e-mopēdu koplietošanas operatoriem · Rīga pirmā, paplašināmies Baltijā',
     trust1: 'White-label spraudnis', trust2: 'Bez atsevišķas lietotnes braucējam',
-    trust3: 'Konfigurējama intervence', trust4: 'Gatavs VDAR prasībām',
+    trust3: 'Konfigurējama intervence', trust4: 'Veidots, ņemot vērā VDAR',
     // Stats — patiesi produkta fakti (bez nepamatotas statistikas)
     // Problem
     prob_eyebrow: 'Operatora problēma',
     prob_h2a: 'Skrejritenis pieder jums.', prob_h2b: 'Risks', prob_h2c: 'ir kopīgs.',
-    prob_stat_label: 'Braucēji ar austiņām zaudē būtisku norādi — skaņu — tieši tur, kur visvairāk vajag pamanīt vilcienu, tramvaju vai auto, kas nogriežas. Pause & Pass samazina šo audio radīto uzmanības novēršanu jūsu kartētajās pārbrauktuvēs un krustojumos.',
+    prob_stat_label: 'Braucēji ar austiņām zaudē būtisku norādi — skaņu — tieši tur, kur visvairāk vajag pamanīt vilcienu, tramvaju vai auto, kas nogriežas. Pause & Pass samazina šo audio radīto uzmanības novēršanu jūsu kartētajās pārejās un pārbrauktuvēs.',
     prob_reg_title: 'Kāpēc riska vadība ir svarīga.',
-    prob_reg_body: 'Latvijā OCTA elektriskajiem skrejriteņiem ir obligāta kopš 2025. gada 1. jūlija, bet pašgājējiem velosipēdiem — kopš 2026. gada 1. maija. LTAB ir publicējis datus par OCTA atlīdzību pieteikumiem saistībā ar elektrisko skrejriteņu vadītāju izraisītiem negadījumiem.',
+    prob_reg_body: 'Latvijā OCTA elektriskajiem skrejriteņiem ir obligāta kopš 2025. gada 1. jūlija, bet pašgājējiem velosipēdiem — kopš 2026. gada 1. maija.',
     lc1_title: 'Regulatīvie un atbildības riski', lc1_body: 'Kad notiek incidenti, operatoriem arvien biežāk jautā, kādi aktīvi drošības pasākumi bija ieviesti. Dokumentēts intervenču ieraksts palīdz uz to atbildēt.', lc1_tag: 'Pastāvīgi',
     lc4_title: 'Pause & Pass maina situāciju', lc4_body: 'Konfigurēta audio intervence jūsu kartētajās pārbrauktuvēs rada auditējamu drošības ierakstu — dokumentētu ierakstu par jūsu ieviestajiem drošības pasākumiem sarunām ar regulatoriem, pilsētu un apdrošinātājiem.', lc4_tag: 'Riska mazināšana',
     // Plugin section
     plug_eyebrow: 'Kā tas darbojas',
     plug_h2a: 'Veidots, lai', plug_h2b: 'netraucētu.',
     plug_sub: 'Pause & Pass darbojas fonā aktīva īres brauciena laikā. Operators izvēlas atbilstošu braucēja informēšanu un drošības pieredzi savam tirgum, savukārt Pause & Pass nodrošina ieteicamo privātuma formulējumu, notikumu reģistrēšanu un konfigurējamus intervences noteikumus.',
-    hw1_t: 'Kartēt riska zonas', hw1_b: 'Operators definē augsta riska vietas: dzelzceļa pārbrauktuves, tramvaja sliedes, bīstamus krustojumus un zonas ar ierobežotu redzamību.',
+    hw1_t: 'Kartēt riska zonas', hw1_b: 'Mēs kartējam dzelzceļa pārbrauktuves, tramvaja sliežu šķērsojumus un gājēju pārejas pēc OpenStreetMap datiem; jūs izvēlaties, kuras ir aktīvas, un varat pievienot savas.',
     hw2_t: 'Atpazīt aktīvu braucienu', hw2_b: 'Spraudnis darbojas tikai aktīva īres brauciena laikā.',
     hw3_t: 'Aktivizēt intervenci', hw3_b: 'Tuvojoties zonai, tas aptur vai samazina audio, atskaņo signālu vai parāda paziņojumu lietotnē — to izvēlaties jūs.',
     hw4_t: 'Reģistrēt notikumu', hw4_b: 'Auditējams ieraksts: laiks, zonas ID, lietotnes/SDK versija, intervences veids un tehniskais rezultāts.',
     hw5_t: 'Izveidot pārskatu', hw5_b: 'Redziet zonu apmeklējumu, intervenču biežumu, sistēmas darbību un zonas ar lielāko risku.',
     int_s1_num: '1. solis', int_s1_title: 'Saskaņojam integrāciju', int_s1_body: 'Pirmajā nedēļā kopā ar jūsu mobilo komandu izejam cauri brauciena plūsmai un saskaņojam integrācijas ceļu. Izstrādājam to kopā, un lietotnes saskarne paliek jūsu.',
     int_s2_num: '2. solis', int_s2_title: 'Piesaistām brauciena notikumiem', int_s2_body: 'Spraudnis ieslēdzas un izslēdzas līdz ar brauciena sākumu un beigām. Zonas tiek izvērtētas ierīcē un tikai aktīva brauciena laikā.',
-    int_s3_num: '3. solis', int_s3_title: 'Palaidiet un mēriet', int_s3_body: 'Atbilstošie aktīvie braucieni atbalstītajās lietotnes versijās tagad ir aptverti. Drošības notikumi nonāk jūsu operatora vadības panelī, un ierakstu atskaitēm glabājat jūs.',
+    int_s3_num: '3. solis', int_s3_title: 'Sākt darbu un mērīt', int_s3_body: 'Atbilstošie aktīvie braucieni atbalstītajās lietotnes versijās tagad ir aptverti. Drošības notikumi nonāk jūsu operatora vadības panelī, un ieraksts pārskatiem paliek jūsu rīcībā.',
     gdpr_title: 'Iekļaujas jūsu esošajā VDAR ietvarā',
     gdpr_body: 'Jums jau ir attiecības ar braucēju, lietošanas noteikumi un VDAR ietvars. Pause & Pass tajā iekļaujas: jūs paliekat datu pārzinis, mēs darbojamies kā jūsu apstrādātājs saskaņā ar datu apstrādes līgumu un sagatavojam formulējumu, ja privātuma paziņojumā jāpievieno rindiņa par drošības intervencēm.',
     // Benefits
     ben_eyebrow: 'Ko iegūst operators',
     ben_h2a: 'Novērst. Izmērīt.', ben_h2b: 'Dokumentēt. Vadīt risku.',
-    pv1_t: 'Novērst', pv1_b: 'Mazina audio radīto uzmanības novēršanu kartētās augsta riska zonās — dzelzceļa pārbrauktuvēs, sarežģītos krustojumos un pilsētas noteiktās bīstamās zonās.', pv1_tag: 'Audio radīta uzmanības novēršana',
+    pv1_t: 'Novērst', pv1_b: 'Mazina audio radīto uzmanības novēršanu kartētās augsta riska zonās — dzelzceļa pārbrauktuvēs, tramvaja sliežu šķērsojumos un gājēju pārejās.', pv1_tag: 'Audio radīta uzmanības novēršana',
     pv2_t: 'Izmērīt', pv2_b: 'Uzskaita atbilstošos braucienus, iebraukšanas gadījumus zonās, intervences un pārklājumu, lai jūs redzētu, kas patiešām notika uz ceļa.', pv2_tag: 'Pārklājums un KPI',
     pv3_t: 'Dokumentēt', pv3_b: 'Veido auditējamu drošības notikumu vēsturi — ar laika zīmogu, zonas atzīmi, eksportējamu.', pv3_tag: 'Audita pēda',
     pv4_t: 'Vadīt risku', pv4_b: 'Palīdz vadīt flotes drošību un sagatavot datus sarunām ar pilsētu, regulatoru un apdrošinātāju.', pv4_tag: 'Pilsēta · regulators · apdrošinātājs',
     // Pricing
-    price_eyebrow: 'Cenas un paketes', price_h2a: 'Pilot, Basic,', price_h2b: 'Advanced.',
-    price_note: 'Orientējošas cenas — galīgais piedāvājums ir atkarīgs no flotes izmēra, pilsētu skaita, integrācijas prasībām un pārskatu apjoma. Basic un Advanced sākas pēc veiksmīga pilota; iOS apjomu saskaņojam pilota laikā.',
-    price_sub: 'Sāciet ar maksas pilotu. Ja tas izpilda iepriekš saskaņotos kritērijus, pārejiet uz Basic vai Advanced.',
-    tier1_name: 'Pilots (maksas)', tier1_sub: 'vienreizējs pilots un uzstādīšana',
-    t1f1: '8–12 nedēļas, viena pilsēta', t1f2: '20–30 drošības zonas', t1f3: 'Līdz 50 000 braucienu mēnesī pilota pilsētā', t1f4: 'Iknedēļas drošības intervenču pārskats', t1f5: 'Panākumu kritēriji saskaņoti iepriekš', t1f6: 'Rezultāts: mērogot, pārveidot vai apturēt',
-    tier2_name: 'Basic', tier2_sub: 'par aktīvu braucienu · min. €750 / mēnesī',
-    t2f1: 'Android integrācija, ko izstrādājam kopā ar jūsu komandu pilotā', t2f2: 'Zonu kopa jūsu starta pilsētai', t2f3: 'Pamata operatora vadības panelis', t2f4: 'Ikmēneša drošības pārskats (PDF)', t2f5: 'E-pasta atbalsts', t2f6: 'Līdz 50 000 aktīvu braucienu / mēnesī',
-    tier3_name: 'Advanced', tier3_sub: 'par aktīvu braucienu · min. €1 500 / mēnesī',
-    t3f1: 'Viss no Basic', t3f2: 'Zonas visām jūsu pilsētām (Baltijā)', t3f3: 'Uzlabots vadības panelis + CSV eksports', t3f4: 'Drošības pierādījumu pakete sarunām ar pilsētu un apdrošinātāju', t3f5: 'Nozīmēta tehniskā kontaktpersona', t3f6: 'Saskaņoti pieejamības un atbalsta noteikumi · 50 000–500 000 braucienu / mēnesī',
+    price_eyebrow: 'Cenas',
+    price_h2a: 'Vispirms pilots,',
+    price_h2b: 'pēc tam maksa par braucienu.',
+    price_sub: 'Cena pēc pieprasījuma. Pastāstiet par savu floti, un mēs nosūtīsim piedāvājumu.',
+    price_p1: 'Vienreizējs maksas pilots jūsu pilsētā ar iepriekš saskaņotiem panākumu kritērijiem.',
+    price_p2: 'Pēc pilota maksājat par katru braucienu.',
+    price_p3: 'Cena ir atkarīga no flotes lieluma un pilsētām, kurās darbojaties.',
+    price_btn: 'Pieprasīt piedāvājumu →',
+    price_micro: 'Atbildē nosūtīsim pilota piedāvājumu.',
     // CTA
     cta_h2: 'Pārbaudiet drošības ietekmi<br/>mērķētā pilotprojektā.',
-    cta_sub: 'Viena pilsēta, 20–30 augsta riska zonas, 8–12 nedēļas — integrēts jūsu esošajā lietotnē, ar vadības paneli, regulāriem drošības pārskatiem un noslēguma ieteikumiem.',
+    cta_sub: 'Pilots jūsu pilsētā un esošajā lietotnē ar vadības paneli, regulāriem drošības pārskatiem un noslēguma ieteikumiem.',
     cta_btn: 'Pieteikt pilotprojektu →',
     next_label: 'Kas notiek tālāk', next1: '30 min zvans: jūsu pilsētas, flote un lietotnes uzbūve', next2: 'Rakstisks pilota apjoms un panākumu kritēriji nedēļas laikā', next3: 'Pilota līgums un datu apstrādes līgums (DAL), tad starts',
     form_privacy: 'Šos datus izmantojam, lai atbildētu uz jūsu pilota pieprasījumu un pārrunātu pilotu. Sīkāk: <a class="privacy-link" href="privacy.html#lv">privātuma paziņojums</a>.', modal_phone: 'Telefons', footer_privacy: 'Privātums',
@@ -1902,7 +1823,7 @@ const translations = {
     kpi6: 'Incidentu / sūdzību dinamika*',
     kpi7: 'Komandas gatavība',
     pf_company: 'Uzņēmuma nosaukums', pf_location: 'Valsts / pilsēta', pf_fleet: 'Aptuvenais flotes izmērs', pf_contact: 'Kontaktpersona', pf_email: 'Darba e-pasts', pf_start: 'Vēlamais pilota sākums (piem., 2027. g. 1. cet.)', pf_v0: 'Transportlīdzekļu veids', pf_v1: 'Elektroskrejriteņi', pf_v2: 'Pašgājēji velosipēdi', pf_v3: 'E-velosipēdi', pf_v4: 'E-mopēdi', pf_v5: 'Jaukta flote', pf_p0: 'Lietotnes platforma', pf_p1: 'iOS + Android', pf_p2: 'Tikai iOS', pf_p3: 'Tikai Android', pf_p4: 'Cits',
-    cta_success: '✅ Tagad jāatveras jūsu e-pasta lietotnei ar aizpildītu pieteikumu. Nospiediet „Sūtīt“, un mēs atbildēsim 2 darba dienu laikā. Ja nekas neatvērās, rakstiet uz hello@pauseandpass.com.',
+    cta_success: '✅ Tagad jāatveras jūsu e-pasta lietotnei ar aizpildītu pieteikumu. Nospiediet „Sūtīt“, un mēs atbildēsim ar pilota piedāvājumu. Ja nekas neatvērās, rakstiet uz hello@pauseandpass.com.',
     cta_note: 'Vai rakstiet mums tieši uz <span style="color:rgba(255,255,255,0.6)">hello@pauseandpass.com</span>',
     contact_title: 'Sazinieties ar mums',
     contact_sub: 'Labprāt atbildēsim uz jebkuriem jautājumiem par Pause & Pass.',
@@ -1914,12 +1835,12 @@ const translations = {
     // Ieviešana (capability matrix)
     cap_eyebrow: 'Ieviešana',
     cap_h2a: 'Platformas iespējas,', cap_h2b: 'vienkāršā valodā.',
-    cap_sub: 'Audio uzvedība atšķiras atkarībā no OS, ierīces un atskaņotāja. Lūk, ko Pause & Pass atbalsta katrā platformā — un lēmumi, kas paliek jūsu ziņā.',
+    cap_sub: 'Vispirms Android; iOS apjomu saskaņojam pilota laikā. Audio uzvedība atšķiras atkarībā no OS, ierīces un atskaņotāja. Lūk, ko Pause & Pass atbalsta katrā platformā — un lēmumi, kas paliek jūsu ziņā.',
     cap_th_cap: 'Iespēja', cap_th_android: 'Android', cap_th_ios: 'iOS', cap_th_op: 'Operatora lēmums',
-    cap_r1_cap: 'Fona brauciena uzraudzība', cap_r1_android: 'Atbalstīts, atkarībā no atļaujām un OS nosacījumiem', cap_r1_ios: 'Atbalstīts, atkarībā no atļaujām un OS nosacījumiem', cap_r1_op: 'Definēt nepieciešamo atļauju plūsmu',
+    cap_r1_cap: 'Fona brauciena uzraudzība', cap_r1_android: 'Izstrādājam un validējam pilotā, atkarībā no atļaujām un OS nosacījumiem', cap_r1_ios: 'Saskaņojam pilotā', cap_r1_op: 'Definēt nepieciešamo atļauju plūsmu',
     cap_r2_cap: 'Audio intervence', cap_r2_android: 'Audio fokusa uzvedība atšķiras pēc OS, ierīces un atskaņotāja', cap_r2_ios: 'Validēts pēc OS / audio sesijas uzvedības', cap_r2_op: 'Izvēlēties pauzi, pieklusināšanu, signālu vai paziņojumu',
-    cap_r3_cap: 'Notikumu reģistrēšana', cap_r3_android: 'Atbalstīts', cap_r3_ios: 'Atbalstīts', cap_r3_op: 'Definēt minimizētu notikumu shēmu un glabāšanu',
-    cap_r4_cap: 'Zonu konfigurācija', cap_r4_android: 'Atbalstīts', cap_r4_ios: 'Atbalstīts', cap_r4_op: 'Izvēlēties standarta un pielāgotas zonas',
+    cap_r3_cap: 'Notikumu reģistrēšana', cap_r3_android: 'Izstrādājam un validējam pilotā', cap_r3_ios: 'Saskaņojam pilotā', cap_r3_op: 'Definēt minimizētu notikumu shēmu un glabāšanu',
+    cap_r4_cap: 'Zonu konfigurācija', cap_r4_android: 'Izstrādājam un validējam pilotā', cap_r4_ios: 'Saskaņojam pilotā', cap_r4_op: 'Izvēlēties standarta un pielāgotas zonas',
     cap_r5_cap: 'Ziņojumi braucējam', cap_r5_android: 'Neobligāti', cap_r5_ios: 'Neobligāti', cap_r5_op: 'Jūs izvēlaties tekstu un UX',
     cap_note: 'Iebraukšanu zonā izvērtē, izmantojot konfigurējamus buferus un atrašanās vietas ticamības noteikumus, lai samazinātu kļūdainas nostrādes pie pārbrauktuvju robežām.',
     // Pielietojums (use cases)
@@ -1980,9 +1901,19 @@ const translations = {
     dash_zones: 'Riskantākās zonas',
     dash_z1: 'Dzelzceļa pārbrauktuve · Brīvības iela',
     dash_z2: 'Tramvaja sliedes · Maskavas iela',
-    dash_z3: 'Krustojums · Krasta iela',
-    dash_z4: 'Ierobežota redzamība · Daugavgrīvas iela',
+    dash_z3: 'Gājēju pāreja · Krasta iela',
+    dash_z4: 'Gājēju pāreja · Daugavgrīvas iela',
     dash_live: 'Skaitītāji atjaunojas līdz ar brauciena simulāciju lapas augšā.',
+    // Added 2026-10-14 (price on request, zones, LTAB, footer)
+    faq_q11: 'Cik tas maksā?',
+    faq_a11: 'Cena pēc pieprasījuma. Sākumā notiek vienreizējs maksas pilots, pēc tam maksājat par katru braucienu. Cena ir atkarīga no flotes lieluma un pilsētām, kurās darbojaties. Nosūtiet pieteikumu, un mēs atbildēsim ar pilota piedāvājumu.',
+    zones_stat: 'Mūsu Rīgas kartē jau ir vairāk nekā 5 000 dzelzceļa, tramvaja un gājēju pāreju (2026. gada oktobris), kas iegūtas no OpenStreetMap un tiek regulāri atjaunotas. Jūs izvēlaties, kuras zonas jūsu flotei ir aktīvas.',
+    octa_stat: 'LTAB 2026. gada februārī ziņoja: 24 OCTA zaudējumu pieteikumi par negadījumiem, ko izraisījuši elektrisko skrejriteņu vadītāji; atlīdzība no €160 līdz €5 500 par vienu pieteikumu.',
+    octa_src: 'Avots: <a href="https://lvportals.lv/dienaskartiba/386088-lielaka-atlidziba-par-elektroskrejritenu-izraisitu-celu-satiksmes-negadijumu-5500-eur-2026" target="_blank" rel="noopener">LTAB, 2026. gada 13. februāris</a>. Aprēķinātā OCTA atlīdzība par pieteikumiem, kas saņemti līdz 2026. gada 1. februārim.',
+    footer_contact: 'Kontakti',
+    modal_email: 'E-pasts',
+    footer_copy: '© 2026 Pause & Pass, SIA “DAGAR” produkts · Reģ. Nr. 40103579673 · PVN LV40103579673 · Silciema iela 15 k-2 – 40, Rīga, LV-1024, Latvija · hello@pauseandpass.com',
+    modal_reg: 'SIA “DAGAR” · Reģ. Nr. 40103579673',
   }
 };
 

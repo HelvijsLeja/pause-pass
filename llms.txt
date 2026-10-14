@@ -4,7 +4,7 @@
 
 ## What it is
 - A software-only safety layer that operators embed in their existing rider app.
-- Reduces avoidable audio distraction (headphones/music) before a rider enters a pre-mapped high-risk location such as a railway crossing or complex intersection.
+- Reduces avoidable audio distraction (headphones/music) before a rider enters a pre-mapped high-risk location such as a railway crossing, tram crossing or pedestrian crossing.
 - Complementary to fleet geofencing, computer vision and collision-alert systems — an add-on, not a replacement.
 
 ## Who it is for
@@ -24,7 +24,7 @@
 - Produces an auditable event log for permit, regulator and insurer discussions.
 - Transparency: operators control rider disclosure; recommended privacy language provided (GDPR-aware).
 - Data: on-device zone evaluation; only minimised events reach the backend; hosting region stated in the DPA; retention agreed per operator.
-- Pricing: paid pilot (EUR 5,000-7,500, one city, 8-12 weeks), then per active ride (roughly EUR 0.005-0.008 depending on volume, with a monthly minimum).
+- Pricing: price on request. A one-off paid pilot, then a fee per ride. The price depends on fleet size and cities.
 - Coverage: eligible active trips on supported app versions and devices.
 
 ## Market context (Latvia)
@@ -32,7 +32,7 @@
 - Pause & Pass is not an insurance product and does not guarantee lower premiums; it creates preventive controls and measurable safety evidence that may support future claims and insurance-risk discussions.
 
 ## Pilot
-- One city, 20-30 high-risk zones, 8-12 weeks, integrated in the operator's existing app.
+- A pilot in the operator's city, integrated in the operator's existing app, with a dashboard, regular safety reports and final recommendations.
 - Measured: trips in risk zones, interventions triggered, technical coverage, false activations, missed interventions, team readiness.
 
 ## Honest limitations
