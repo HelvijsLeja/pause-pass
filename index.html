@@ -12,6 +12,9 @@
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Pause &amp; Pass (SIA DAGAR)"/>
 <link rel="canonical" href="https://pauseandpass.com/"/>
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <!-- Open Graph / social sharing -->
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Pause &amp; Pass"/>
@@ -34,6 +37,7 @@
       "name": "Pause & Pass",
       "url": "https://pauseandpass.com/",
       "email": "hello@pauseandpass.com",
+      "logo": "https://pauseandpass.com/assets/logo/pauseandpass-logo.png",
       "description": "White-label rider-attention safety plugin for shared micromobility operators (e-scooters, e-bikes, e-mopeds).",
       "areaServed": [
         "Latvia",
@@ -241,13 +245,8 @@ nav {
   text-decoration: none;
 }
 
-.nav-logo-mark {
-  width: 32px; height: 32px;
-  background: var(--black);
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--green); font-size: 15px; font-weight: 800;
-}
+.nav-logo-mark { display: block; height: 32px; width: auto; flex-shrink: 0; }
+.nav-logo-amp { color: var(--green); }
 
 .nav-links { display: flex; gap: 32px; }
 .nav-links a {
@@ -954,8 +953,8 @@ footer {
 <!-- Nav -->
 <nav>
   <a href="#" class="nav-logo">
-    <div class="nav-logo-mark">P</div>
-    Pause &amp; Pass
+    <img class="nav-logo-mark" src="assets/logo/pauseandpass-mark.svg" width="57" height="32" alt=""/>
+    <span>Pause <span class="nav-logo-amp">&amp;</span> Pass</span>
   </a>
   <div class="nav-links">
     <a href="#plugin" data-i18n="nav_how">How it works</a>
@@ -1479,8 +1478,8 @@ footer {
   <div class="container">
     <div class="footer-inner">
       <div class="nav-logo" style="font-size:15px">
-        <div class="nav-logo-mark" style="width:26px;height:26px;font-size:12px;">P</div>
-        Pause &amp; Pass
+        <img class="nav-logo-mark" src="assets/logo/pauseandpass-mark.svg" width="46" height="26" alt="" style="height:26px"/>
+        <span>Pause <span class="nav-logo-amp">&amp;</span> Pass</span>
       </div>
       <div class="footer-copy">© 2026 Pause &amp; Pass, a product of SIA “DAGAR” · Reg. No. 40103579673 · VAT LV40103579673 · Silciema iela 15 k-2 – 40, Rīga, LV-1024, Latvia · hello@pauseandpass.com</div>
       <div class="footer-links">

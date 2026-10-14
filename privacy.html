@@ -7,6 +7,9 @@
 <title>Privacy notice · Pause &amp; Pass</title>
 <meta name="description" content="How Pause &amp; Pass processes personal data from the pauseandpass.com website and pilot request form."/>
 <link rel="canonical" href="https://pauseandpass.com/privacy.html"/>
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <link href="fonts/fonts.css" rel="stylesheet"/>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -21,7 +24,8 @@ nav {
   padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between;
 }
 .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; letter-spacing: -0.3px; color: var(--black); text-decoration: none; }
-.nav-logo-mark { width: 32px; height: 32px; background: var(--black); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--green); font-size: 15px; font-weight: 800; }
+.nav-logo-mark { display: block; height: 32px; width: auto; flex-shrink: 0; }
+.nav-logo-amp { color: var(--green); }
 .lang-switcher { display: flex; background: var(--grey1); border: 1px solid var(--border); border-radius: 8px; padding: 3px; gap: 2px; }
 .lang-btn { padding: 5px 12px; border-radius: 6px; border: none; font: 600 13px 'Geist', sans-serif; cursor: pointer; background: transparent; color: var(--grey3); }
 .lang-btn.active { background: var(--black); color: var(--white); }
@@ -42,7 +46,7 @@ html[lang="en"] [data-lang="en"], html[lang="lv"] [data-lang="lv"] { display: bl
 </head>
 <body>
 <nav>
-  <a href="./" class="nav-logo" id="homeLink"><div class="nav-logo-mark">P</div>Pause &amp; Pass</a>
+  <a href="./" class="nav-logo" id="homeLink"><img class="nav-logo-mark" src="assets/logo/pauseandpass-mark.svg" width="57" height="32" alt=""/><span>Pause <span class="nav-logo-amp">&amp;</span> Pass</span></a>
   <div class="lang-switcher">
     <button class="lang-btn active" id="btnEN" onclick="setLang('en')">EN</button>
     <button class="lang-btn" id="btnLV" onclick="setLang('lv')">LV</button>
