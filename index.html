@@ -245,8 +245,18 @@ nav {
   text-decoration: none;
 }
 
-.nav-logo-mark { display: block; height: 32px; width: auto; flex-shrink: 0; }
-.nav-logo-amp { color: var(--green); }
+/* Logo C1: Pause (mark) Pass + fading sound wave behind "Pass"; scales with font-size (em). Min 16px. */
+.nav-logo { gap: 0.3em; letter-spacing: -0.018em; line-height: 1; }
+.brand-mark { display: block; height: 1.27em; width: 1.168em; flex-shrink: 0; }
+.brand-pass { position: relative; display: inline-block; }
+.brand-word { position: relative; z-index: 1; }
+.brand-waves { position: absolute; inset: 0; pointer-events: none; }
+.brand-waves i { position: absolute; top: 50%; width: 0.136em; border-radius: 0.068em; background: var(--green); transform: translateY(-50%); }
+.brand-waves i:nth-child(1) { left: 0.091em; height: 1.636em; opacity: 0.50; }
+.brand-waves i:nth-child(2) { left: 0.614em; height: 1.455em; opacity: 0.40; }
+.brand-waves i:nth-child(3) { left: 1.136em; height: 1.273em; opacity: 0.31; }
+.brand-waves i:nth-child(4) { left: 1.659em; height: 1.091em; opacity: 0.23; }
+.brand-waves i:nth-child(5) { left: 2.182em; height: 0.955em; opacity: 0.16; }
 
 .nav-links { display: flex; gap: 32px; }
 .nav-links a {
@@ -952,10 +962,7 @@ footer {
 
 <!-- Nav -->
 <nav>
-  <a href="#" class="nav-logo">
-    <img class="nav-logo-mark" src="assets/logo/pauseandpass-mark.svg" width="57" height="32" alt=""/>
-    <span>Pause <span class="nav-logo-amp">&amp;</span> Pass</span>
-  </a>
+  <a href="#" class="nav-logo" aria-label="Pause &amp; Pass"><span class="brand-word">Pause</span><svg class="brand-mark" viewBox="0 0 92 100" aria-hidden="true" focusable="false"><circle cx="46" cy="50" r="40" fill="rgba(29,185,84,.12)" stroke="#1DB954" stroke-width="4" stroke-dasharray="7 7" stroke-linecap="round"/><rect x="32" y="33" width="10" height="34" rx="5" fill="#1DB954"/><rect x="50" y="33" width="10" height="34" rx="5" fill="#1DB954"/></svg><span class="brand-pass"><span class="brand-waves" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="brand-word">Pass</span></span></a>
   <div class="nav-links">
     <a href="#plugin" data-i18n="nav_how">How it works</a>
     <a href="#dashboard" data-i18n="nav_dash">Dashboard</a>
@@ -1477,10 +1484,7 @@ footer {
 <footer>
   <div class="container">
     <div class="footer-inner">
-      <div class="nav-logo" style="font-size:15px">
-        <img class="nav-logo-mark" src="assets/logo/pauseandpass-mark.svg" width="46" height="26" alt="" style="height:26px"/>
-        <span>Pause <span class="nav-logo-amp">&amp;</span> Pass</span>
-      </div>
+      <div class="nav-logo" style="font-size:16px" role="img" aria-label="Pause &amp; Pass"><span class="brand-word">Pause</span><svg class="brand-mark" viewBox="0 0 92 100" aria-hidden="true" focusable="false"><circle cx="46" cy="50" r="40" fill="rgba(29,185,84,.12)" stroke="#1DB954" stroke-width="4" stroke-dasharray="7 7" stroke-linecap="round"/><rect x="32" y="33" width="10" height="34" rx="5" fill="#1DB954"/><rect x="50" y="33" width="10" height="34" rx="5" fill="#1DB954"/></svg><span class="brand-pass"><span class="brand-waves" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="brand-word">Pass</span></span></div>
       <div class="footer-copy">© 2026 Pause &amp; Pass, a product of SIA “DAGAR” · Reg. No. 40103579673 · VAT LV40103579673 · Silciema iela 15 k-2 – 40, Rīga, LV-1024, Latvia · hello@pauseandpass.com</div>
       <div class="footer-links">
         <a class="privacy-link" href="privacy.html" data-i18n="footer_privacy">Privacy</a>
