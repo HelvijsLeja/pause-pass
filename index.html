@@ -860,16 +860,17 @@ footer {
 .map-foot-note { color: rgba(255,255,255,0.6); }
 /* Illustrative Android-style notification over the simulation map */
 .map-stage { position: relative; }
-.map-notif { position: absolute; top: 8px; left: 8px; right: 8px; display: flex; gap: 10px; align-items: flex-start; background: #E9E5EE; color: #1A1A1A; border-radius: 22px; padding: 10px 14px; box-shadow: 0 10px 28px rgba(0,0,0,0.45); text-align: left; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.map-notif { position: absolute; bottom: 8px; left: 8px; right: 8px; display: flex; gap: 10px; align-items: flex-start; background: #E9E5EE; color: #1A1A1A; border-radius: 22px; padding: 10px 14px; box-shadow: 0 10px 28px rgba(0,0,0,0.45); text-align: left; }
 .map-notif[hidden] { display: none; }
 .map-notif-ico { width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px; }
 .map-notif-txt { min-width: 0; }
 .map-notif-app { font-size: 10.5px; color: #4F4A57; }
 .map-notif-t { font-size: 13px; font-weight: 500; color: #1A1A1A; margin-top: 1px; }
 .map-notif-b { font-size: 12px; color: #3A3640; line-height: 1.35; margin-top: 1px; }
-@media (max-width: 600px) { .map-notif { top: 6px; left: 6px; right: 6px; padding: 8px 12px; border-radius: 18px; } .map-notif-t { font-size: 12px; } .map-notif-b { font-size: 11px; } }
+@media (max-width: 600px) { .map-notif { gap: 8px; padding: 7px 11px; border-radius: 18px; } .map-notif-ico { width: 20px; height: 20px; } .map-notif-app { font-size: 10px; } .map-notif-t { font-size: 11.5px; } .map-notif-b { font-size: 11px; line-height: 1.3; } }
 @media (prefers-reduced-motion: no-preference) { .map-notif.pop { animation: notifIn 0.35s ease-out; } }
-@keyframes notifIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
+@keyframes notifIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
 /* ── Operator dashboard (illustrative) ── */
 .dash-section { background: #0A0A0A; padding: 90px 0; }
@@ -976,19 +977,18 @@ footer {
             <div class="map-status safe" id="mapStatus"><span class="sc-status-dot"></span><span id="mapStatusText">Safe zone</span></div>
           </div>
           <div class="map-stage">
-          <svg class="map-svg" viewBox="0 0 400 260" aria-hidden="true">
-            <rect width="400" height="260" fill="#0d0d0d"/>
-            <g class="blocks"><rect x="108" y="72" width="80" height="50" rx="4"/><rect x="108" y="150" width="60" height="42" rx="4"/><rect x="200" y="160" width="115" height="36" rx="4"/><rect x="215" y="66" width="100" height="22" rx="4"/><rect x="10" y="150" width="70" height="42" rx="4"/><rect x="355" y="80" width="40" height="110" rx="4"/></g>
-            <g class="roads"><line x1="0" y1="60" x2="400" y2="50" class="rd"/><line x1="0" y1="205" x2="400" y2="215" class="rd"/><line x1="95" y1="0" x2="70" y2="260" class="rd"/><line x1="330" y1="0" x2="345" y2="260" class="rd"/><line x1="0" y1="130" x2="160" y2="140" class="rd"/></g>
-            <line x1="185" y1="0" x2="315" y2="260" class="rail"/><line x1="185" y1="0" x2="315" y2="260" class="rail-ties"/>
+          <svg class="map-svg" viewBox="0 0 400 300" aria-hidden="true">
+            <rect width="400" height="300" fill="#0d0d0d"/>
+            <g class="blocks"><rect x="108" y="72" width="80" height="50" rx="4"/><rect x="108" y="150" width="60" height="42" rx="4"/><rect x="200" y="160" width="115" height="36" rx="4"/><rect x="215" y="66" width="100" height="22" rx="4"/><rect x="10" y="150" width="70" height="42" rx="4"/><rect x="355" y="80" width="40" height="110" rx="4"/><rect x="10" y="232" width="48" height="40" rx="4"/><rect x="100" y="232" width="110" height="40" rx="4"/><rect x="230" y="232" width="95" height="40" rx="4"/></g>
+            <g class="roads"><line x1="0" y1="60" x2="400" y2="50" class="rd"/><line x1="0" y1="205" x2="400" y2="215" class="rd"/><line x1="95" y1="0" x2="66" y2="300" class="rd"/><line x1="330" y1="0" x2="347" y2="300" class="rd"/><line x1="0" y1="130" x2="160" y2="140" class="rd"/></g>
+            <line x1="185" y1="0" x2="335" y2="300" class="rail"/><line x1="185" y1="0" x2="335" y2="300" class="rail-ties"/>
             <g id="riskZone"><circle class="rz-pulse" cx="250" cy="118" r="46"/><circle class="rz-fill" cx="250" cy="118" r="46"/></g>
             <text x="262" y="56" class="rz-label" data-i18n="map_zone_lbl">RZ-014 · railway crossing</text>
             <path id="tripPath" d="M18 214 C 90 208, 160 165, 228 128 S 330 70, 392 44" class="trip"/>
             <circle id="tripHalo" r="14" class="trip-halo" cx="18" cy="214"/><circle id="tripDot" r="6" class="trip-dot" cx="18" cy="214"/>
           </svg>
-          <div role="status" aria-live="polite">
-            <div class="map-notif" id="mapNotif" hidden><svg class="map-notif-ico" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="27" fill="#E3F6EA" stroke="#1DB954" stroke-width="6" stroke-dasharray="9.6 11.6" stroke-linecap="round"/><rect x="21" y="19" width="8" height="26" rx="4" fill="#1DB954"/><rect x="35" y="19" width="8" height="26" rx="4" fill="#1DB954"/></svg><div class="map-notif-txt"><div class="map-notif-app" id="mapNotifApp">Your rider app · now</div><div class="map-notif-t" id="mapNotifT">⚠️ Entering danger zone</div><div class="map-notif-b" id="mapNotifB">Audio paused. Railway crossing: watch for trains and traffic!</div></div></div>
-          </div>
+          <div class="map-notif" id="mapNotif" aria-hidden="true" hidden><svg class="map-notif-ico" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="27" fill="#E3F6EA" stroke="#1DB954" stroke-width="6" stroke-dasharray="9.6 11.6" stroke-linecap="round"/><rect x="21" y="19" width="8" height="26" rx="4" fill="#1DB954"/><rect x="35" y="19" width="8" height="26" rx="4" fill="#1DB954"/></svg><div class="map-notif-txt"><div class="map-notif-app" id="mapNotifApp">Your rider app · now</div><div class="map-notif-t" id="mapNotifT">⚠️ Entering danger zone</div><div class="map-notif-b" id="mapNotifB">Audio paused. Railway crossing: watch for trains and traffic!</div></div></div>
+          <div class="sr-only" id="mapNotifSR" role="status" aria-live="polite"></div>
           </div>
           <div class="map-audio" id="mapAudio"><span class="map-audio-ico" id="mapAudioIco">🎵</span><div><div class="map-audio-t" id="mapAudioT">Music playing</div><div class="map-audio-s" id="mapAudioS">Audio active</div></div></div>
           <div class="map-controls">
@@ -2011,7 +2011,7 @@ function setLang(lang) {
   const dot = document.getElementById('tripDot'), halo = document.getElementById('tripHalo');
   const zone = { x: 250, y: 118, r: 46 }, len = path.getTotalLength(), DUR = 9000;
   let t0 = null, mode = 'pause', inZone = false, near = false, lastLang = null;
-  let notifState = null, notifTimer = null, skipNotif = false;
+  let notifState = null, notifTimer = null, skipNotif = false, userTrip = false;
   const tr = k => (translations[document.documentElement.lang === 'lv' ? 'lv' : 'en'] || {})[k] || k;
   const $ = id => document.getElementById(id);
   function render() {
@@ -2043,7 +2043,7 @@ function setLang(lang) {
       ? (mode === 'pause' ? 'notif_enter_body_pause' : 'notif_enter_body_' + mode)
       : (mode === 'pause' ? 'notif_exit_body_pause' : mode === 'duck' ? 'notif_exit_body' : 'notif_exit_body_chime')));
   }
-  function hideNotif() { clearTimeout(notifTimer); notifState = null; $('mapNotif').hidden = true; }
+  function hideNotif() { clearTimeout(notifTimer); notifState = null; $('mapNotif').hidden = true; $('mapNotifSR').textContent = ''; }
   function showNotif(state) {
     clearTimeout(notifTimer);
     notifState = state;
@@ -2051,6 +2051,8 @@ function setLang(lang) {
     const n = $('mapNotif');
     n.hidden = false;
     n.classList.remove('pop'); void n.offsetWidth; n.classList.add('pop');
+    // Announce only trips the visitor started (Run a trip or a mode button), not the endless demo loop.
+    if (userTrip) $('mapNotifSR').textContent = $('mapNotifT').textContent + '. ' + $('mapNotifB').textContent;
     if (state === 'exit') notifTimer = setTimeout(hideNotif, 3000);
   }
   function bump(id) {
@@ -2073,7 +2075,7 @@ function setLang(lang) {
     if (t0 === null) { t0 = ts; prog = 0; }
     const dt = ts - t0; t0 = ts;
     prog += (dt / DUR) * (inZone ? 0.35 : near ? 0.6 : 1);   // rider slows near the crossing
-    if (prog >= 1) { bump('dkTrips'); prog = 0; }
+    if (prog >= 1) { bump('dkTrips'); prog = 0; userTrip = false; }
     const pt = path.getPointAtLength(prog * len);
     dot.setAttribute('cx', pt.x); dot.setAttribute('cy', pt.y);
     halo.setAttribute('cx', pt.x); halo.setAttribute('cy', pt.y);
@@ -2089,9 +2091,9 @@ function setLang(lang) {
   }
   document.querySelectorAll('.map-chip').forEach(b => b.addEventListener('click', () => {
     document.querySelectorAll('.map-chip').forEach(x => x.classList.remove('active'));
-    b.classList.add('active'); mode = b.dataset.mode; render();
+    b.classList.add('active'); mode = b.dataset.mode; userTrip = true; render();
   }));
-  $('mapReplay').addEventListener('click', () => { t0 = null; skipNotif = inZone; hideNotif(); });
+  $('mapReplay').addEventListener('click', () => { t0 = null; skipNotif = inZone; userTrip = true; hideNotif(); });
   ['btnEN', 'btnLV'].forEach(id => $(id) && $(id).addEventListener('click', render));
   render();
   requestAnimationFrame(frame);
