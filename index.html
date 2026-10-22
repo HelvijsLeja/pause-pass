@@ -857,6 +857,19 @@ footer {
 .map-log-row span:last-child { margin-left: auto; color: var(--green); }
 @keyframes logIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
 .map-foot { font-size: 10px; color: rgba(255,255,255,0.3); margin-top: 8px; text-align: right; }
+.map-foot-note { color: rgba(255,255,255,0.6); }
+/* Illustrative Android-style notification over the simulation map */
+.map-stage { position: relative; }
+.map-notif { position: absolute; top: 8px; left: 8px; right: 8px; display: flex; gap: 10px; align-items: flex-start; background: #E9E5EE; color: #1A1A1A; border-radius: 22px; padding: 10px 14px; box-shadow: 0 10px 28px rgba(0,0,0,0.45); text-align: left; }
+.map-notif[hidden] { display: none; }
+.map-notif-ico { width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px; }
+.map-notif-txt { min-width: 0; }
+.map-notif-app { font-size: 10.5px; color: #4F4A57; }
+.map-notif-t { font-size: 13px; font-weight: 500; color: #1A1A1A; margin-top: 1px; }
+.map-notif-b { font-size: 12px; color: #3A3640; line-height: 1.35; margin-top: 1px; }
+@media (max-width: 600px) { .map-notif { top: 6px; left: 6px; right: 6px; padding: 8px 12px; border-radius: 18px; } .map-notif-t { font-size: 12px; } .map-notif-b { font-size: 11px; } }
+@media (prefers-reduced-motion: no-preference) { .map-notif.pop { animation: notifIn 0.35s ease-out; } }
+@keyframes notifIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
 
 /* ── Operator dashboard (illustrative) ── */
 .dash-section { background: #0A0A0A; padding: 90px 0; }
@@ -962,6 +975,7 @@ footer {
             <div class="map-title" data-i18n="map_title">Live trip · Riga</div>
             <div class="map-status safe" id="mapStatus"><span class="sc-status-dot"></span><span id="mapStatusText">Safe zone</span></div>
           </div>
+          <div class="map-stage">
           <svg class="map-svg" viewBox="0 0 400 260" aria-hidden="true">
             <rect width="400" height="260" fill="#0d0d0d"/>
             <g class="blocks"><rect x="108" y="72" width="80" height="50" rx="4"/><rect x="108" y="150" width="60" height="42" rx="4"/><rect x="200" y="160" width="115" height="36" rx="4"/><rect x="215" y="66" width="100" height="22" rx="4"/><rect x="10" y="150" width="70" height="42" rx="4"/><rect x="355" y="80" width="40" height="110" rx="4"/></g>
@@ -972,6 +986,10 @@ footer {
             <path id="tripPath" d="M18 214 C 90 208, 160 165, 228 128 S 330 70, 392 44" class="trip"/>
             <circle id="tripHalo" r="14" class="trip-halo" cx="18" cy="214"/><circle id="tripDot" r="6" class="trip-dot" cx="18" cy="214"/>
           </svg>
+          <div role="status" aria-live="polite">
+            <div class="map-notif" id="mapNotif" hidden><svg class="map-notif-ico" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="27" fill="#E3F6EA" stroke="#1DB954" stroke-width="6" stroke-dasharray="9.6 11.6" stroke-linecap="round"/><rect x="21" y="19" width="8" height="26" rx="4" fill="#1DB954"/><rect x="35" y="19" width="8" height="26" rx="4" fill="#1DB954"/></svg><div class="map-notif-txt"><div class="map-notif-app" id="mapNotifApp">Your rider app · now</div><div class="map-notif-t" id="mapNotifT">⚠️ Entering danger zone</div><div class="map-notif-b" id="mapNotifB">Audio paused. Railway crossing: watch for trains and traffic!</div></div></div>
+          </div>
+          </div>
           <div class="map-audio" id="mapAudio"><span class="map-audio-ico" id="mapAudioIco">🎵</span><div><div class="map-audio-t" id="mapAudioT">Music playing</div><div class="map-audio-s" id="mapAudioS">Audio active</div></div></div>
           <div class="map-controls">
             <span class="map-ctl-label" data-i18n="map_mode">Intervention:</span>
@@ -981,7 +999,7 @@ footer {
             <button type="button" class="map-replay" id="mapReplay" data-i18n="map_replay">▶ Run a trip</button>
           </div>
           <div class="map-log" id="mapLog"></div>
-          <div class="map-foot" data-i18n="map_sim">Simulation · illustrative data</div>
+          <div class="map-foot"><span data-i18n="map_sim">Simulation · illustrative data</span> · <span class="map-foot-note" data-i18n="notif_label">Illustrative notifications</span></div>
         </div>
       </div>
     </div>
@@ -1760,6 +1778,19 @@ const translations = {
     modal_email: 'Email',
     footer_copy: '© 2026 Pause & Pass, a product of SIA “DAGAR” · Reg. No. 40103579673 · VAT LV40103579673 · Silciema iela 15 k-2 – 40, Rīga, LV-1024, Latvia · hello@pauseandpass.com',
     modal_reg: 'SIA “DAGAR” · Reg. No. 40103579673',
+    // Illustrative notifications in the simulation (EN, 2026-10-22)
+    notif_app: 'Your rider app · now',
+    notif_enter_title: '⚠️ Entering danger zone',
+    notif_enter_body: 'Railway crossing: stay alert and watch for trains and traffic!',
+    notif_enter_body_pause: 'Audio paused. Railway crossing: watch for trains and traffic!',
+    notif_enter_body_duck: 'Volume lowered. Railway crossing ahead.',
+    notif_enter_body_chime: 'Railway crossing ahead: stay alert.',
+    notif_exit_title: '✅ Safe zone',
+    notif_exit_body: 'You have left the danger zone. Volume restored. Stay safe!',
+    notif_exit_body_pause: 'You have left the danger zone. Audio resumed. Stay safe!',
+    notif_exit_body_chime: 'You have left the danger zone. Stay safe!',
+    notif_ped_body: 'Pedestrian crossing: watch for pedestrians and traffic!',
+    notif_label: 'Illustrative notifications',
   },
   lv: {
     // Nav
@@ -1921,6 +1952,19 @@ const translations = {
     modal_email: 'E-pasts',
     footer_copy: '© 2026 Pause & Pass, SIA “DAGAR” produkts · Reģ. Nr. 40103579673 · PVN LV40103579673 · Silciema iela 15 k-2 – 40, Rīga, LV-1024, Latvija · hello@pauseandpass.com',
     modal_reg: 'SIA “DAGAR” · Reģ. Nr. 40103579673',
+    // Illustrative notifications in the simulation (LV, 2026-10-22)
+    notif_app: 'Jūsu lietotne · tagad',
+    notif_enter_title: '⚠️ Iebraukšana bīstamajā zonā',
+    notif_enter_body: 'Dzelzceļa pārbrauktuve: pievērsiet uzmanību vilcieniem un satiksmei!',
+    notif_enter_body_pause: 'Audio apturēts. Dzelzceļa pārbrauktuve: pievērsiet uzmanību vilcieniem un satiksmei!',
+    notif_enter_body_duck: 'Skaļums samazināts. Priekšā dzelzceļa pārbrauktuve.',
+    notif_enter_body_chime: 'Priekšā dzelzceļa pārbrauktuve: pievērsiet uzmanību satiksmei.',
+    notif_exit_title: '✅ Droša zona',
+    notif_exit_body: 'Bīstamā zona ir aiz muguras. Skaļums atjaunots. Drošu braucienu!',
+    notif_exit_body_pause: 'Bīstamā zona ir aiz muguras. Audio atsākts. Drošu braucienu!',
+    notif_exit_body_chime: 'Bīstamā zona ir aiz muguras. Drošu braucienu!',
+    notif_ped_body: 'Gājēju pāreja: pievērsiet uzmanību gājējiem un satiksmei!',
+    notif_label: 'Ilustratīvi paziņojumi',
   }
 };
 
@@ -1967,6 +2011,7 @@ function setLang(lang) {
   const dot = document.getElementById('tripDot'), halo = document.getElementById('tripHalo');
   const zone = { x: 250, y: 118, r: 46 }, len = path.getTotalLength(), DUR = 9000;
   let t0 = null, mode = 'pause', inZone = false, near = false, lastLang = null;
+  let notifState = null, notifTimer = null, skipNotif = false;
   const tr = k => (translations[document.documentElement.lang === 'lv' ? 'lv' : 'en'] || {})[k] || k;
   const $ = id => document.getElementById(id);
   function render() {
@@ -1984,6 +2029,29 @@ function setLang(lang) {
     }
     $('mapAudio').classList.toggle('on', inZone);
     $('riskZone').classList.toggle('hot', inZone);
+    paintNotif();
+  }
+  // Illustrative rider notification: text depends on enter/exit and the chosen intervention.
+  // Text is only rewritten when it changes, so the polite live region is not re-read every frame.
+  function setText(id, v) { const el = $(id); if (el.textContent !== v) el.textContent = v; }
+  function paintNotif() {
+    if (!notifState) return;
+    const enter = notifState === 'enter';
+    setText('mapNotifApp', tr('notif_app'));
+    setText('mapNotifT', tr(enter ? 'notif_enter_title' : 'notif_exit_title'));
+    setText('mapNotifB', tr(enter
+      ? (mode === 'pause' ? 'notif_enter_body_pause' : 'notif_enter_body_' + mode)
+      : (mode === 'pause' ? 'notif_exit_body_pause' : mode === 'duck' ? 'notif_exit_body' : 'notif_exit_body_chime')));
+  }
+  function hideNotif() { clearTimeout(notifTimer); notifState = null; $('mapNotif').hidden = true; }
+  function showNotif(state) {
+    clearTimeout(notifTimer);
+    notifState = state;
+    paintNotif();
+    const n = $('mapNotif');
+    n.hidden = false;
+    n.classList.remove('pop'); void n.offsetWidth; n.classList.add('pop');
+    if (state === 'exit') notifTimer = setTimeout(hideNotif, 3000);
   }
   function bump(id) {
     const el = $(id); if (!el) return;
@@ -2011,7 +2079,11 @@ function setLang(lang) {
     halo.setAttribute('cx', pt.x); halo.setAttribute('cy', pt.y);
     const d = Math.hypot(pt.x - zone.x, pt.y - zone.y);
     const nz = d < zone.r, nr = !nz && d < zone.r + 45, lang = document.documentElement.lang;
-    if (nz !== inZone) { inZone = nz; near = nr; log(nz); render(); }
+    if (nz !== inZone) {
+      inZone = nz; near = nr; log(nz);
+      if (skipNotif) { skipNotif = false; hideNotif(); } else showNotif(nz ? 'enter' : 'exit');
+      render();
+    }
     else if (nr !== near || lang !== lastLang) { near = nr; lastLang = lang; render(); }
     requestAnimationFrame(frame);
   }
@@ -2019,7 +2091,7 @@ function setLang(lang) {
     document.querySelectorAll('.map-chip').forEach(x => x.classList.remove('active'));
     b.classList.add('active'); mode = b.dataset.mode; render();
   }));
-  $('mapReplay').addEventListener('click', () => { t0 = null; });
+  $('mapReplay').addEventListener('click', () => { t0 = null; skipNotif = inZone; hideNotif(); });
   ['btnEN', 'btnLV'].forEach(id => $(id) && $(id).addEventListener('click', render));
   render();
   requestAnimationFrame(frame);
