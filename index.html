@@ -974,7 +974,7 @@ footer {
         <div class="map-card">
           <div class="map-head">
             <div class="map-title" data-i18n="map_title">Live trip · Riga</div>
-            <div class="map-status safe" id="mapStatus"><span class="sc-status-dot"></span><span id="mapStatusText">Safe zone</span></div>
+            <div class="map-status safe" id="mapStatus"><span class="sc-status-dot"></span><span id="mapStatusText">No zone nearby</span></div>
           </div>
           <div class="map-stage">
           <svg class="map-svg" viewBox="0 0 400 300" aria-hidden="true">
@@ -1733,7 +1733,7 @@ const translations = {
     faq_q10: 'Does it only work with e-scooters?', faq_a10: 'No. It is built for connected micromobility platforms, including e-scooters, self-propelled bicycles, e-bikes and e-mopeds.',
     // Map + dashboard
     map_title: 'Live trip · Riga',
-    map_s_safe: 'Safe zone',
+    map_s_safe: 'No zone nearby',
     map_s_near: 'Risk zone ahead',
     map_s_zone: 'In risk zone',
     map_a_play: 'Music playing',
@@ -1785,10 +1785,10 @@ const translations = {
     notif_enter_body_pause: 'Audio paused. Railway crossing: watch for trains and traffic!',
     notif_enter_body_duck: 'Volume lowered. Railway crossing ahead.',
     notif_enter_body_chime: 'Railway crossing ahead: stay alert.',
-    notif_exit_title: '✅ Safe zone',
-    notif_exit_body: 'You have left the danger zone. Volume restored. Stay safe!',
-    notif_exit_body_pause: 'You have left the danger zone. Audio resumed. Stay safe!',
-    notif_exit_body_chime: 'You have left the danger zone. Stay safe!',
+    notif_exit_title: '✅ Danger zone cleared',
+    notif_exit_body: 'You have left the danger zone. Volume restored. Stay alert!',
+    notif_exit_body_pause: 'You have left the danger zone. Audio resumed. Stay alert!',
+    notif_exit_body_chime: 'You have left the danger zone. Stay alert!',
     notif_ped_body: 'Pedestrian crossing: watch for pedestrians and traffic!',
     notif_label: 'Illustrative notifications',
   },
@@ -1907,7 +1907,7 @@ const translations = {
     faq_q10: 'Vai risinājums darbojas tikai ar skrejriteņiem?', faq_a10: 'Nē. Tas paredzēts dažādām savienotām mikromobilitātes platformām, tostarp elektriskajiem skrejriteņiem, pašgājējiem velosipēdiem, e-velosipēdiem un e-mopēdiem.',
     // Map + dashboard
     map_title: 'Aktīvs brauciens · Rīga',
-    map_s_safe: 'Droša zona',
+    map_s_safe: 'Zonas tuvumā nav',
     map_s_near: 'Priekšā riska zona',
     map_s_zone: 'Riska zonā',
     map_a_play: 'Skan mūzika',
@@ -1959,10 +1959,10 @@ const translations = {
     notif_enter_body_pause: 'Audio apturēts. Dzelzceļa pārbrauktuve: pievērsiet uzmanību vilcieniem un satiksmei!',
     notif_enter_body_duck: 'Skaļums samazināts. Priekšā dzelzceļa pārbrauktuve.',
     notif_enter_body_chime: 'Priekšā dzelzceļa pārbrauktuve: pievērsiet uzmanību satiksmei.',
-    notif_exit_title: '✅ Droša zona',
-    notif_exit_body: 'Bīstamā zona ir aiz muguras. Skaļums atjaunots. Drošu braucienu!',
-    notif_exit_body_pause: 'Bīstamā zona ir aiz muguras. Audio atsākts. Drošu braucienu!',
-    notif_exit_body_chime: 'Bīstamā zona ir aiz muguras. Drošu braucienu!',
+    notif_exit_title: '✅ Bīstamā zona aiz muguras',
+    notif_exit_body: 'Skaļums atjaunots. Saglabājiet uzmanību!',
+    notif_exit_body_pause: 'Audio atsākts. Saglabājiet uzmanību!',
+    notif_exit_body_chime: 'Saglabājiet uzmanību!',
     notif_ped_body: 'Gājēju pāreja: pievērsiet uzmanību gājējiem un satiksmei!',
     notif_label: 'Ilustratīvi paziņojumi',
   }
