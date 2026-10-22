@@ -1456,97 +1456,6 @@ footer {
 </div>
 
 <script>
-  // ── Scooter dashboard animation ──────────────────────────────────────────
-  const scStates = window._scStates = [
-    {
-      status: 'safe', statusText: 'Safe zone',
-      speed: 18, ringOffset: 170,
-      ringColor: '#1DB954',
-      audioTitle: 'Spotify playing',
-      audioSub: 'Audio active · 78% volume',
-      showWave: true, showPause: false,
-      zone: '✅', zoneText: 'No crossings in range · 340m to Maskavas iela',
-      zoneBg: 'rgba(29,185,84,0.08)', zoneColor: 'rgba(255,255,255,0.4)',
-      zoneBorder: 'rgba(29,185,84,0.15)',
-    },
-    {
-      status: 'warning', statusText: 'Approaching zone',
-      speed: 16, ringOffset: 190,
-      ringColor: '#D97706',
-      audioTitle: 'Spotify playing',
-      audioSub: 'Warning — 40m to crossing',
-      showWave: true, showPause: false,
-      zone: '⚠️', zoneText: 'Railway crossing ahead · 40m · Brīvības iela, Rīga',
-      zoneBg: 'rgba(217,119,6,0.08)', zoneColor: '#D97706',
-      zoneBorder: 'rgba(217,119,6,0.25)',
-    },
-    {
-      status: 'danger', statusText: 'Audio paused',
-      speed: 12, ringOffset: 240,
-      ringColor: '#E53E3E',
-      audioTitle: 'Audio paused',
-      audioSub: 'Pause & Pass active · danger zone',
-      showWave: false, showPause: true,
-      zone: '🚨', zoneText: 'DANGER ZONE — Music paused · Resume in ~15m',
-      zoneBg: 'rgba(229,62,62,0.08)', zoneColor: '#E53E3E',
-      zoneBorder: 'rgba(229,62,62,0.25)',
-    },
-    {
-      status: 'warning', statusText: 'Exiting zone',
-      speed: 15, ringOffset: 200,
-      ringColor: '#D97706',
-      audioTitle: 'Resuming audio…',
-      audioSub: 'Clearing crossing · almost safe',
-      showWave: false, showPause: false,
-      zone: '⚠️', zoneText: 'Exiting crossing zone · resuming shortly',
-      zoneBg: 'rgba(217,119,6,0.08)', zoneColor: '#D97706',
-      zoneBorder: 'rgba(217,119,6,0.2)',
-    },
-    {
-      status: 'safe', statusText: 'Safe zone',
-      speed: 19, ringOffset: 160,
-      ringColor: '#1DB954',
-      audioTitle: 'Spotify resumed',
-      audioSub: 'Audio active · crossing cleared ✓',
-      showWave: true, showPause: false,
-      zone: '✅', zoneText: 'Crossing cleared · event logged to dashboard',
-      zoneBg: 'rgba(29,185,84,0.08)', zoneColor: 'rgba(255,255,255,0.4)',
-      zoneBorder: 'rgba(29,185,84,0.15)',
-    },
-  ];
-
-  let sci = 0;
-  function animateScooter() {
-    if (!document.getElementById('scStatus')) return;
-    sci = (sci + 1) % scStates.length;
-    const s = scStates[sci];
-
-    const statusEl = document.getElementById('scStatus');
-    statusEl.className = 'sc-status ' + s.status;
-    document.getElementById('scStatusText').textContent = s.statusText;
-
-    document.getElementById('scSpeed').textContent = s.speed;
-    const ring = document.getElementById('scRing');
-    ring.style.strokeDashoffset = s.ringOffset;
-    ring.style.stroke = s.ringColor;
-
-    document.getElementById('scAudioTitle').textContent = s.audioTitle;
-    document.getElementById('scAudioSub').textContent = s.audioSub;
-
-    const waveform = document.getElementById('scWaveform');
-    const pauseTag = document.getElementById('scPauseTag');
-    waveform.style.display = s.showWave ? 'flex' : 'none';
-    pauseTag.style.display = s.showPause ? 'block' : 'none';
-
-    const zoneAlert = document.getElementById('scZoneAlert');
-    zoneAlert.style.background = s.zoneBg;
-    zoneAlert.style.borderColor = s.zoneBorder;
-    document.querySelector('#scZoneAlert .sc-zone-icon').textContent = s.zone;
-    document.getElementById('scZoneText').textContent = s.zoneText;
-    document.getElementById('scZoneText').style.color = s.zoneColor;
-  }
-  setInterval(animateScooter, 2400);
-
   // ── Counter animations ───────────────────────────────────────────────────
   const statsData = [
     { id: 'stat1', target: 2, suffix: '' },
@@ -1992,16 +1901,6 @@ function setLang(lang) {
   document.title = lang === 'lv'
     ? 'Pause & Pass — Drošības spraudnis mobilitātes operatoriem'
     : 'Pause & Pass — Safety Plugin for Mobility Operators';
-  // Update dashboard status texts to current language
-  const scStates = window._scStates;
-  if (scStates) {
-    scStates[0].statusText = lang === 'lv' ? 'Droša zona' : 'Safe zone';
-    scStates[0].zoneText   = lang === 'lv' ? 'Nav pārbrauktuvju tuvumā · 340m līdz Maskavas ielai' : 'No crossings in range · 340m to Maskavas iela';
-    scStates[1].statusText = lang === 'lv' ? 'Tuvojas zonai' : 'Approaching zone';
-    scStates[1].zoneText   = lang === 'lv' ? 'Dzelzceļa pārbrauktuve priekšā · 40m · Brīvības iela, Rīga' : 'Railway crossing ahead · 40m · Brīvības iela, Rīga';
-    scStates[2].statusText = lang === 'lv' ? 'Audio apturēts' : 'Audio paused';
-    scStates[2].zoneText   = lang === 'lv' ? 'BĪSTAMĀ ZONA — Mūzika apturēta · Atsāksies pēc ~15m' : 'DANGER ZONE — Music paused · Resume in ~15m';
-  }
 }
 
 // ── Hero risk-zone map simulation (illustrative) ─────────────────────────
