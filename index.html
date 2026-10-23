@@ -45,7 +45,7 @@
       "url": "https://pauseandpass.com/",
       "email": "hello@pauseandpass.com",
       "logo": "https://pauseandpass.com/assets/logo/pauseandpass-logo.png",
-      "description": "White-label audio-safety plugin for shared micromobility fleets (e-scooters, e-bikes, e-mopeds).",
+      "description": "White-label audio-safety plugin for shared micromobility fleets (e-scooters, e-bikes, e-mopeds). A product of SIA \"DAGAR\", which also makes CrossAware, an app for pedestrians and cyclists in Riga.",
       "slogan": "Created to raise safety compliance in the micromobility industry.",
       "areaServed": [
         "Latvia",
@@ -53,17 +53,23 @@
         "Lithuania"
       ],
       "parentOrganization": {
-        "@type": "Organization",
-        "name": "SIA DAGAR",
-        "legalName": "Sabiedrība ar ierobežotu atbildību \"DAGAR\"",
-        "vatID": "LV40103579673",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Silciema iela 15 k-2 – 40",
-          "addressLocality": "Rīga",
-          "postalCode": "LV-1024",
-          "addressCountry": "LV"
-        }
+        "@id": "https://dagar.lv/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://dagar.lv/#organization",
+      "name": "SIA DAGAR",
+      "legalName": "SIA DAGAR",
+      "identifier": "40103579673",
+      "vatID": "LV40103579673",
+      "url": "https://dagar.lv/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Silciema iela 15 k-2 – 40",
+        "addressLocality": "Rīga",
+        "postalCode": "LV-1024",
+        "addressCountry": "LV"
       }
     },
     {
@@ -88,6 +94,9 @@
       "description": "A white-label audio-safety plugin for micromobility apps (e-scooters, self-propelled bicycles, e-mopeds). It reduces audio distraction in mapped high-risk zones, measures safety interventions and creates an auditable risk-management record. Not an insurance product.",
       "publisher": {
         "@id": "https://pauseandpass.com/#organization"
+      },
+      "producer": {
+        "@id": "https://dagar.lv/#organization"
       }
     },
     {
@@ -180,6 +189,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Price on request. You start with a one-off paid pilot, and after the pilot you pay per ride. The price depends on your fleet size and the cities you operate in. Send a request and we reply with a pilot quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you have a consumer app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. CrossAware is our safety app for pedestrians and cyclists in Riga, currently in Android beta. Pause & Pass is built by the same team, and both use the same Riga danger-zone map, built from OpenStreetMap. CrossAware users' data is not used in Pause & Pass."
           }
         }
       ]
@@ -746,7 +763,7 @@ footer {
   flex-wrap: wrap; gap: 16px;
 }
 .footer-copy { font-size: 13px; color: var(--grey3); }
-.footer-links { display: flex; gap: 24px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .footer-links a { font-size: 13px; color: var(--grey3); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--ink); }
 
@@ -758,6 +775,7 @@ footer {
 .supporter { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; opacity: 0.85; transition: opacity 0.2s; }
 .supporter:hover { opacity: 1; }
 .supporter img { height: 34px; width: auto; display: block; }
+.team-line { margin: 28px auto 0; max-width: 640px; font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.7); }
 @media (max-width: 640px) { .supported-logos { gap: 32px; flex-direction: column; } .supporter img { height: 30px; } }
 
 /* ── Scroll reveal ── */
@@ -1021,6 +1039,7 @@ footer {
       <img src="vefresh-white.svg" alt="VEFRESH" width="110" height="34" loading="lazy">
     </a>
   </div>
+  <p class="team-line" data-i18n="team_line">Pause &amp; Pass is built by the team behind CrossAware, our safety app for pedestrians and cyclists in Riga (Android beta).</p>
 </section>
 
 
@@ -1362,6 +1381,10 @@ footer {
         <summary style="font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;" data-i18n="faq_q11">How much does it cost?</summary>
         <p style="margin-top:12px;font-size:14px;color:#666;line-height:1.7;" data-i18n="faq_a11">Price on request. You start with a one-off paid pilot, and after the pilot you pay per ride. The price depends on your fleet size and the cities you operate in. Send a request and we reply with a pilot quote.</p>
       </details>
+      <details style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px 22px;">
+        <summary style="font-weight:600;color:var(--ink);cursor:pointer;font-size:15px;" data-i18n="faq_q12">Do you have a consumer app?</summary>
+        <p style="margin-top:12px;font-size:14px;color:#666;line-height:1.7;" data-i18n="faq_a12">Yes. CrossAware is our safety app for pedestrians and cyclists in Riga, currently in Android beta. Pause &amp; Pass is built by the same team, and both use the same Riga danger-zone map, built from OpenStreetMap. CrossAware users' data is not used in Pause &amp; Pass.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -1429,6 +1452,7 @@ footer {
       <div class="footer-links">
         <a class="privacy-link" href="privacy.html" data-i18n="footer_privacy">Privacy</a>
         <a href="#" onclick="document.getElementById('contactModal').style.display='flex';return false;" data-i18n="footer_contact">Contact</a>
+        <a href="https://crossaware.com/" data-i18n="footer_ca">For pedestrians and cyclists: CrossAware →</a>
       </div>
     </div>
   </div>
@@ -1709,6 +1733,11 @@ const translations = {
     vision_body: 'A shared way for operators, insurers and cities to see and document what is done about rider safety. This is our aim. It is not yet a recognised standard.',
     meta_title: 'Pause & Pass: Audio-safety plugin for micromobility fleets',
     meta_desc: 'White-label plugin for micromobility rider apps: pauses or lowers audio in mapped risk zones and keeps an audit trail of every intervention.',
+    // CrossAware cross-reference (2026-10-23)
+    team_line: 'Pause & Pass is built by the team behind CrossAware, our safety app for pedestrians and cyclists in Riga (Android beta).',
+    faq_a12: 'Yes. CrossAware is our safety app for pedestrians and cyclists in Riga, currently in Android beta. Pause & Pass is built by the same team, and both use the same Riga danger-zone map, built from OpenStreetMap. CrossAware users\' data is not used in Pause & Pass.',
+    faq_q12: 'Do you have a consumer app?',
+    footer_ca: 'For pedestrians and cyclists: CrossAware →',
   },
   lv: {
     // Nav
@@ -1888,6 +1917,11 @@ const translations = {
     vision_body: 'Vienots veids, kā operatori, apdrošinātāji un pilsētas var redzēt un dokumentēt, kas tiek darīts braucēju drošībai. Tas ir mūsu mērķis. Atzīts standarts tas vēl nav.',
     meta_title: 'Pause & Pass: audio drošības spraudnis mikromobilitātes flotēm',
     meta_desc: 'White-label spraudnis mikromobilitātes braucēju lietotnēm: kartētās riska zonās aptur vai samazina audio un saglabā audita pēdu katrai intervencei.',
+    // CrossAware cross-reference (2026-10-23)
+    team_line: 'Pause & Pass veido tā pati komanda, kas CrossAware, mūsu drošības lietotni gājējiem un velosipēdistiem Rīgā (Android beta).',
+    faq_a12: 'Jā. CrossAware ir mūsu drošības lietotne gājējiem un velosipēdistiem Rīgā, patlaban Android beta versijā. Pause & Pass veido tā pati komanda, un abi produkti izmanto to pašu Rīgas bīstamo zonu karti, kas veidota no OpenStreetMap datiem. CrossAware lietotāju dati Pause & Pass netiek izmantoti.',
+    faq_q12: 'Vai jums ir lietotne patērētājiem?',
+    footer_ca: 'Gājējiem un velosipēdistiem: CrossAware →',
   }
 };
 

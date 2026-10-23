@@ -44,7 +44,8 @@
 - The product does not by itself guarantee accident reduction, regulatory compliance or lower insurance premiums; it provides evidence and safety interventions to support those goals.
 
 ## Company
-- A product of DAGAR Ltd. Built in the Baltics (Riga-first), expanding across Latvia, Estonia and Lithuania.
+- A product of SIA "DAGAR" (Reg. No. 40103579673). Built in the Baltics (Riga-first), expanding across Latvia, Estonia and Lithuania.
+- Related product: CrossAware (https://crossaware.com), a safety app for pedestrians and cyclists in Riga (Android beta) by the same team at SIA "DAGAR". Both use the same Riga danger-zone map built from OpenStreetMap. CrossAware users' data is not used in Pause & Pass.
 - Programme: participant in Urban Mobility Incubator 2026 (https://www.urbanmobility.io); supported by EIT Urban Mobility (an initiative of the European Institute of Innovation and Technology, EIT) and VEFRESH; partners include the City of Riga.
 
 ## Contact
