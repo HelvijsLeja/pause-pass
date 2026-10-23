@@ -20,6 +20,7 @@
 ## Key facts
 - What operators get: rider awareness (a warning at the moment of risk), a safety record to share with the insurer and the city, and an audit trail of every intervention (time, zone and outcome).
 - Mission, not a certification: Pause & Pass is created to raise safety compliance; it does not certify or guarantee compliance.
+- Aim: a shared way for operators, insurers and cities to see and document what is done about rider safety. It is not yet a recognised standard.
 - Platforms: Android first, built with the operator during the pilot; iOS scope agreed per pilot.
 - Interventions are configurable: pause, lower volume, sound alert or on-screen message.
 - No vehicle hardware required; software only.
@@ -44,7 +45,7 @@
 
 ## Company
 - A product of DAGAR Ltd. Built in the Baltics (Riga-first), expanding across Latvia, Estonia and Lithuania.
-- Programme: participant in Urban Mobility Incubator 2026 (https://www.urbanmobility.io), supported by EIT Urban Mobility, an initiative of the European Institute of Innovation and Technology (EIT); partners include VEFRESH and the City of Riga.
+- Programme: participant in Urban Mobility Incubator 2026 (https://www.urbanmobility.io); supported by EIT Urban Mobility (an initiative of the European Institute of Innovation and Technology, EIT) and VEFRESH; partners include the City of Riga.
 
 ## Contact
 - Email: hello@pauseandpass.com

@@ -7,8 +7,8 @@
 <!-- Cloudflare email obfuscation disabled -->
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Pause & Pass — Safety Plugin for Mobility Operators</title>
-<meta name="description" content="Plugin for micromobility operators: reduce rider audio distraction in mapped risk zones and keep an auditable safety record. Paid pilot, one city."/>
+<title>Pause & Pass: Audio-safety plugin for micromobility fleets</title>
+<meta name="description" content="White-label plugin for micromobility rider apps: pauses or lowers audio in mapped risk zones and keeps an audit trail of every intervention."/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Pause &amp; Pass (SIA DAGAR)"/>
 <link rel="canonical" href="https://pauseandpass.com/"/>
@@ -19,8 +19,8 @@
 <!-- Open Graph / social sharing -->
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Pause &amp; Pass"/>
-<meta property="og:title" content="Pause &amp; Pass — Safety plugin for mobility operators"/>
-<meta property="og:description" content="Plugin for micromobility operators: reduce rider audio distraction in mapped risk zones and keep an auditable safety record. Paid pilot, one city."/>
+<meta property="og:title" content="Pause &amp; Pass: Audio-safety plugin for micromobility fleets"/>
+<meta property="og:description" content="White-label plugin for micromobility rider apps: pauses or lowers audio in mapped risk zones and keeps an audit trail of every intervention."/>
 <meta property="og:url" content="https://pauseandpass.com/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:locale:alternate" content="lv_LV"/>
@@ -29,8 +29,8 @@
 <meta property="og:image:height" content="630"/>
 <meta property="og:image:alt" content="Pause &amp; Pass: the audio-safety plug-in for micromobility fleets"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Pause &amp; Pass — Safety plugin for mobility operators"/>
-<meta name="twitter:description" content="Plugin for micromobility operators: reduce rider audio distraction in mapped risk zones and keep an auditable safety record. Paid pilot, one city."/>
+<meta name="twitter:title" content="Pause &amp; Pass: Audio-safety plugin for micromobility fleets"/>
+<meta name="twitter:description" content="White-label plugin for micromobility rider apps: pauses or lowers audio in mapped risk zones and keeps an audit trail of every intervention."/>
 <meta name="twitter:image" content="https://pauseandpass.com/assets/og/pauseandpass-og.png"/>
 <meta name="twitter:image:alt" content="Pause &amp; Pass: the audio-safety plug-in for micromobility fleets"/>
 <!-- Structured data for search engines and AI answer engines (SEO / GEO) -->
@@ -909,7 +909,10 @@ footer {
   div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
 }
 
-@media (min-width: 901px) { .benefits-grid.four { grid-template-columns: repeat(4, 1fr); } }
+.vision { margin-top: 48px; padding: 32px 36px; border-radius: 16px; background: #0A0A0A; }
+.vision-h2 { font-size: clamp(22px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.5px; line-height: 1.2; color: #fff; margin-bottom: 10px; }
+.vision-body { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.75); max-width: 720px; }
+@media (max-width: 600px) { .vision { padding: 24px 20px; } }
 
 @media (max-width: 900px) {
   .hero-inner, .problem-grid, .integration-grid { grid-template-columns: 1fr; }
@@ -952,8 +955,8 @@ footer {
   <div class="container">
     <div class="hero-inner">
       <div>
-        <div class="hero-eyebrow" data-i18n="hero_eyebrow">🔌 Audio-safety plugin for micromobility fleets</div>
-        <h1><span data-i18n="hero_h1a">Reduce distraction.</span><br/><span data-i18n="hero_h1b">Measure risk.</span><br/><span class="accent" data-i18n="hero_h1c">Strengthen safety operations.</span></h1>
+        <div class="hero-eyebrow" data-i18n="hero_eyebrow">White-label plugin for rider apps</div>
+        <h1 data-i18n="hero_h1">Audio-safety plugin for micromobility fleets</h1>
         <p class="hero-mission" data-i18n="hero_mission">Created to raise safety compliance in the micromobility industry.</p>
         <p class="hero-sub" data-i18n="hero_sub">Pause &amp; Pass is a <strong>white-label safety plugin for micromobility operators</strong>. During an active trip it requests a pause or lower volume in mapped high-risk zones and records auditable safety events.<br/><strong>No vehicle hardware. No separate app. Runs inside your existing rider app.</strong></p>
         <div class="hero-actions">
@@ -1009,7 +1012,7 @@ footer {
 
 <!-- Urban Mobility Incubator 2026 (supported by EIT Urban Mobility) -->
 <section class="supported-by">
-  <p class="supported-label" data-i18n="supported_by">Participant · <a href="https://www.urbanmobility.io" target="_blank" rel="noopener">Urban Mobility Incubator 2026</a>, supported by EIT Urban Mobility</p>
+  <p class="supported-label" data-i18n="supported_by">Participant · <a href="https://www.urbanmobility.io" target="_blank" rel="noopener">Urban Mobility Incubator 2026</a> · Supported by EIT Urban Mobility and VEFRESH</p>
   <div class="supported-logos">
     <a href="https://www.eiturbanmobility.eu" target="_blank" rel="noopener" class="supporter" aria-label="EIT Urban Mobility">
       <img src="eit-urban-mobility-white.svg" alt="EIT Urban Mobility" width="262" height="34" loading="lazy">
@@ -1025,33 +1028,33 @@ footer {
 <section class="benefits-section" id="benefits">
   <div class="container">
     <div class="section-eyebrow" data-i18n="ben_eyebrow">What operators get</div>
-    <h2 class="section-h2"><span data-i18n="ben_h2a">Prevent. Measure.</span><br/><em data-i18n="ben_h2b">Document. Manage risk.</em></h2>
+    <h2 class="section-h2"><span data-i18n="ben_h2a">Awareness. Show.</span><br/><em data-i18n="ben_h2b">Document.</em></h2>
 
-    <div class="benefits-grid four reveal">
+    <div class="benefits-grid reveal">
       <div class="benefit-card">
-        <div class="bc-icon">🛑</div>
-        <h3 data-i18n="pv1_t">Prevent</h3>
+        <div class="bc-icon">🎧</div>
+        <h3 data-i18n="pv1_t">Informed, more aware riders</h3>
         <p data-i18n="pv1_b">Riders on headphones or phones may miss the risk at rail, tram and pedestrian crossings. A warning reaches them as they enter a mapped zone.</p>
-        <span class="benefit-tag" data-i18n="pv1_tag">Rider awareness</span>
-      </div>
-      <div class="benefit-card">
-        <div class="bc-icon">📊</div>
-        <h3 data-i18n="pv2_t">Measure</h3>
-        <p data-i18n="pv2_b">Tracks eligible trips, zone entries, interventions and coverage, so you see what actually happened on the road.</p>
-        <span class="benefit-tag" data-i18n="pv2_tag">Coverage &amp; KPIs</span>
-      </div>
-      <div class="benefit-card">
-        <div class="bc-icon">🗂️</div>
-        <h3 data-i18n="pv3_t">Document</h3>
-        <p data-i18n="pv3_b">An audit trail of every intervention, with time, zone and outcome for each event.</p>
-        <span class="benefit-tag" data-i18n="pv3_tag">Audit trail</span>
+        <span class="benefit-tag" data-i18n="pv1_tag">Awareness</span>
       </div>
       <div class="benefit-card">
         <div class="bc-icon">🛡️</div>
-        <h3 data-i18n="pv4_t">Manage risk</h3>
+        <h3 data-i18n="pv4_t">Evidence for your insurer and the city</h3>
         <p data-i18n="pv4_b">A safety record you can share with your insurer, the city or a regulator when they ask what you do about risk.</p>
-        <span class="benefit-tag" data-i18n="pv4_tag">City · regulator · insurer</span>
+        <span class="benefit-tag" data-i18n="pv4_tag">Show</span>
       </div>
+      <div class="benefit-card">
+        <div class="bc-icon">🗂️</div>
+        <h3 data-i18n="pv3_t">An audit trail of every intervention</h3>
+        <p data-i18n="pv3_b">Each event is logged with time, zone and outcome.</p>
+        <span class="benefit-tag" data-i18n="pv3_tag">Document</span>
+      </div>
+    </div>
+
+    <!-- Vision (aim, not a recognised standard) -->
+    <div class="vision reveal">
+      <h2 class="vision-h2" data-i18n="vision_h2">We are building a new safety compliance standard</h2>
+      <p class="vision-body" data-i18n="vision_body">A shared way for operators, insurers and cities to see and document what is done about rider safety. This is our aim. It is not yet a recognised standard.</p>
     </div>
   </div>
 </section>
@@ -1533,11 +1536,11 @@ const translations = {
     nav_how: 'How it works',
     nav_pricing: 'Pricing', nav_dash: 'Dashboard', nav_faq: 'FAQ',
     nav_cta: 'Get in touch',
-    supported_by: 'Participant · <a href="https://www.urbanmobility.io" target="_blank" rel="noopener">Urban Mobility Incubator 2026</a>, supported by EIT Urban Mobility',
+    supported_by: 'Participant · <a href="https://www.urbanmobility.io" target="_blank" rel="noopener">Urban Mobility Incubator 2026</a> · Supported by EIT Urban Mobility and VEFRESH',
     // Hero
-    hero_eyebrow: '🔌 Audio-safety plugin for micromobility fleets',
+    hero_eyebrow: 'White-label plugin for rider apps',
     hero_mission: 'Created to raise safety compliance in the micromobility industry.',
-    hero_h1a: 'Reduce distraction.', hero_h1b: 'Measure risk.', hero_h1c: 'Strengthen safety operations.',
+    hero_h1: 'Audio-safety plugin for micromobility fleets',
     hero_sub: 'Pause & Pass is a <strong>white-label safety plugin for micromobility operators</strong>. During an active trip it requests a pause or lower volume in mapped high-risk zones and records auditable safety events.<br/><strong>No vehicle hardware. No separate app. Runs inside your existing rider app.</strong>',
     hero_cta1: 'Request a pilot →', hero_cta2: 'How it works',
     hero_note: 'For shared e-scooter, self-propelled bicycle, e-bike and e-moped operators · Riga-first, expanding across the Baltics',
@@ -1568,11 +1571,10 @@ const translations = {
     gdpr_body: 'You already have the rider relationship, terms and GDPR framework. Pause & Pass slots into it: you remain the data controller, we act as your processor under a data processing agreement, and we supply ready wording if your privacy notice needs a line about safety interventions.',
     // Benefits
     ben_eyebrow: 'What operators get',
-    ben_h2a: 'Prevent. Measure.', ben_h2b: 'Document. Manage risk.',
-    pv1_t: 'Prevent', pv1_b: 'Riders on headphones or phones may miss the risk at rail, tram and pedestrian crossings. A warning reaches them as they enter a mapped zone.', pv1_tag: 'Rider awareness',
-    pv2_t: 'Measure', pv2_b: 'Tracks eligible trips, zone entries, interventions and coverage, so you see what actually happened on the road.', pv2_tag: 'Coverage & KPIs',
-    pv3_t: 'Document', pv3_b: 'An audit trail of every intervention, with time, zone and outcome for each event.', pv3_tag: 'Audit trail',
-    pv4_t: 'Manage risk', pv4_b: 'A safety record you can share with your insurer, the city or a regulator when they ask what you do about risk.', pv4_tag: 'City · regulator · insurer',
+    ben_h2a: 'Awareness. Show.', ben_h2b: 'Document.',
+    pv1_t: 'Informed, more aware riders', pv1_b: 'Riders on headphones or phones may miss the risk at rail, tram and pedestrian crossings. A warning reaches them as they enter a mapped zone.', pv1_tag: 'Awareness',
+    pv3_t: 'An audit trail of every intervention', pv3_b: 'Each event is logged with time, zone and outcome.', pv3_tag: 'Document',
+    pv4_t: 'Evidence for your insurer and the city', pv4_b: 'A safety record you can share with your insurer, the city or a regulator when they ask what you do about risk.', pv4_tag: 'Show',
     // Pricing
     price_eyebrow: 'Pricing',
     price_h2a: 'Pilot first,',
@@ -1702,17 +1704,22 @@ const translations = {
     notif_exit_body_chime: 'You have left the danger zone. Stay alert!',
     notif_ped_body: 'Pedestrian crossing: watch for pedestrians and traffic!',
     notif_label: 'Illustrative notifications',
+    // Deck alignment (2026-10-23)
+    vision_h2: 'We are building a new safety compliance standard',
+    vision_body: 'A shared way for operators, insurers and cities to see and document what is done about rider safety. This is our aim. It is not yet a recognised standard.',
+    meta_title: 'Pause & Pass: Audio-safety plugin for micromobility fleets',
+    meta_desc: 'White-label plugin for micromobility rider apps: pauses or lowers audio in mapped risk zones and keeps an audit trail of every intervention.',
   },
   lv: {
     // Nav
     nav_how: 'Kā tas darbojas',
     nav_pricing: 'Cenas', nav_dash: 'Vadības panelis', nav_faq: 'BUJ',
     nav_cta: 'Sazināties',
-    supported_by: 'Dalībnieks · <a href="https://www.urbanmobility.io" target="_blank" rel="noopener">Urban Mobility Incubator 2026</a>, ko atbalsta EIT Urban Mobility',
+    supported_by: 'Dalībnieks · <a href="https://www.urbanmobility.io" target="_blank" rel="noopener">Urban Mobility Incubator 2026</a> · Atbalsta EIT Urban Mobility un VEFRESH',
     // Hero
-    hero_eyebrow: '🔌 Audio drošības spraudnis mikromobilitātes flotēm',
-    hero_mission: 'Radīts, lai celtu drošības prasību ievērošanu mikromobilitātes nozarē.',
-    hero_h1a: 'Mazināt uzmanības novēršanu.', hero_h1b: 'Izmērīt risku.', hero_h1c: 'Uzlabot drošības vadību.',
+    hero_eyebrow: 'White-label spraudnis braucēju lietotnēm',
+    hero_mission: 'Radīts, lai celtu drošības prasību ievērošanas līmeni mikromobilitātes nozarē.',
+    hero_h1: 'Audio drošības spraudnis mikromobilitātes flotēm',
     hero_sub: 'Pause & Pass ir <strong>white-label drošības spraudnis mikromobilitātes operatoriem</strong>. Aktīva brauciena laikā tas pieprasa pauzēt audio vai samazināt skaļumu kartētās augsta riska zonās un reģistrē auditējamus drošības notikumus.<br/><strong>Bez transportlīdzekļa aparatūras. Bez atsevišķas lietotnes. Darbojas jūsu esošajā braucēju lietotnē.</strong>',
     hero_cta1: 'Pieteikt pilotprojektu →', hero_cta2: 'Kā tas darbojas',
     hero_note: 'Elektrisko skrejriteņu, pašgājēju velosipēdu, e-velosipēdu un e-mopēdu koplietošanas operatoriem · Rīga pirmā, paplašināmies Baltijā',
@@ -1743,11 +1750,10 @@ const translations = {
     gdpr_body: 'Jums jau ir attiecības ar braucēju, lietošanas noteikumi un VDAR ietvars. Pause & Pass tajā iekļaujas: jūs paliekat datu pārzinis, mēs darbojamies kā jūsu apstrādātājs saskaņā ar datu apstrādes līgumu un sagatavojam formulējumu, ja privātuma paziņojumā jāpievieno rindiņa par drošības intervencēm.',
     // Benefits
     ben_eyebrow: 'Ko iegūst operators',
-    ben_h2a: 'Novērst. Izmērīt.', ben_h2b: 'Dokumentēt. Vadīt risku.',
-    pv1_t: 'Novērst', pv1_b: 'Braucēji ar austiņām vai tālruni rokās var nepamanīt risku pie dzelzceļa, tramvaja un gājēju pārejām. Brīdinājums viņus sasniedz brīdī, kad viņi iebrauc kartētā zonā.', pv1_tag: 'Braucēju uzmanība',
-    pv2_t: 'Izmērīt', pv2_b: 'Uzskaita atbilstošos braucienus, iebraukšanas gadījumus zonās, intervences un pārklājumu, lai jūs redzētu, kas patiešām notika uz ceļa.', pv2_tag: 'Pārklājums un KPI',
-    pv3_t: 'Dokumentēt', pv3_b: 'Audita pēda katrai intervencei: laiks, zona un rezultāts katram notikumam.', pv3_tag: 'Audita pēda',
-    pv4_t: 'Vadīt risku', pv4_b: 'Drošības ieraksts, ko varat parādīt apdrošinātājam, pilsētai vai regulatoram, kad viņi jautā, ko jūs darāt riska mazināšanai.', pv4_tag: 'Pilsēta · regulators · apdrošinātājs',
+    ben_h2a: 'Informētība. Parādīt.', ben_h2b: 'Dokumentēt.',
+    pv1_t: 'Informēti un uzmanīgāki braucēji', pv1_b: 'Braucēji, kas lieto austiņas vai tālruni, var nepamanīt risku pie dzelzceļa pārbrauktuvēm, tramvaja sliežu šķērsojumiem un gājēju pārejām. Brīdinājums pienāk, tiklīdz braucējs iebrauc kartētā zonā.', pv1_tag: 'Informētība',
+    pv3_t: 'Audita pēda katrai intervencei', pv3_b: 'Katram notikumam tiek reģistrēts laiks, zona un rezultāts.', pv3_tag: 'Dokumentēt',
+    pv4_t: 'Pierādījumi apdrošinātājam un pilsētai', pv4_b: 'Drošības ieraksts, ko varat parādīt apdrošinātājam, pilsētai vai regulatoram, kad tie jautā, ko darāt riska mazināšanai.', pv4_tag: 'Parādīt',
     // Pricing
     price_eyebrow: 'Cenas',
     price_h2a: 'Vispirms pilots,',
@@ -1877,6 +1883,11 @@ const translations = {
     notif_exit_body_chime: 'Saglabājiet uzmanību!',
     notif_ped_body: 'Gājēju pāreja: pievērsiet uzmanību gājējiem un satiksmei!',
     notif_label: 'Ilustratīvi paziņojumi',
+    // Deck alignment (2026-10-23)
+    vision_h2: 'Veidojam jaunu drošības prasību ievērošanas standartu',
+    vision_body: 'Mūsu mērķis ir vienots veids, kā operatori, apdrošinātāji un pilsētas var redzēt un dokumentēt, kas tiek darīts braucēju drošībai. Tas ir mūsu mērķis. Atzīts standarts tas vēl nav.',
+    meta_title: 'Pause & Pass: audio drošības spraudnis mikromobilitātes flotēm',
+    meta_desc: 'White-label spraudnis mikromobilitātes braucēju lietotnēm: kartētās riska zonās aptur vai samazina audio un saglabā audita pēdu katrai intervencei.',
   }
 };
 
@@ -1901,9 +1912,9 @@ function setLang(lang) {
     if (v) el.placeholder = v;
   });
   // Update page title
-  document.title = lang === 'lv'
-    ? 'Pause & Pass — Drošības spraudnis mobilitātes operatoriem'
-    : 'Pause & Pass — Safety Plugin for Mobility Operators';
+  document.title = t.meta_title;
+  const md = document.querySelector('meta[name="description"]');
+  if (md) md.content = t.meta_desc;
 }
 
 // ── Hero risk-zone map simulation (illustrative) ─────────────────────────
