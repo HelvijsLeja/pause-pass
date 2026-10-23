@@ -1,10 +1,10 @@
 # Pause & Pass
 
-> Pause & Pass is a white-label rider-attention safety plugin for shared micromobility operators (e-scooters, self-propelled bicycles, e-bikes, e-mopeds). When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention (pause, lower volume, sound alert or on-screen message) and logs an auditable event. No vehicle hardware, no separate rider app; runs inside the operator's existing rider app.
+> Pause & Pass is a white-label audio-safety plugin for shared micromobility fleets (e-scooters, self-propelled bicycles, e-bikes, e-mopeds), created to raise safety compliance in the micromobility industry. When an active trip approaches a mapped high-risk crossing, it triggers a configurable audio-safety intervention (pause, lower volume, sound alert or on-screen message) and logs an auditable event. No vehicle hardware, no separate rider app; runs inside the operator's existing rider app.
 
 ## What it is
 - A software-only safety layer that operators embed in their existing rider app.
-- Reduces avoidable audio distraction (headphones/music) before a rider enters a pre-mapped high-risk location such as a railway crossing, tram crossing or pedestrian crossing.
+- Riders on headphones or phones may miss the risk; a warning reaches them as they enter a pre-mapped high-risk location such as a railway crossing, tram crossing or pedestrian crossing.
 - Complementary to fleet geofencing, computer vision and collision-alert systems — an add-on, not a replacement.
 
 ## Who it is for
@@ -18,6 +18,8 @@
 3. Cleared: normal audio behaviour resumes and a privacy-minimised event (zone ID, timestamp, app/SDK version, outcome) is logged to the operator dashboard.
 
 ## Key facts
+- What operators get: rider awareness (a warning at the moment of risk), a safety record to share with the insurer and the city, and an audit trail of every intervention (time, zone and outcome).
+- Mission, not a certification: Pause & Pass is created to raise safety compliance; it does not certify or guarantee compliance.
 - Platforms: Android first, built with the operator during the pilot; iOS scope agreed per pilot.
 - Interventions are configurable: pause, lower volume, sound alert or on-screen message.
 - No vehicle hardware required; software only.
